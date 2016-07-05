@@ -1,41 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Intergala-homepage by bo-blog</title>
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+<title>About Bob Shen</title>
+<script src="//cdn.bootcss.com/jquery/2.1.0/jquery.js"></script>
+<script src="jquery.scrollTo.min.js"></script>
+<link href="//at.alicdn.com/t/font_1463671252_5156708.css" media="all" rel="stylesheet" type="text/css" />
+<link href="style.css" media="all" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="layer1" class="layer">
+<p class="wL">About Bob</p>
+<p class="wM">It's never too late to learn.<br/><br/><br/><br/></p>
+<div class="uF">
+<span class="wM fL"><a href="http://note.bobshen.com/"><i class="wL">&#58932;</i><br>Blog</a></span>
+<span class="wM fL"><a href="http://instagram.com/bobshen"><i class="wL">&#58890;</i><br>Photos</a></span>
+<span class="wM fL"><i class="wL" id="btn1">&#xe642;</i><br>Contact</span>
+</div>
+</div>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Intergala-homepage</h1>
-        <p></p>
 
-        <p class="view"><a href="https://github.com/bo-blog/intergala-homepage">View the Project on GitHub <small>bo-blog/intergala-homepage</small></a></p>
+<div id="layer2" class="layer">
+<p class="wL">Contact</p>
+<p class="wM">Keep in touch.<br/><br/><br/><br/></p>
+<div class="uF">
+<span class="wM fL"><a href="mailto:i@bobshen.com"><i class="wL">&#58886;</i></a></span>
+<span class="wM fL"><a href="http://weibo.com/22112197"><i class="wL">&#58883;</i></a></span>
+<span class="wM fL"><a href="https://twitter.com/bob_shen"><i class="wL">&#58885;</i></a></span>
+</div>
+</div>
 
-
-        <ul>
-          <li><a href="https://github.com/bo-blog/intergala-homepage/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/bo-blog/intergala-homepage/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/bo-blog/intergala-homepage">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <p>123</p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/bo-blog">bo-blog</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
+<script>
+$('#btn1').click (function(){
+	$.scrollTo('#layer2', 500, {onAfter: function(){
+	}});
+});
+</script>
+</body>
 </html>

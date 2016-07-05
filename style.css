@@ -1,0 +1,83 @@
+/* css reset by Tantek Celik */
+:link,:visited { text-decoration:none }
+ul { list-style:none }
+h1,h2,h3,h4,h5,h6,pre,code { font-size:1em; }
+ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input
+{ margin:0; padding:0; font-weight:normal }
+a img,:link img,:visited img { border:none }
+address { font-style:normal }
+
+@font-face {
+  font-family: 'iconfont';
+  src: url('//at.alicdn.com/t/font_1463671252_3203113.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_1463671252_3203113.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/font_1463671252_3203113.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/font_1463671252_3203113.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_1463671252_3203113.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+i {
+font-family:"iconfont";
+font-style:normal;
+}
+
+body {
+background: #FFF;
+font-family: "Lucida Sans Unicode", Helvetica, "Microsoft Yahei", "Microsoft JhengHei", STHei, "Meiryo UI";
+height:100%;
+}
+html {
+height: 100%;
+}
+.layer {
+height: 100%;
+text-align: center;
+padding: 60px 0 60px 0;
+}
+#layer1 {
+background-color: #0080FF;
+background: url('http://bobshen.qiniudn.com/storage/865be484') 50% 50%;
+color: #FFF;
+text-shadow: #CCC 1px 1px 1px;
+}
+#layer2 {
+background-color: #0080FF;
+background: url('http://bobshen.qiniudn.com/storage/a73ed322') 50% 50%;
+color: #FFF;
+text-shadow: #CCC 1px 1px 1px;
+}
+p {
+margin-bottom: 20px;
+}
+.wL {
+font-size: 3em;
+}
+.wXM {
+font-size: 2em;
+}
+.wM {
+font-size: 1.2em;
+}
+.wS {
+font-size: 0.8em;
+}
+.wBox {
+border: 1px solid #EFEFEF;
+border-radius: 5px;
+padding: 6px;
+cursor: pointer;
+}
+.wBox:hover {
+background: #FFF;
+color: #333;
+}
+.wRed {
+color: #D93600;
+}
+.wGreen {
+color: #7AFF4D;
+}
+
+.fL {display: block; float: left; text-align: center; margin-left: 6px; width: 100px; cursor: pointer;}
+.uF {margin: auto; text-align: center; width: 320px;}
+a {color: #fff;}
