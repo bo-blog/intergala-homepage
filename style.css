@@ -11,8 +11,8 @@ address { font-style:normal }
   font-family: 'iconfont';
   src: url('//at.alicdn.com/t/font_1463671252_3203113.eot'); /* IE9*/
   src: url('//at.alicdn.com/t/font_1463671252_3203113.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('//at.alicdn.com/t/font_1463671252_3203113.woff') format('woff'), /* chrome°¢firefox */
-  url('//at.alicdn.com/t/font_1463671252_3203113.ttf') format('truetype'), /* chrome°¢firefox°¢opera°¢Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_1463671252_3203113.woff') format('woff'), /* chrome„ÄÅfirefox */
+  url('//at.alicdn.com/t/font_1463671252_3203113.ttf') format('truetype'), /* chrome„ÄÅfirefox„ÄÅopera„ÄÅSafari, Android, iOS 4.2+*/
   url('//at.alicdn.com/t/font_1463671252_3203113.svg#iconfont') format('svg'); /* iOS 4.1- */
 }
 
@@ -35,17 +35,17 @@ text-align: center;
 padding: 60px 0 60px 0;
 }
 #layer1 {
-background-color: #0080FF;
-background: url('http://bobshen.qiniudn.com/storage/865be484') 50% 50%;
-color: #FFF;
+background-color: #92DAC8;
+color: #297C68;
 text-shadow: #CCC 1px 1px 1px;
 }
+#layer1 a {color: #297C68;}
 #layer2 {
-background-color: #0080FF;
-background: url('http://bobshen.qiniudn.com/storage/a73ed322') 50% 50%;
+background-color: gray;
 color: #FFF;
 text-shadow: #CCC 1px 1px 1px;
 }
+#layer2 a {color: #fff;}
 p {
 margin-bottom: 20px;
 }
@@ -80,4 +80,3 @@ color: #7AFF4D;
 
 .fL {display: block; float: left; text-align: center; margin-left: 6px; width: 100px; cursor: pointer;}
 .uF {margin: auto; text-align: center; width: 320px;}
-a {color: #fff;}
