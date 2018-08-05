@@ -1,42 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
-<title>About Bob Shen</title>
-<script src="//cdn.bootcss.com/jquery/2.1.0/jquery.js"></script>
-<script src="jquery.scrollTo.min.js"></script>
-<link href="//at.alicdn.com/t/font_1463671252_5156708.css" media="all" rel="stylesheet" type="text/css" />
-<link href="style.css" media="all" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta charset="utf-8">
+    <title>Home | Bob's Lab</title>
+    <style>
+     body {
+      font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: #77878F;
+     }
+     h1,h2,h3,h4,h5,h6 {
+      font-weight: normal;
+      display: inline;
+      line-height: 150%;
+     }
+     a {
+      color: #CCCACA;
+      font-style: italic;
+      text-decoration: none;
+     }
+     h1 {
+      color: #88A3AD;
+     }
+     h3 {
+      color: #AAB9BD;
+     }
+     h4,h4 a {
+      color: #ccc;
+      font-style: normal;
+     }
+    </style>
 </head>
 <body>
-<div id="layer1" class="layer">
-<p class="wL">About Bob</p>
-<p class="wM">It's never too late to learn.<br/><br/><br/><br/></p>
-<div class="uF">
-<span class="wM fL"><a href="http://note.bobshen.com/"><i class="wL">&#58932;</i><br>Blog</a></span>
-<span class="wM fL"><a href="http://instagram.com/bobshen"><i class="wL">&#58890;</i><br>Photos</a></span>
-<span class="wM fL"><i class="wL" id="btn1">&#xe642;</i><br>Contact</span>
+<h1>Welcome to Bob's Lab<br></h1><hr>
+<div>
+ <p>
+  <h3>- MonoTalk</h3>
+  <h5><br>MonoTalk is a SPA-styled personal microblogging system where all contents are loaded through API's implmented with PHP. I use MonoTalk to instantly pen down my random thoughts, especially first impressions on the movies I watched recently.<br> <a href="http://me.bobshen.com/monotalk/">&raquo; Link: Bob's Mono Talk</a></h5>
+ </p>
+ <p>
+   <h3>- bW</h3>
+   <h5><br>bW is a typical PHP blogging system, aiming to be lighweight and mobile friendly. It has all the features I feel necessary for a blog, and nothing else to make it another replica of WordPress.<br> <a href="http://note.bobshen.com">&raquo; Link: InterGala</a></h5>
+  </p>
+  <p>
+    <h3>- RiQian for JSBox</h3>
+    <h5><br>RiQian is a quick tool to generate a poster with dates, pictures and thoughts. It runs on the powerful iOS app JSBox which allows users to create their own tools with JavaScript on iPhone or iPad. <br> <a href="https://github.com/bs-2001/riqian-jsbox">&raquo; Link: RiQian</a></h5>
+   </p>
+   <p>
+     <h3>- Things Sorter for JSBox</h3>
+     <h5><br>Things Sorter is a tool to help me remember where those small things are stored, for example, keys, chargers, passport, etc. It allows me to create storage spaces such as a cabinet in the bedroom, and then "put" things into it.<br> <a href="https://github.com/bs-2001/ThingsSorter-JSBOX">&raquo; Link: Things Sorter</a></h5>
+    </p>
 </div>
-</div>
-
-
-<div id="layer2" class="layer">
-<p class="wL">Contact</p>
-<p class="wM">Keep in touch.<br/><br/><br/><br/></p>
-<div class="uF">
-<span class="wM fL"><a href="mailto:i@bobshen.com"><i class="wL">&#58886;</i></a></span>
-<span class="wM fL"><a href="http://weibo.com/22112197"><i class="wL">&#58883;</i></a></span>
-<span class="wM fL"><a href="https://twitter.com/bob_shen"><i class="wL">&#58885;</i></a></span>
-</div>
-</div>
-
-<script>
-$('#btn1').click (function(){
-	$.scrollTo('#layer2', 500, {onAfter: function(){
-	}});
-});
-</script>
+<hr>
 </body>
-</html>
