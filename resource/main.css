@@ -1,0 +1,283 @@
+@import url("definition.css");
+
+/* Grid & Position */
+body {
+    height: 100%;
+}
+#canvas {
+    width: var(--overall-width);
+    text-align: center;
+}
+.main-wrapper {
+    width: var(--main-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+.full-wrapper {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.row {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    align-content: flex-start;
+}
+.row-close {
+    justify-content: center;
+}
+.row-loose {
+    justify-content: space-between;
+}
+.row-even {
+    justify-content: space-evenly;
+}
+.row-left {
+    justify-content: start;
+}
+.row-wrap {
+    flex-wrap: wrap;
+}
+.row-top {
+    align-items: flex-start;
+}
+.col-1 {
+    width: 10%;
+}
+.col-2 {
+    width: 20%;
+}
+.col-3 {
+    width: 30%;
+}
+.col-4 {
+    width: 40%;
+}
+.col-5 {
+    width: 50%;
+}
+.col-6 {
+    width: 60%;
+}
+.col-7 {
+    width: 70%;
+}
+.col-75 {
+    width: 75%;
+}
+.col-8 {
+    width: 80%;
+}
+.col-9 {
+    width: 90%;
+}
+.to-left {
+    text-align: left;
+}
+.to-center {
+    text-align: center;
+}
+.to-right {
+    text-align: right;
+}
+.inline-block {
+    display: inline-block;
+}
+
+
+/* Font Style & Cursor */
+body {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
+}
+.stress-font {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+.minor-font {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+.bold {
+    font-weight: bold;
+}
+.bolder {
+    font-weight: bolder;
+}
+.slim {
+    font-weight: 400;
+}
+.slimmer {
+    font-weight: 300;
+}
+a {
+    text-decoration: none;
+}
+.underline {
+    text-decoration: underline;
+}
+.pointer {
+    cursor: pointer;
+}
+.forbidden {
+    cursor: not-allowed;
+}
+
+
+/* Font Size */
+body {
+    font-size: var(--fontsize-base);
+}
+.text-l {
+    font-size: calc(var(--fontsize-base) * 1.2);
+}
+.text-xl {
+    font-size: calc(var(--fontsize-base) * 1.5);
+}
+.text-xxl {
+    font-size: calc(var(--fontsize-base) * 1.8);
+}
+.text-3xl {
+    font-size: calc(var(--fontsize-base) * 2);
+}
+.text-s {
+    font-size: calc(var(--fontsize-base) * 0.9);
+}
+.text-xs {
+    font-size: calc(var(--fontsize-base) * 0.8);
+}
+.text-xxs {
+    font-size: calc(var(--fontsize-base) * 0.5);
+}
+
+
+/* Spacing */
+.space {
+    padding: var(--space-base);
+}
+.space-l {
+    padding: calc(var(--space-base) * 1.5);
+}
+.space-xl {
+    padding: calc(var(--space-base) * 2);
+}
+.space-s {
+    padding: calc(var(--space-base) * 0.8);
+}
+.space-xs {
+    padding: calc(var(--space-base) * 0.5);
+}
+.space-xxs {
+    padding: calc(var(--space-base) * 0.2);
+}
+.space-vh {
+    padding: calc(var(--space-base) * 0.3) calc(var(--space-base) * 0.6);
+}
+.space-hv {
+    padding: calc(var(--space-base) * 0.6) calc(var(--space-base) * 0.3);
+}
+.between {
+    margin-top: var(--space-base);
+}
+
+
+/* Mobile */
+@media screen and (max-width: 850px){
+    .tile {
+        display: block;
+    }
+}
+
+
+/* Specials */
+/* Horitontal Menu */
+.h-list ul {
+    padding: 0;
+    margin: 0;
+}
+.h-list li {
+    display: inline-block;
+    list-style: none;
+    margin-right: calc(var(--space-base) * 0.8);
+}
+.h-list li:last-child {
+    margin-right: 0;
+}
+.h-list a {
+    display: inline-block;
+    width: 100%;
+}
+
+/* Vertical Menu */
+.v-list ul, .v-list ol {        
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.rounded {
+    border-radius: 8px;
+}
+
+.ease {
+    transition: 0.5s ease-in-out;
+}
+
+/* Button */
+.button {
+    display: inline-block;
+    border: 1px solid var(--theme-color); 
+    cursor: pointer;
+}
+.button:hover {
+    border-color: var(--secordary-color); 
+    box-shadow: 1px 1px 18px var(--primary-bg-color); 
+}
+.button, .button a {
+    color: var(--theme-color);    
+}
+.button:hover, .button:hover a, .button:hover a:hover  {
+    color: var(--secordary-color);
+    text-decoration: none;
+}
+
+
+/* Color */
+body {
+    color: var(--primary-color);
+    background-color: var(--primary-bg-color);
+ }
+a {
+    color: var(--theme-color);
+}
+.sc, .sc a {
+    color: var(--secordary-color);
+}
+.major, .major a {
+    color: var(--primary-color);
+}
+.minor, .minor a {
+    color: var(--minor-color);
+}
+.theme-color, .theme-color a {
+    color: var(--theme-color);
+}
+.bg {
+    background-color: var(--primary-bg-color);
+}
+.bg-sc {
+    background-color: var(--secondary-bg-color);
+}
+.bg-hover:hover {
+    background-color: var(--primary-bg-color);
+}
+.bg-sc-hover:hover {
+    background-color: var(--secondary-bg-color);
+}
+.bg-panel {
+    background-color: var(--panel-bg-color);
+}
+.blurred {
+    filter: blur(9px);
+    transition: filter 0.2s ease-in-out;
+}

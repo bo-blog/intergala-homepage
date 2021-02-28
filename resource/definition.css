@@ -1,0 +1,23 @@
+:root {
+    --overall-width: 100%;
+    --main-width: 88%;
+    --space-base: 20px;
+    --fontsize-base: 18px;
+
+    --theme-color: #00b7c3;
+    --primary-color: #787c7e;
+    --secordary-color: #69797e;
+    --minor-color: #b2c1c6;
+    --primary-bg-color: #f3f3f3;
+    --secondary-bg-color: #e5e9ed;
+    --panel-bg-color: #fefefe;
+    --block-bg-color: #eeeeee;
+    --dim-bg-color: #eee;
+    --separator-color: #e5e9ed;
+}
+
+@media screen and (max-width: 600px){  
+    :root {
+        --main-width: 92%;
+    }
+}

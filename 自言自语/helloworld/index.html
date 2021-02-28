@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta property="og:url" content="https://www.bobshen.com/自言自语/helloworld/" />
+<meta property="og:title" content="又是一个新的开始" /><meta property="og:image" content="https://www.bobshen.com/facebook_default.png" /><meta property="og:description" content="随记一个八零后的生活。" />
+  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/resource/main.css">
+  <link rel="stylesheet" href="/resource/parts.css">
+  <script src="https://cdn.bootcss.com/vue/2.6.11/vue.min.js"></script>
+  <script src="https://cdn.bootcss.com/reqwest/2.0.5/reqwest.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+  <link href="https://cdn.bootcdn.net/ajax/libs/highlight.js/10.1.1/styles/monokai-sublime.min.css" rel="stylesheet">
+  <title>又是一个新的开始 | Bob&#39;s Corner</title>
+</head>
+  <body>
+    <script>
+      var mixins = []
+    </script>
+    <div id="canvas">
+        <header class="full-wrapper bg space-xs" :class="{'hide-header': hideHeader, 'shrink-header': shrinkHeader, 'blurred': showLoader}">
+  <div class="header-wrap main-wrapper row row-loose">
+    <div class="col-5 text-xl bolder site-name major"><a href="/">Bob&#39;s Corner</a></div>
+      <div class="col-5 menu pointer to-right" @click="showMenu()"><div class="text-l bold inline-block menu-btn" :class="{'menu-open': menuOpen}"><i class="fa fa-chevron-right" aria-hidden="true"></i></div></div>
+      <nav class="nav-body col-8" :class="{'nav-open': menuOpen}">
+        <ul class="h-list to-right sc">
+          <li class="bg-sc-hover space-vh rounded ease" :class="{'nav-active': activeNav=='index' || activeNav=='category' || activeNav=='article'}"><a href="/">Home</a></li>
+          <li class="bg-sc-hover space-vh rounded ease" :class="{'nav-active': activeNav=='tag'}"><a href="/tags/">Tags</a></li>
+          <li class="bg-sc-hover space-vh rounded ease" :class="{'nav-active': activeNav=='archive'}"><a href="/archives/">Archive</a></li>
+          
+        </ul>
+      </nav>
+    </div>
+</header>
+
+        <main class="main-wrapper row row-loose row-top row-wrap space-xs" :class="{blurred: showLoader}">
+          <div class="main-zone-wrapper full-wrapper">
+          
+
+<section class="zone-main" id="zone-main">
+    <article class="space-s bg-panel rounded article-animate" style="animation-duration: 0.8s">
+    
+      <div class="title-area">
+        <div class="text-xs minor">May 11, 2014</div>  
+        <div class="text-l bold theme-color">又是一个新的开始</div>
+      </div>
+      <div class="article-wrapper row row-loose row-top">
+        <div>
+            <div class="body-text between space-vh">
+                <p>2004年。当我们开始写“网络日志”的时候，在网上写文章是很严肃的事情。任何不负责任的发布行为都会被归为“灌水”一类。</p>
+<p>2014年。140字的微博，拇指长的微信分享占据了所有人的网上言论空间。想找个地方，安安静静、认认真真地写上一篇，不受字数、网站的限制，似乎很难。因为，我们似乎忘记了网络日志的存在。</p>
+<p>我也一度关闭了blog。</p>
+<p>但是，不管微博和微信是多么方便，总有一些自由，是它们无法给予的，而blog则可以。</p>
+<p>所以我回来写这个blog。记载一些生活中对我有意义的记忆。同时，补上一些过去的记录，来弥补之前的懒惰。</p>
+<p>启程！</p>
+<p>#2016/05/28<br>我把技术博客和个人博客合二为一了。同时把旧博客的文章挑了几篇转移了过来，把水文和纯贴图删了去。那些照片游记，想办法用相册的方式再行整理吧。</p>
+
+            </div>
+            <div class="article-info between text-xs sc">
+                <div class="space-vh"><i class="fa fa-folder-o" aria-hidden="true"></i> <a href="/category/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/">自言自语</a></div>
+                
+            </div>
+        </div>
+        
+      </div>
+      
+    </article>
+
+    
+    
+    <div class="article-adjacent full-wrapper row row-top row-loose row-wrap text-xs sc">
+        <div class="space-vh"><i class="fa fa-arrow-left" aria-hidden="true"></i> Previous: <a href="/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/no-baidu/">当我们厌恶百度时，我们在厌恶什么</a></div>
+        <div class="space-vh">Next: <a href="/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/loveshanghai/">上海</a> <i class="fa fa-arrow-right" aria-hidden="true"></i></div>
+    </div>
+</section>
+<script>
+    mixins.push({
+        data: {
+            anchorPos: [],
+            activeAnchor: -1
+        },
+        methods: {
+            bindToc() {                
+                let allAnchors = document.querySelectorAll("#article-toc ul li a")
+                if (allAnchors.length>0) {
+                    for (anchor of allAnchors) {
+                        let targetID = anchor.hash
+                        this.anchorPos.push(document.getElementById(targetID.substring(1)).offsetTop)
+                    }
+                    console.log(this.anchorPos)
+                    window.addEventListener('scroll', this.updateToc) 
+                }
+            },
+            updateToc() {
+                if (this.anchorPos.length>0) {
+                    for (an in this.anchorPos) {
+                        if (this.anchorPos[an] <= this.windowScrolled) {
+                            this.activeAnchor = an
+                        }
+                        else {
+                            break;
+                        }
+                    }
+                    
+                    let allAnchors = document.querySelectorAll("#article-toc ul li")
+                    for (let i=0; i<allAnchors.length; i++) {
+                        if (i==this.activeAnchor) {
+                            allAnchors[i].classList.add("toc-highlight")
+                        }
+                        else {
+                            allAnchors[i].classList.remove("toc-highlight")
+                        }
+                    }
+                }
+            }
+        },
+        mounted() {
+            window.setTimeout(this.bindToc, 500)  
+        }
+    })
+
+</script>
+
+          </div>
+          
+        </main>
+
+        <footer class="main-wrapper" :class="{blurred: showLoader}">
+  
+  <div class="space-s between to-center">
+    <div class="space-xxs to-center">
+      <div class="h-list sc text-l">
+        <ul>
+          
+          <li class="contact-item"><a href="http://weibo.com/bobshen" target="_blank" title="Weibo"><i class="fa fa-weibo" aria-hidden="true"></i></a></li>
+          
+          <li class="contact-item"><a href="https://twitter.com/bob_shen" target="_blank" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+          
+          <li class="contact-item"><a href="https://instagram.com/bobshen" target="_blank" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="text-xs sc">&copy; Bob 2021.</div>
+  </div>
+</footer>
+
+<div class="loader ease" :class="{'loader-on': showLoader}">
+  <div class="lightbox"></div>
+  <div class="loading">
+    <i class="left"></i>
+    <i class="middle"></i>
+    <i class="right"></i>
+  </div>
+</div>
+    </div> 
+    
+  <script>
+  Vue.component ('place-holder', {
+      template: "<div class=\"place-holder\" :style=\"{width: phWidth}\">.</div>",
+      props: ['width'],
+      computed: {
+          phWidth() {
+              return this.width + "%"
+          }
+      }
+  })
+  var app = new Vue({
+      el: "#canvas",
+      mixins: mixins,
+      data: {
+         menuOpen: false,
+         windowScrolled: false,
+         windowScrollUp: false,
+         showLoader: false,
+         activeNav: 'article',
+      },
+      methods: {
+          showMenu () {
+              this.menuOpen = !this.menuOpen;
+          },
+          windowScroller () {
+              var scrolled = document.documentElement.scrollTop || document.body.scrollTop
+              this.windowScrollUp = scrolled < this.windowScrolled
+              this.windowScrolled = scrolled
+          },
+          scrollToTop () {
+              window.scrollTo({ 
+                  top: 0, 
+                  behavior: "smooth" 
+              })
+          },
+          lightsOn () {
+              var self = this
+              setTimeout(function() {
+                  self.scrollToTop ()
+                  self.showLoader = false
+              }, 600)
+          }
+      },
+      mounted () { 
+          window.addEventListener('scroll', this.windowScroller) 
+          if (location.hash && location.hash!=="#") {
+            window.setTimeout(function(){
+                let dest = location.hash.substring(1)
+                document.getElementById(dest).scrollIntoView()                
+            }, 500)  
+        }
+      },
+      computed: {
+          hideHeader() {
+              return this.windowScrolled > 30
+          },
+          shrinkHeader() {
+              return this.windowScrolled > 30 && this.windowScrollUp
+          },                
+      }
+  })
+</script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelectorAll('pre code').forEach((block) => {
+        hljs.highlightBlock(block);
+      });
+    });
+  </script>
+  
+  </body>
+</html>
