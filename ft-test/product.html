@@ -1,1 +1,131 @@
-Under Construction
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品系列 - FLOWTHEORY</title>
+    <link href="images/style.css" type="text/css" rel="stylesheet" />
+    <link href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="images/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <header class="outer font-body header-block" id="navigation">
+        <nav class="inner flex-wrap navigation">
+            <div class="formal logo"><img src="images/logo.png" alt="FLOWTHEORY"></div>
+            <div class="ts-l font-title nav-bar" :class="{'show-menu': isMenuDisplayed}">
+                <ul class="flex-wrap nav-menu">
+                    <li class="formal"><a href="index.html"><span class="fa fa-home icon"></span>首页</a></li>
+                    <li class="formal nav-active"><span class="fa fa-snowflake-o icon"></span>产品</li>
+                    <li class="formal" @click="moveTo('purchase')"><a href="##"><span class="fa fa-shopping-cart icon"></span>购买</a></li>
+                    <li class="formal"><a href="#"><span class="fa fa-envelope icon"></span>联系</a></li>
+                </ul>
+            </div>
+            <div class="nav-btn formal" @click="isMenuDisplayed = !isMenuDisplayed"><span class="fa fa-bars icon ts-l"></span>MENU</div>
+        </nav>
+        <div class="hero-innerpage" style="background-image: url('images/hero-inner.jpg')">
+            <div class="inner ts-xxl hilite heavy title-innerpage">
+                产品系列
+            </div>
+        </div>
+    </header>
+    
+    <section class="outer font-body" id="products">
+        <div class="sec-block top-round-fix spacing">
+          <div class="flex-wrap flex-topped products">
+              <div class="formal categories">
+                  <ul>
+                      <li class="formal" @click="changTo(1)" :class="{'active-cate-name': cate.cate1}">品类一</li>
+                      <li class="formal" @click="changTo(2)" :class="{'active-cate-name': cate.cate2}">品类二</li>
+                      <li class="formal" @click="changTo(3)" :class="{'active-cate-name': cate.cate3}">品类三</li>
+                      <li class="formal" @click="changTo(4)" :class="{'active-cate-name': cate.cate4}">品类四</li>
+                      <li class="formal" @click="changTo(5)" :class="{'active-cate-name': cate.cate5}">品类五</li>
+                      <li class="formal" @click="changTo(6)" :class="{'active-cate-name': cate.cate6}">品类六</li>
+                  </ul>
+              </div>
+              <div class="product-info formal inner">
+                <div class="cate-item" id="cate1" :class="{'active-cate': cate.cate1}">
+                    a
+                </div>
+                <div class="cate-item" id="cate2" :class="{'active-cate': cate.cate2}">
+                    b
+                </div>
+                <div class="cate-item" id="cate3" :class="{'active-cate': cate.cate3}">
+                    c
+                </div>
+                <div class="cate-item" id="cate4" :class="{'active-cate': cate.cate4}">
+                    d
+                </div>
+                <div class="cate-item" id="cate5" :class="{'active-cate': cate.cate5}">
+                    e
+                </div>
+                <div class="cate-item" id="cate6" :class="{'active-cate': cate.cate6}">
+                    f 
+                </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="outer font-body" id="purchase">
+        <div class="sec-block sec-block">
+            <div class="ts-xl heavy hilite"><span class="logo-lead"></span> 如何购买</div>
+            <div class="flex-wrap flex-spaced qr-tile">
+                <div class="centered">
+                    <img src="images/QR-placeholder.png" alt="Tmall" class="qr">
+                    <div class="title-btn ts-s">天猫旗舰店</div>
+                </div>
+                <div class="centered">
+                    <img src="images/QR-placeholder.png" alt="Weidian" class="qr">
+                    <div class="title-btn ts-s">微信商城</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="outer font-body">
+        <div class="sec-block footer-block">
+            <div class="ts-xs spacing textbook formal"><a href="##"><span @click="moveTo('navigation')">^ 返回顶部</span></a><br><br>&copy; FLOWTHEORY 2022<br>
+                沪ICP备XXXXXX号
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script>
+    var app = new Vue({
+      el: "#app",
+      data: {
+          isMenuDisplayed: false,
+          cate: {
+              cate1: true, 
+              cate2: false,
+              cate3: false,
+              cate4: false,
+              cate5: false,
+              cate6: false
+          },
+          activeCateID: 1,
+      },
+      methods: {
+          moveTo(divID) {
+            document.getElementById(divID).scrollIntoView({
+                behavior: "smooth"
+            })
+          },
+          changTo(cateID) {
+              let trueID = 'cate'+cateID
+              if (cateID != this.activeCateID) {
+                this.cate[trueID] = true
+                this.cate["cate"+this.activeCateID] = false
+                this.activeCateID = cateID
+                this.moveTo('products')
+                // console.log (this.activeCateID)
+              }
+          },
+      }
+    })
+</script>
+</body>
+</html>

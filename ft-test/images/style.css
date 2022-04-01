@@ -59,6 +59,7 @@ table {
     --bgcolor-section: #efefef;
     --bgcolor-banner: #e5e7ee;
     --frame-height: 92vh;
+    --inner-height: 40vh;
     --round-radius: 30px;
 }
 
@@ -108,6 +109,10 @@ a, a:link, a:visited, a:hover, a:active{
 
 .font-body {
     font-family: Arial, Helvetica, sans-serif
+}
+
+.ts-xxl {
+    font-size: 32px;
 }
 
 .ts-xl {
@@ -173,6 +178,10 @@ a, a:link, a:visited, a:hover, a:active{
     opacity: 0.7;
 }
 
+.nav-active {
+    opacity: 0.7;
+}
+
 .headline {
     position: relative;
     padding-top: calc(var(--frame-height) * 0.66);
@@ -180,17 +189,32 @@ a, a:link, a:visited, a:hover, a:active{
     color: var(--color-revert);
 }
 
+.title-innerpage {
+    position: absolute;
+    top: calc(var(--inner-height) * 0.45);
+    left: 80px;
+    width: 220px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 20px;
+    background-color:rgba(255, 255, 255, .5);
+}
+
 .hero-container {
     width: 300vw;
     transition: margin-left 0.8s ease-in-out;
 }
 
-.hero {
+.hero, .hero-innerpage {
     width: 100%;
     height: var(--frame-height);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.hero-innerpage {
+    height: var(--inner-height);
 }
 
 .logo img {
@@ -360,6 +384,50 @@ a, a:link, a:visited, a:hover, a:active{
     display: none;
 }
 
+.categories {
+    position: sticky;
+    top: 10px;
+    width: 220px;
+}
+
+.categories li {
+    background-color: var(--bgcolor-home);
+    padding: 5px auto 5px auto;
+    border: 2px solid var(--bgcolor-section);
+    border-top: none;
+    border-left: 3px solid var(--bgcolor-section);
+    cursor: pointer;
+}
+
+.categories li:nth-child(1) {
+    border-top: 2px solid var(--bgcolor-section);
+}
+
+.categories li:hover {
+    opacity: 0.8;
+}
+
+.active-cate-name {
+    border-left: 3px solid var(--bgcolor-pop2)!important;
+    opacity: 0.8;
+    color: var(--color-pop);
+    font-weight: bold;
+}
+
+.product-info {
+    min-height: 400px;
+}
+
+.cate-item {
+    position: absolute;
+    top: cal(var(--inner-height) + 50px);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.active-cate {
+    opacity: 1;
+}
 
 /* Mobile adaptation */
 @media only screen and (max-width: 800px) {
@@ -377,6 +445,22 @@ a, a:link, a:visited, a:hover, a:active{
     }
     .qr {
         width: 90%;
+    }
+    .hero-innerpage {
+        height: 160px;
+    }
+    .title-innerpage {
+        display: none;
+    }
+    .products {
+        flex-direction: column;
+    }
+    .categories {
+        width: 100%;
+    }
+    .categories li {
+        display: inline-block;
+        width: 20%;
     }
 }
 
