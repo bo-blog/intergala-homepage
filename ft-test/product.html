@@ -8,6 +8,7 @@
     <link href="images/style.css" type="text/css" rel="stylesheet" />
     <link href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="images/vue.min.js"></script>
+    <script src="images/lazyload.min.js"></script>
 </head>
 <body>
 <div id="app">
@@ -31,37 +32,83 @@
         </div>
     </header>
     
-    <section class="outer font-body" id="products">
-        <div class="sec-block top-round-fix spacing">
+    <section class="outer font-body">
+        <div class="product-block top-round-fix spacing">
           <div class="flex-wrap flex-topped products">
-              <div class="formal categories">
+              <div class="formal categories ts-s" id="categories">
+                  <div class="formal category-group ts-r">FLOWTHEORY 滑雪眼镜</div>
                   <ul>
-                      <li class="formal" @click="changTo(1)" :class="{'active-cate-name': cate.cate1}">品类一</li>
-                      <li class="formal" @click="changTo(2)" :class="{'active-cate-name': cate.cate2}">品类二</li>
-                      <li class="formal" @click="changTo(3)" :class="{'active-cate-name': cate.cate3}">品类三</li>
-                      <li class="formal" @click="changTo(4)" :class="{'active-cate-name': cate.cate4}">品类四</li>
-                      <li class="formal" @click="changTo(5)" :class="{'active-cate-name': cate.cate5}">品类五</li>
-                      <li class="formal" @click="changTo(6)" :class="{'active-cate-name': cate.cate6}">品类六</li>
+                      <li class="formal" @click="changTo(1)" :class="{'active-cate-name': cate.cate1}">纯视系列</li>
+                      <li class="formal" @click="changTo(2)" :class="{'active-cate-name': cate.cate2}">纯粹系列</li>
+                      <li class="formal" @click="changTo(3)" :class="{'active-cate-name': cate.cate3}">纯真系列</li>
+                      <li class="formal" @click="changTo(4)" :class="{'active-cate-name': cate.cate4}">霓虹精工设计师系列</li>
+                      <li class="formal" @click="changTo(5)" :class="{'active-cate-name': cate.cate5}">态度玩家系列</li>
+                  </ul>
+                  <div class="formal category-group ts-r">FLOWTHEORY 雪服雪裤</div>
+                  <ul>
+                    <li class="formal" @click="changTo(6)" :class="{'active-cate-name': cate.cate6}">日本原设 初心系列</li>
+                    <li class="formal" @click="changTo(7)" :class="{'active-cate-name': cate.cate7}">日本原设 初心背带裤系列</li>
+                    <li class="formal" @click="changTo(8)" :class="{'active-cate-name': cate.cate8}">日本原设 初心雪裤系列</li>
+                  </ul>
+                  <div class="formal category-group ts-r">FLOWTHEORY 滑雪配件</div>
+                  <ul>
+                    <li class="formal" @click="changTo(9)" :class="{'active-cate-name': cate.cate9}">多功能滑雪护臀套装</li>
+                    <li class="formal" @click="changTo(10)" :class="{'active-cate-name': cate.cate10}">滑雪护脸保暖头套</li>
+                    <li class="formal" @click="changTo(11)" :class="{'active-cate-name': cate.cate11}">滑雪瘦脸保暖头套</li>
+                    <li class="formal" @click="changTo(12)" :class="{'active-cate-name': cate.cate12}">滑雪护脸可爱头套</li>
+                    <li class="formal" @click="changTo(13)" :class="{'active-cate-name': cate.cate13}">保暖加厚滑雪长袜</li>
+                    <li class="formal" @click="changTo(14)" :class="{'active-cate-name': cate.cate14}">时尚潮流毛线帽</li>
+                    <li class="formal" @click="changTo(15)" :class="{'active-cate-name': cate.cate15}">滑雪防冻护脸贴</li>
                   </ul>
               </div>
-              <div class="product-info formal inner">
-                <div class="cate-item" id="cate1" :class="{'active-cate': cate.cate1}">
-                    a
+              <div class="product-info formal inner" id="products">
+                <div class="cate-item product-details" id="cate1" :class="{'active-cate': cate.cate1}">
+                    <img data-src="products/cate1-p1.png" alt="" class="lazy"><img data-src="products/cate1-p2.png" alt="" class="lazy">
                 </div>
-                <div class="cate-item" id="cate2" :class="{'active-cate': cate.cate2}">
-                    b
+                <div class="cate-item product-details" id="cate2" :class="{'active-cate': cate.cate2}">
+                    <img data-src="products/cate2-p1.png" alt="" class="lazy"><img data-src="products/cate2-p2.png" alt="" class="lazy">
                 </div>
-                <div class="cate-item" id="cate3" :class="{'active-cate': cate.cate3}">
-                    c
+                <div class="cate-item product-details" id="cate3" :class="{'active-cate': cate.cate3}">
+                    <img data-src="products/cate3-p1.png" alt="" class="lazy"><img data-src="products/cate3-p2.png" alt="" class="lazy">
                 </div>
-                <div class="cate-item" id="cate4" :class="{'active-cate': cate.cate4}">
-                    d
+                <div class="cate-item product-details" id="cate4" :class="{'active-cate': cate.cate4}">
+                    <img data-src="products/cate4-p1.png" alt="" class="lazy"><img data-src="products/cate4-p2.png" alt="" class="lazy">
                 </div>
-                <div class="cate-item" id="cate5" :class="{'active-cate': cate.cate5}">
-                    e
+                <div class="cate-item product-details" id="cate5" :class="{'active-cate': cate.cate5}">
+                    <img data-src="products/cate5-p1.png" alt="" class="lazy"><img data-src="products/cate5-p2.png" alt="" class="lazy">
                 </div>
-                <div class="cate-item" id="cate6" :class="{'active-cate': cate.cate6}">
-                    f 
+                <div class="cate-item product-details" id="cate6" :class="{'active-cate': cate.cate6}">
+                    <img data-src="products/cate6-p1.png" alt="" class="lazy"><img data-src="products/cate6-p2.png" alt="" class="lazy"> 
+                </div>
+                <div class="cate-item product-details" id="cate7" :class="{'active-cate': cate.cate7}">
+                    <img data-src="products/cate7-p1.png" alt="" class="lazy"><img data-src="products/cate7-p2.png" alt="" class="lazy"> 
+                </div>
+                <div class="cate-item product-details" id="cate8" :class="{'active-cate': cate.cate8}">
+                    <img data-src="products/cate8-p1.png" alt="" class="lazy"><img data-src="products/cate8-p2.png" alt="" class="lazy">  
+                </div>
+                <div class="cate-item product-details" id="cate9" :class="{'active-cate': cate.cate9}">
+                    <img data-src="products/cate9-p1.png" alt="" class="lazy"><img data-src="products/cate9-p2.png" alt="" class="lazy"><img data-src="products/cate9-p3.png" alt="" class="lazy">  
+                </div>
+                <div class="cate-item product-details" id="cate10" :class="{'active-cate': cate.cate10}">
+                    <img data-src="products/cate10-p1.png" alt="" class="lazy"><img data-src="products/cate10-p2.png" alt="" class="lazy"> 
+                </div>
+                <div class="cate-item product-details" id="cate11" :class="{'active-cate': cate.cate11}">
+                    <img data-src="products/cate11-p1.png" alt="" class="lazy"><img data-src="products/cate11-p2.png" alt="" class="lazy"> 
+                </div>
+                <div class="cate-item product-details" id="cate12" :class="{'active-cate': cate.cate12}">
+                    <img data-src="products/cate12-p1.png" alt="" class="lazy"><img data-src="products/cate12-p2.png" alt="" class="lazy"> 
+                </div>
+                <div class="cate-item product-details" id="cate13" :class="{'active-cate': cate.cate13}">
+                    <img data-src="products/cate13-p1.png" alt="" class="lazy"><img data-src="products/cate13-p2.png" alt="" class="lazy">
+                </div>
+                <div class="cate-item product-details" id="cate14" :class="{'active-cate': cate.cate14}">
+                    <img data-src="products/cate14-p1.png" alt="" class="lazy"><img data-src="products/cate14-p2.png" alt="">
+                </div>
+                <div class="cate-item product-details" id="cate15" :class="{'active-cate': cate.cate15}">
+                    <img data-src="products/cate15-p1.png" alt="" class="lazy"><img data-src="products/cate15-p2.png" alt="" class="lazy">
+                </div>
+                <div class="centered more-products">
+                    <div class="title-btn ts-s" @click="moveTo('categories')">更多产品</div>
                 </div>
             </div>
           </div>
@@ -69,12 +116,12 @@
     </section>
 
     <section class="outer font-body" id="purchase">
-        <div class="sec-block sec-block">
+        <div class="sec-block sec-block top-round-fix">
             <div class="ts-xl heavy hilite"><span class="logo-lead"></span> 如何购买</div>
             <div class="flex-wrap flex-spaced qr-tile">
                 <div class="centered">
-                    <img src="images/QR-placeholder.png" alt="Tmall" class="qr">
-                    <div class="title-btn ts-s">天猫旗舰店</div>
+                    <img src="images/qr-tmall.png" alt="Tmall" class="qr">
+                    <div class="title-btn ts-s" @click="document.location='https://flowtheoryyd.tmall.com/'">天猫旗舰店</div>
                 </div>
                 <div class="centered">
                     <img src="images/QR-placeholder.png" alt="Weidian" class="qr">
@@ -104,7 +151,16 @@
               cate3: false,
               cate4: false,
               cate5: false,
-              cate6: false
+              cate6: false,
+              cate7: false,
+              cate8: false,
+              cate9: false,
+              cate10: false,
+              cate11: false,
+              cate12: false,
+              cate13: false,
+              cate14: false,
+              cate15: false
           },
           activeCateID: 1,
       },
@@ -122,9 +178,23 @@
                 this.activeCateID = cateID
                 this.moveTo('products')
                 // console.log (this.activeCateID)
+                location.hash = "#category_" + cateID
               }
           },
+      },
+      mounted() {
+          let hashTag = location.hash
+          if (hashTag.indexOf('#category_') == 0) {
+            let thisCateID = parseInt(hashTag.replace('#category_', ''))
+            this.changTo(thisCateID)
+          }
       }
+    })
+</script>
+
+<script>
+    var lazyLoadInstance = new LazyLoad({
+        container: document.querySelector('#products')
     })
 </script>
 </body>

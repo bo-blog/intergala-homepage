@@ -34,14 +34,14 @@
             </div>
             <div class="hero" id="hero2" style="background-image: url('images/hero-2.jpg')">
                 <div class="headline inner ts-xl heavy">
-                    产品介绍 产品内容
-                    <div><div class="title-btn ts-l" @click="moveTo('brand')">了解更多</div></div>
+                    FLOWTHEORY 滑雪眼镜系列
+                    <div><div class="title-btn ts-l" @click="open(1)">了解更多</div></div>
                 </div>
             </div>
             <div class="hero" id="hero3" style="background-image: url('images/hero-3.jpg')">
                 <div class="headline inner ts-xl heavy">
-                    <span class="hilite">活动介绍 活动信息</span>
-                    <div><div class="title-btn ts-l" @click="moveTo('brand')">了解更多</div></div>
+                    <span class="hilite">FLOWTHEORY 雪服雪裤系列</span>
+                    <div><div class="title-btn ts-l" @click="open(6)">了解更多</div></div>
                 </div>
             </div>
         </div>
@@ -74,12 +74,62 @@
             </div>
             <div class="carousel-container spacing">
                 <div class="flex-wrap flex-spaced spacing carousel" :style="{'margin-left': scrollPositionX+'px'}">
-                    <div class="gallery carousel-item" style="background-image: url('images/cat1.PNG')"></div>
-                    <div class="gallery carousel-item" style="background-image: url('images/cat2.PNG')"></div>
-                    <div class="gallery carousel-item" style="background-image: url('images/cat3.PNG')"></div>
-                    <div class="gallery carousel-item" style="background-image: url('images/cat1.PNG')"></div>
-                    <div class="gallery carousel-item" style="background-image: url('images/cat2.PNG')"></div>
-                    <div class="gallery carousel-item" style="background-image: url('images/cat3.PNG')"></div>
+                    <div class="gallery carousel-item" style="background-image: url('images/cat-1.jpg')" @click="open(1)">
+                        <div class="gallery-text">
+                            <div class="gallery-subtitle ts-s">滑雪眼镜</div>
+                            <div class="gallery-headline ts-l">纯视系列</div>
+                            <div class="gallery-body ts-s">二代柱面双层 •大视野滑雪镜</div>
+                        </div>
+                    </div>
+                    <div class="gallery carousel-item" style="background-image: url('images/cat-2.jpg')" @click="open(4)">
+                        <div class="gallery-text">
+                            <div class="gallery-subtitle ts-s">滑雪眼镜</div>
+                            <div class="gallery-headline ts-l">霓虹精工设计师系列</div>
+                            <div class="gallery-body ts-s">多重创新磁吸科技 匠心工艺 为热爱而生</div>
+                        </div>
+                    </div>
+                    <div class="gallery carousel-item" style="background-image: url('images/cat-3.jpg')" @click="open(7)">
+                        <div class="gallery-text">
+                            <div class="gallery-subtitle ts-s">雪服雪裤</div>
+                            <div class="gallery-headline ts-l">日本原设 | 初心背带裤系列</div>
+                            <div class="gallery-body ts-s">岂止颜值 品质更突出</div> 
+                        </div>
+                    </div>
+                    <div class="gallery carousel-item" style="background-image: url('images/cat-4.jpg')" @click="open(6)">
+                        <div class="gallery-text">
+                            <div class="gallery-subtitle ts-s">雪服雪裤</div>
+                            <div class="gallery-headline ts-l">日本原设 | 初心系列</div>
+                            <div class="gallery-body ts-s">岂止颜值 品质更突出</div> 
+                        </div>
+                    </div>
+                    <div class="gallery carousel-item" style="background-image: url('images/cat-5.jpg')" @click="open(8)">
+                        <div class="gallery-text">
+                            <div class="gallery-subtitle ts-s">雪服雪裤</div>
+                            <div class="gallery-headline ts-l">日本原设 | 初心雪裤系列</div>
+                            <div class="gallery-body ts-s">岂止颜值 品质更突出</div> 
+                        </div>
+                    </div>
+                    <div class="gallery carousel-item" style="background-image: url('images/cat-6.jpg')" @click="open(9)">
+                        <div class="gallery-text">
+                            <div class="gallery-subtitle ts-s">滑雪配件</div>
+                            <div class="gallery-headline ts-l">多功能滑雪护臀套装</div>
+                            <div class="gallery-body ts-s">加强防护 男女通用</div> 
+                        </div>
+                    </div>
+                    <div class="gallery carousel-item" style="background-image: url('images/cat-7.jpg')" @click="open(10)">
+                        <div class="gallery-text">
+                            <div class="gallery-subtitle ts-s">滑雪配件</div>
+                            <div class="gallery-headline ts-l">滑雪护脸保暖头套</div>
+                            <div class="gallery-body ts-s">亲肤舒适 透气排汗</div> 
+                        </div>
+                    </div>
+                    <div class="gallery carousel-item" style="background-image: url('images/cat-8.jpg')" @click="open(0)">
+                        <div class="gallery-text">
+                            <div class="gallery-subtitle ts-s">FLOWTHEORY</div>
+                            <div class="gallery-headline ts-l">更多产品</div>
+                            <div class="gallery-body ts-s">点击了解</div> 
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -90,8 +140,8 @@
             <div class="ts-xl heavy hilite"><span class="logo-lead"></span> 如何购买</div>
             <div class="flex-wrap flex-spaced qr-tile">
                 <div class="centered">
-                    <img src="images/QR-placeholder.png" alt="Tmall" class="qr">
-                    <div class="title-btn ts-s">天猫旗舰店</div>
+                    <img src="images/qr-tmall.png" alt="Tmall" class="qr">
+                    <div class="title-btn ts-s" @click="document.location='https://flowtheoryyd.tmall.com/'">天猫旗舰店</div>
                 </div>
                 <div class="centered">
                     <img src="images/QR-placeholder.png" alt="Weidian" class="qr">
@@ -116,7 +166,7 @@
       data: {
           scrollPositionX: 0,
           scrollRange: 310,
-          scrollCounter: 6,
+          scrollCounter: 8,
           scrollMax: 0,
           scrollMin: 0,
           wrapperWidth: 0.8,
@@ -186,9 +236,18 @@
                 let toHeroID = this.activeHeroID == 3 ? 1 : this.activeHeroID + 1
                 this.switchTo(toHeroID, false)
               }
+          },
+          open(cateID) {
+              if (cateID == 0) {
+                  window.location = "product.html"
+              }
+              else {
+                  window.location = "product.html#category_" + cateID
+              }
           }
       }
     })
 </script>
+
 </body>
 </html>
