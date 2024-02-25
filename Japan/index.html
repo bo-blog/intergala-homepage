@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" id="daylight" href="style.css">
-    <title>Japan Photo Collection</title>
+    <title>Japan Photo Picks</title>
     <script>
         var descTitle = [
         "",
@@ -49,7 +49,7 @@
 </head>
 <body>
     <div id="headline">
-        Photo Selection @Japan
+        Photo Picks @Japan
     </div>
     <div id="nav-tile">
         <div id="pic-rolls">
@@ -126,10 +126,12 @@
             else {
                 document.getElementById("left").style.display = "block"
             }
+            document.body.style.overflowY = "hidden"
         }
 
         function closePic() {
             lightbox.style.top = "-100vh"
+            document.body.style.overflowY = "auto"
         }
 
         function goLeft() {
