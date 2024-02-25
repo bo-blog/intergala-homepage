@@ -35,4 +35,5 @@ var descTitle = [
     "Seto Naikai / 瀬戸内海",
     "Kurushima Kaikyo Ohashi, Imabari / 今治来島海峡大橋",
     "Asamayama, Karuizawa / 軽井沢浅間山",
+    "Toshogu, Nikko / 日光東照宮",
 ]
