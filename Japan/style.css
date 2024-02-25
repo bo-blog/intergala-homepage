@@ -1,0 +1,167 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+    background: #e9f5f9;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #2f3031;
+}
+
+#headline {
+    margin: 32px auto 16px auto;
+    width: 60%;
+    text-align: left;
+    font-size: 30px;
+}
+
+#footer, #footer a {
+    font-size: 14px;
+    color: #acb2b5;
+    text-decoration: none;
+}
+
+#nav-tile {
+    margin: 0 auto 32px auto;
+    width: 60%;
+    min-width: 340px;
+}
+
+#nav-tile #pic-rolls {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    flex-shrink: 0;
+    padding: 4px;
+}
+
+#nav-tile #pic-rolls .thumbnail {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    cursor: pointer;
+    filter: grayscale(60%);
+    opacity: 0.8;
+    transition: 0.5s ease-in-out;
+    background-size: 100px;
+    background-position: center;
+}
+
+#nav-tile #pic-rolls .thumbnail:hover {
+    filter: grayscale(0);
+    opacity: 1;
+    background-size: 110px;
+}
+
+#lightbox {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(10, 11, 8, 0.9);
+    top: -100vh;
+    left: 0;
+    transition: 0.2s ease-in-out;
+    text-align: center;
+}
+
+#picture-box {
+    position: absolute;
+    margin: auto;
+    top: 5vh;
+    left: 5vw;
+    width: 90vw;
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    transition: 0.2s ease-in-out;
+}
+
+.desc {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 22px;
+    bottom: 6px;
+    color: #f1f9e9;
+    font-size: 16px;
+}
+
+.buttons {
+    opacity: 0.4;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    font-size: 28px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+#left {
+    left: 10px;
+}
+
+#right {
+    right: 10px;
+}
+
+#close {
+    right: 10px;
+    top: 30px;
+    font-weight: bold;
+}
+
+.buttons:hover {
+    opacity: 1;
+}

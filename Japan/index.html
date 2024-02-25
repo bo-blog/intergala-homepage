@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" id="daylight" href="style.css">
+    <title>Japan Photo Collection</title>
+    <script>
+        var descTitle = [
+        "",
+        "Tokyo Tower at night",
+        "Kenchoji in the sakura season",
+        "Shinkyo Bridge, Nikko in the snow",
+        "Tofukuji, Kyoto covered by red leaves",
+        "A summer day in Kamogawa, Kyoto",
+        "Angel&apos;s Road, Shodoshima",
+        "Shinjuku Goen, Tokyo",
+        "Byodoin, Uji",
+        "Tsutenya, Osaka",
+        "Deer at Kasuga Taisha, Nara",
+        "Lighthouse in Seto Naikai",
+        "Sento Naikai",
+        "Birdview of Tokyo",
+        "Jojakkoji, Arashiyama, Kyoto",
+        "Birdview of night Osaka",
+        "Ritsurin Park, Takamatsu",
+        "Beach at Kamakura",
+        "The buddha in Hase, Kamakura",
+        "Amanohashidate, Kyoto-fu",
+        "Ochanomizu, Tokyo",
+        "Uji River in summer",
+        "View from Kankake, Shodoshima",
+        "Kyoto Tower",
+        "Kobe Harbour, Hyogo",
+        "Akihabara, Tokyo",
+        "Enoden Train, Kamakura",
+        "Ine boat house, Kyoto",
+        "Baishinji Station of Iyo Railway",
+        "Torii in front of Heian Jingu",
+        "Dontobori, Osaka at night",
+        "Sakura at Kenchoji, Kamakura",
+        "Sakura in Tsurugaoka Kamakura",
+        "Shimanami Kaido and Sento Naikai",
+        "Kurushima Kaikyo Ohashi",
+        "Asamayama, Karuizawa",
+        "",            
+        ]
+    </script>
+</head>
+<body>
+    <div id="headline">
+        Photo Selection @Japan
+    </div>
+    <div id="nav-tile">
+        <div id="pic-rolls">
+            <div class="thumbnail" style="background-image: url(thumb/p1.jpg);" onclick="showPic(1)"></div>
+            <div class="thumbnail" style="background-image: url(thumb/p2.jpg);" onclick="showPic(2)"></div>
+            <div class="thumbnail" style="background-image: url(thumb/p3.jpg);" onclick="showPic(3)"></div>
+            <div class="thumbnail" style="background-image: url(thumb/p4.jpg);" onclick="showPic(4)"></div>
+            <div class="thumbnail" style="background-image: url(thumb/p5.jpg);" onclick="showPic(5)"></div>
+            <div class="thumbnail" style="background-image: url(thumb/p6.jpg);" onclick="showPic(6)"></div>
+            <div class="thumbnail" style="background-image: url(thumb/p7.jpg);" onclick="showPic(7)"></div>
+            <div class="thumbnail" style="background-image: url(thumb/p8.jpg);" onclick="showPic(8)"></div>
+            <div class="thumbnail" style="background-image: url(thumb/p9.jpg);" onclick="showPic(9)"></div>
+            <div class="thumbnail" style="background-image: url(thumb/p10.jpg);" onclick="showPic(10)"></div>
+            <div class="thumbnail" style="background-image: url(thumb/p11.jpg);" onclick="showPic(11)"></div>
+            <div class="thumbnail" style="background-image: url(thumb/p12.jpg);" onclick="showPic(12)"></div>
+            <div class="thumbnail" style="background-image: url(thumb/p13.jpg);" onclick="showPic(13)"></div>
+            <div class="thumbnail" style="background-image: url(thumb/p14.jpg);" onclick="showPic(14)"></div>
+            <div class="thumbnail" style="background-image: url(thumb/p15.jpg);" onclick="showPic(15)"></div>
+            <div class="thumbnail" style="background-image: url(thumb/p16.jpg);" onclick="showPic(16)"></div>
+            <div class="thumbnail" style="background-image: url(thumb/p17.jpg);" onclick="showPic(17)"></div>
+            <div class="thumbnail" style="background-image: url(thumb/p18.jpg);" onclick="showPic(18)"></div>
+            <div class="thumbnail" style="background-image: url(thumb/p19.jpg);" onclick="showPic(19)"></div>
+            <div class="thumbnail" style="background-image: url(thumb/p20.jpg);" onclick="showPic(20)"></div>
+            <div class="thumbnail" style="background-image: url(thumb/p21.jpg);" onclick="showPic(21)"></div>
+            <div class="thumbnail" style="background-image: url(thumb/p22.jpg);" onclick="showPic(22)"></div>
+            <div class="thumbnail" style="background-image: url(thumb/p23.jpg);" onclick="showPic(23)"></div>
+            <div class="thumbnail" style="background-image: url(thumb/p24.jpg);" onclick="showPic(24)"></div>
+            <div class="thumbnail" style="background-image: url(thumb/p25.jpg);" onclick="showPic(25)"></div>
+            <div class="thumbnail" style="background-image: url(thumb/p26.jpg);" onclick="showPic(26)"></div>
+            <div class="thumbnail" style="background-image: url(thumb/p27.jpg);" onclick="showPic(27)"></div>
+            <div class="thumbnail" style="background-image: url(thumb/p28.jpg);" onclick="showPic(28)"></div>
+            <div class="thumbnail" style="background-image: url(thumb/p29.jpg);" onclick="showPic(29)"></div>
+            <div class="thumbnail" style="background-image: url(thumb/p30.jpg);" onclick="showPic(30)"></div>
+            <div class="thumbnail" style="background-image: url(thumb/p31.jpg);" onclick="showPic(31)"></div>
+            <div class="thumbnail" style="background-image: url(thumb/p32.jpg);" onclick="showPic(32)"></div>
+            <div class="thumbnail" style="background-image: url(thumb/p33.jpg);" onclick="showPic(33)"></div>
+            <div class="thumbnail" style="background-image: url(thumb/p34.jpg);" onclick="showPic(34)"></div>
+            <div class="thumbnail" style="background-image: url(thumb/p35.jpg);" onclick="showPic(35)"></div>
+        </div>
+    </div>
+    <div id="footer">
+        &copy;Bob | <a href="https://www.bobshen.com">Home</a>
+    </div>
+    <div id="lightbox">
+        <div id="picture-box">
+        </div>
+        <div class="desc" id="description"></div>
+        <div id="left" class="buttons" onclick="goLeft()">❮</div>
+        <div id="right" class="buttons" onclick="goRight()">❯</div>
+        <div id="close" class="buttons" onclick="closePic()">✕</div>
+    </div>
+    <script>
+        var lightbox = document.querySelector("#lightbox")
+        var picture = document.querySelector("#picture-box")
+        var description = document.querySelector("#description")
+        var currentNum = 1
+
+        function showPic(num) {
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+            currentNum = num
+            lightbox.style.top = 0
+            picture.style.backgroundImage = `url("photo/p${num}.jpg")`
+            picture.style.opacity = 1
+            description.innerHTML = descTitle[num]
+            if (num == 35) {
+                document.getElementById("right").style.display = "none"
+            }
+            else {
+                document.getElementById("right").style.display = "block"
+            }
+            if (num == 1) {
+                document.getElementById("left").style.display = "none"
+            }
+            else {
+                document.getElementById("left").style.display = "block"
+            }
+        }
+
+        function closePic() {
+            lightbox.style.top = "-100vh"
+        }
+
+        function goLeft() {
+            if (currentNum > 1) {
+                picture.style.opacity = 0.4
+                currentNum--
+                showPic(currentNum)
+            }
+        }
+
+        function goRight() {
+            if (currentNum < 35) {
+                picture.style.opacity = 0.4
+                currentNum++
+                showPic(currentNum)
+            }
+        }
+    </script>
+</body>
+</html>
