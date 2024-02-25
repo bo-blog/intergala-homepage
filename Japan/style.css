@@ -125,7 +125,7 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
-    transition: 0.2s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
 .desc {
@@ -135,8 +135,12 @@ body {
     height: 22px;
     bottom: 56px;
     color: #f1f9e9;
-    font-size: 16px;
-    text-shadow: #2f3031 2px 0 2px;
+    font-size: 14px;
+    text-shadow: #2f3031 1px 0 1px;
+}
+
+#description {
+    background: #2f3031;
 }
 
 .buttons {
