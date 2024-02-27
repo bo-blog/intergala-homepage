@@ -170,8 +170,9 @@ body {
     height: 22px;
     bottom: 56px;
     color: #f1f9e9;
-    font-size: 14px;
+    font-size: 15px;
     text-shadow: #2f3031 1px 0 1px;
+    opacity: 0.9;
 }
 
 #description {

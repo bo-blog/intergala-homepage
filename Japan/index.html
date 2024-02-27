@@ -103,8 +103,21 @@
             description.innerHTML = photo[cateID][num].desc
             var totalImgs = photo[cateID].length
 
+            var lastCate = allCateIDs[allCateIDs.length - 1]
+            
             if (num == totalImgs - 1) {
-                document.getElementById("right").style.display = "none"
+                if (cateID == lastCate) {
+                    document.getElementById("right").style.display = "none"
+                }
+                else {
+                    var nextCate = allCateIDs[allCateIDs.indexOf(cateID) + 1]
+                    if (!preloader[nextCate][0]) {
+                        preloader[nextCate][0] = new Image()
+                        preloader[nextCate][0].src = `photo/${photo[nextCate][0].id}.jpg`
+                        console.log (`Preloaded image: photo/${photo[nextCate][0].id}.jpg`)
+                    }
+                    document.getElementById("right").style.display = "block"
+                }
             }
             else {
                 if (!preloader[cateID][num + 1]) {
@@ -115,7 +128,19 @@
                 document.getElementById("right").style.display = "block"
             }
             if (num == 0) {
-                document.getElementById("left").style.display = "none"
+                if (cateID == allCateIDs[0]) {
+                    document.getElementById("left").style.display = "none"
+                }
+                else {
+                    var prevCate = allCateIDs[allCateIDs.indexOf(cateID) - 1]
+                    var pID = photo[prevCate].length - 1
+                    if (!preloader[prevCate][pID]) {
+                        preloader[prevCate][pID] = new Image()
+                        preloader[prevCate][pID].src = `photo/${photo[prevCate][pID].id}.jpg`
+                        console.log (`Preloaded image: photo/${photo[prevCate][pID].id}.jpg`)
+                    }
+                    document.getElementById("left").style.display = "block"
+                }
             }
             else {
                 if (!preloader[cateID][num - 1]) {
@@ -139,12 +164,31 @@
                 currentNum--
                 showPic(currentCate, currentNum)
             }
+            else {
+                if (currentCate != allCateIDs[0]) {
+                    var prevCate = allCateIDs[allCateIDs.indexOf(currentCate) - 1]
+                    listCategory(prevCate)
+                    var pNum = photo[prevCate].length - 1
+                    currentNum = pNum
+                    showPic(prevCate, currentNum)
+                }
+            }
         }
 
         function goRight() {
-            picture.style.filter = "grayscale(0.3)"
-            currentNum++
-            showPic(currentCate, currentNum)
+            if (currentNum < photo[currentCate].length - 1) {
+                picture.style.filter = "grayscale(0.3)"
+                currentNum++
+                showPic(currentCate, currentNum)
+            }
+            else {
+                if (currentCate != allCateIDs[allCateIDs.length - 1]) {
+                    var nextCate = allCateIDs[allCateIDs.indexOf(currentCate) + 1]
+                    listCategory(nextCate)
+                    currentNum = 0
+                    showPic(nextCate, currentNum)
+                }
+            }
         }
     </script>
 </body>
