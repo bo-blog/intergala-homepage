@@ -11,6 +11,8 @@
     <div id="headline">
         Photo Picks @Japan
     </div>
+    <div id="category-tile">
+    </div>
     <div id="nav-tile">
         <div id="pic-rolls">
         </div>
@@ -27,47 +29,99 @@
         <div id="close" class="buttons" onclick="closePic()">✕</div>
     </div>
     <script>
+        var cateGroup = ""
+        var allCateIDs = []
+        var preloader = {thumbnails: []}
+
+        for (var i = 0; i < category.length; i++) {
+            cateGroup += `
+            <div id="cate-${category[i].id}" class="category-item" onclick="listCategory('${category[i].id}')"><span>${category[i].name}</span></div>
+            `
+            allCateIDs[i] = category[i].id
+            preloader[category[i].id] = []
+            for (var j = 0; j < photo[category[i].id].length; j++) {
+                preloader.thumbnails[j] = new Image()
+                preloader.thumbnails[j].src = `thumb/${photo[category[i].id][j].id}.jpg`
+                console.log (`Preloaded thumbnail: thumb/${photo[category[i].id][j].id}.jpg`)
+            }
+        }
+        document.querySelector("#category-tile").innerHTML = cateGroup
+        var currentCate = allCateIDs[0]
+
+        function switchHash() {
+            var winHash = location.hash
+            if (winHash.indexOf("#") != -1) {
+                var currentCateTest = winHash.split("#")[1]
+                if (allCateIDs.indexOf(currentCateTest) != -1) {
+                    currentCate = currentCateTest
+                }
+            }
+            document.querySelectorAll(".category-item").forEach((item) => item.classList.remove("cate-sel"))
+            document.querySelector("#cate-"+currentCate).classList.add("cate-sel")
+            setTimeout (() => {
+                refreshThumbs(currentCate)
+                document.querySelector("#pic-rolls").style.opacity = 1
+            }, 300)
+            
+        }
+       switchHash()
+
+       function listCategory(id) {
+            location.hash = "#" + id
+            document.querySelector("#pic-rolls").style.opacity = 0.1
+            switchHash()
+       }
+
+
+
         var lightbox = document.querySelector("#lightbox")
         var picture = document.querySelector("#picture-box")
         var description = document.querySelector("#description")
-        var currentNum = 1
+        var currentNum = 0
 
-        var totalImgs = descTitle.length - 1
 
-        var picGroup = ""
-        for (var i = 1; i <= totalImgs; i++) {
-            picGroup += `
-            <div class="thumbnail" style="background-image: url(thumb/p${i}.jpg);" onclick="showPic(${i})"></div>
-            `
+        function refreshThumbs(currentCate) {
+            currentNum = 0
+            var descTitle = photo[currentCate]
+            var totalImgs = descTitle.length
+            var picGroup = ""
+            for (var i = 0; i < totalImgs; i++) {
+                picGroup += `
+                <div class="thumbnail" style="background-image: url(thumb/${descTitle[i].id}.jpg);" onclick="showPic('${currentCate}', ${i})"></div>
+                `
+            }
+            document.querySelector("#pic-rolls").innerHTML = picGroup
         }
-        document.querySelector("#pic-rolls").innerHTML = picGroup
         
-        var preloader = new Array()
 
-        function showPic(num) {
+        function showPic(cateID, num) {
             window.scrollTo({ top: 0, behavior: 'smooth' })
             currentNum = num
             lightbox.style.top = 0
             picture.style.filter = "grayscale(0)"
-            picture.style.backgroundImage = `url("photo/p${num}.jpg")`
-            description.innerHTML = descTitle[num]
-            if (num == totalImgs) {
+            picture.style.backgroundImage = `url("photo/${photo[cateID][num].id}.jpg")`
+            description.innerHTML = photo[cateID][num].desc
+            var totalImgs = photo[cateID].length
+
+            if (num == totalImgs - 1) {
                 document.getElementById("right").style.display = "none"
             }
             else {
-                if (!preloader[num + 1]) {
-                    preloader[num + 1] = new Image()
-                    preloader[num + 1].src = `photo/p${num + 1}.jpg`
+                if (!preloader[cateID][num + 1]) {
+                    preloader[cateID][num + 1] = new Image()
+                    preloader[cateID][num + 1].src = `photo/${photo[cateID][num + 1].id}.jpg`
+                    console.log (`Preloaded image: photo/${photo[cateID][num + 1].id}.jpg`)
                 }
                 document.getElementById("right").style.display = "block"
             }
-            if (num == 1) {
+            if (num == 0) {
                 document.getElementById("left").style.display = "none"
             }
             else {
-                if (!preloader[num - 1]) {
-                    preloader[num - 1] = new Image()
-                    preloader[num - 1].src = `photo/p${num - 1}.jpg`
+                if (!preloader[cateID][num - 1]) {
+                    preloader[cateID][num - 1] = new Image()
+                    preloader[cateID][num - 1].src = `photo/${photo[cateID][num - 1].id}.jpg`
+                    console.log (`Preloaded image: photo/${photo[cateID][num - 1].id}.jpg`)
                 }
                 document.getElementById("left").style.display = "block"
             }
@@ -80,19 +134,17 @@
         }
 
         function goLeft() {
-            if (currentNum > 1) {
+            if (currentNum > 0) {
                 picture.style.filter = "grayscale(0.3)"
                 currentNum--
-                showPic(currentNum)
+                showPic(currentCate, currentNum)
             }
         }
 
         function goRight() {
-            if (currentNum < totalImgs) {
-                picture.style.filter = "grayscale(0.3)"
-                currentNum++
-                showPic(currentNum)
-            }
+            picture.style.filter = "grayscale(0.3)"
+            currentNum++
+            showPic(currentCate, currentNum)
         }
     </script>
 </body>
