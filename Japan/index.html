@@ -8,6 +8,7 @@
     <script src="definition.js"></script>
 </head>
 <body>
+    <div id="progress"></div>
     <div id="headline">
         Photo Picks @Japan
     </div>
@@ -17,8 +18,9 @@
         <div id="pic-rolls">
         </div>
     </div>
+    <div id="play-button"><span onclick="autoPlay()">► Play</span></div>
     <div id="footer">
-        &copy;Bob | <a href="https://www.bobshen.com">Home</a>
+        <a href="https://www.bobshen.com">&copy;Bob</a>
     </div>
     <div id="lightbox">
         <div id="picture-box">
@@ -60,15 +62,18 @@
             document.querySelector("#cate-"+currentCate).classList.add("cate-sel")
             setTimeout (() => {
                 refreshThumbs(currentCate)
+                document.querySelector("#pic-rolls").style.filter = "none"
                 document.querySelector("#pic-rolls").style.opacity = 1
-            }, 300)
+            }, 220)
             
         }
        switchHash()
 
        function listCategory(id) {
             location.hash = "#" + id
-            document.querySelector("#pic-rolls").style.opacity = 0.1
+            document.querySelector("#pic-rolls").style.filter = "blur(3px)"
+            document.querySelector("#pic-rolls").style.opacity = 0.5
+
             switchHash()
        }
 
@@ -155,6 +160,10 @@
         function closePic() {
             lightbox.style.top = "-100vh"
             document.body.style.overflowY = "auto"
+            clearInterval(autoplayer)
+            document.getElementById("left").style.opacity = 0.4
+            document.getElementById("right").style.opacity = 0.4
+            document.getElementById("progress").style.display = "none"         
         }
 
         function goLeft() {
@@ -189,6 +198,28 @@
                 }
             }
         }
+
+        var autoplayer
+        function autoPlay() {
+            document.getElementById("left").style.opacity = 0
+            document.getElementById("right").style.opacity = 0
+            document.getElementById("progress").style.display = "block"
+            showPic(currentCate, 0)
+            autoplayer = setInterval(autoNext, 5000)
+        }
+
+        function autoNext() {
+            document.getElementById("progress").style.animationPlayState = "initial"
+            if (document.getElementById("right").style.display != "none") {
+                document.getElementById("right").click()
+            }
+            else {
+                document.getElementById("progress").style.animationPlayState = "paused"
+                clearInterval(autoplayer)
+                document.getElementById("progress").style.display = "none"       
+            }
+        }
+
     </script>
 </body>
 </html>
