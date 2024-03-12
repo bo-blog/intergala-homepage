@@ -29,6 +29,7 @@
         <div id="left" class="buttons" onclick="goLeft()">❮</div>
         <div id="right" class="buttons" onclick="goRight()">❯</div>
         <div id="close" class="buttons" onclick="closePic()">✕</div>
+        <div id="counter"><div id="counternum"></div></div>
     </div>
     <script>
         var cateGroup = ""
@@ -82,6 +83,7 @@
         var lightbox = document.querySelector("#lightbox")
         var picture = document.querySelector("#picture-box")
         var description = document.querySelector("#description")
+        var counter = document.querySelector("#counternum")
         var currentNum = 0
 
 
@@ -105,6 +107,8 @@
             picture.style.filter = "grayscale(0)"
             picture.style.backgroundImage = `url("photo/${photo[cateID][num].id}.jpg")`
             description.innerHTML = photo[cateID][num].desc
+            counter.textContent = `${num + 1} / ${photo[cateID].length}`
+
             var totalImgs = photo[cateID].length
 
             var lastCate = allCateIDs[allCateIDs.length - 1]

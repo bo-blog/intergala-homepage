@@ -200,6 +200,23 @@ body {
     opacity: 0.9;
 }
 
+#counter {
+    position: absolute;
+    width: 90%;
+    left: 10px;
+    top: 36px;
+    font-size: 14px;
+    text-align: left;
+}
+#counternum {
+    display: inline-block;
+    color: #f1f9e9;
+    background-color: #2f3031;
+    padding: 3px 10px 3px 10px;
+    opacity: 0.7;
+    border-radius: 9px;
+}
+
 
 #description {
     background: #2f3031;
