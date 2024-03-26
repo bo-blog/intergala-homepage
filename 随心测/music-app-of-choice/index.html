@@ -106,7 +106,7 @@
     
     
     <div class="article-adjacent full-wrapper row row-top row-loose row-wrap text-xs sc">
-        <div class="space-vh"></div>
+        <div class="space-vh"><i class="fa fa-arrow-left" aria-hidden="true"></i> Previous: <a href="/%E5%B0%8F%E7%8E%A9%E6%84%8F/photo-gps/">批量修改照片的拍摄位置</a></div>
         <div class="space-vh">Next: <a href="/%E9%9A%8F%E5%BF%83%E6%B5%8B/bo-e8/">B＆O E8使用体验：一次失败的购物</a> <i class="fa fa-arrow-right" aria-hidden="true"></i></div>
     </div>
 </section>
@@ -258,8 +258,15 @@
   <script>
     document.addEventListener('DOMContentLoaded', (event) => {
       document.querySelectorAll('pre code').forEach((block) => {
-        hljs.highlightBlock(block);
-      });
+        hljs.highlightBlock(block)
+      })
+
+      document.querySelectorAll('article img').forEach((imgRes) => {
+        let imgSrc = imgRes.getAttribute("src")
+        imgRes.addEventListener("click", () => {
+          window.location = imgSrc
+        })
+      })
     });
   </script>
   

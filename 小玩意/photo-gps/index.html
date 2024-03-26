@@ -3,8 +3,8 @@
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <meta property="og:url" content="https://www.bobshen.com/category/随心测/" />
-<meta property="og:title" content="随心测" /><meta property="og:image" content="https://www.bobshen.com/facebook_default.png" /><meta property="og:description" content="随记一个八零后的生活。" />
+  <meta property="og:url" content="https://www.bobshen.com/小玩意/photo-gps/" />
+<meta property="og:title" content="批量修改照片的拍摄位置" /><meta property="og:image" content="https://www.bobshen.com/facebook_default.png" /><meta property="og:description" content="随记一个八零后的生活。" />
   <link href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/resource/main.css">
   <link rel="stylesheet" href="/resource/parts.css">
@@ -12,7 +12,7 @@
   <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/reqwest/2.0.5/reqwest.min.js"></script>
   <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/highlight.js/10.1.1/highlight.min.js"></script>
   <link href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/highlight.js/10.1.1/styles/monokai-sublime.min.css" rel="stylesheet">
-  <title>随心测 | Bob’s Corner</title>
+  <title>批量修改照片的拍摄位置 | Bob’s Corner</title>
 </head>
   <body>
     <script>
@@ -37,111 +37,98 @@
         <main class="main-wrapper row row-loose row-top row-wrap space-xs" :class="{blurred: showLoader}">
           <div class="main-zone-wrapper full-wrapper">
           
-<section class="zone-main" id="zone-main">
-    <article class="space-s bg-panel rounded article-animate function-container row row-top row-left row-wrap" style="animation-duration: 0.8s">
-        <div class="body-text space-vh col-2 v-list text-s" id="category-navbar">
-            <div id="indicator-bar" class="ease" :style="{top: indicatorTop}"> </div>
-            <ul class="category-selector">
-                <li :class="{'category-indicator': currentCategory == 'archive'}" @click="categorySwitch('archive')" >All Articles</li>
-                
-                <li :class="{'category-indicator': currentCategory == '小玩意'}" @click="categorySwitch('小玩意')" class="ease">
-                
-                
-                小玩意
-                </li>
-                
-                <li :class="{'category-indicator': currentCategory == '游记'}" @click="categorySwitch('游记')" class="ease">
-                
-                
-                游记
-                </li>
-                
-                <li :class="{'category-indicator': currentCategory == '自言自语'}" @click="categorySwitch('自言自语')" class="ease">
-                
-                
-                自言自语
-                </li>
-                
-                <li :class="{'category-indicator': currentCategory == '随心测'}" @click="categorySwitch('随心测')" class="ease">
-                
-                
-                随心测
-                </li>
-                
-            </ul>
-        </div>
-        <div class="body-text space-vh col-7" id="category-main" :class="{blurred: miniload}">
-            
-<div class="body-text space-vh bold"><i class="fa fa-folder-o" aria-hidden="true"></i> 随心测</div>
 
-<div class="body-text space-vh v-list text-s">
-    <ul>
-        
-        <li>
-            <a href="/%E9%9A%8F%E5%BF%83%E6%B5%8B/music-app-of-choice/" class="major">摒弃鄙视链：我为何选择了QQ音乐</a> &nbsp; <span class="minor text-xxs">Feb. 21, 2021</span>
-        </li>
-        
-        <li>
-            <a href="/%E9%9A%8F%E5%BF%83%E6%B5%8B/bo-e8/" class="major">B＆O E8使用体验：一次失败的购物</a> &nbsp; <span class="minor text-xxs">Aug. 10, 2019</span>
-        </li>
-        
-    </ul>
-</div>
+<section class="zone-main" id="zone-main">
+    <article class="space-s bg-panel rounded article-animate" style="animation-duration: 0.8s">
+    
+      <div class="title-area">
+        <div class="text-xs minor">Mar. 26, 2024</div>  
+        <div class="text-l bold theme-color">批量修改照片的拍摄位置</div>
+      </div>
+      <div class="article-wrapper row row-loose row-top">
+        <div>
+            <div class="body-text between space-vh">
+                <p>去年，买了理光的GR3，带着去日本旅行的时候拍了好多照片，但是这些照片都没有记录GPS location。</p>
+<p>难受的是，iOS的相册给照片添加位置时只能输入国内地点（可能是国行调用高德地图的原因）。试了一堆app都不怎么好用，要么年久失修，要么调用的macOS自带地图依然只能查找国内地址，所以自己出手写了个小工具，用来批量修改Exif GPS并一键导出保存。</p>
+<p>放在这里了：<a href="https://bobshen.com/lab/photogps">https://bobshen.com/lab/photogps</a></p>
+<p><img src="https://img2.imgtp.com/2024/03/26/CHR9aD1A.jpeg" alt="Screenshot"></p>
+
+            </div>
+            <div class="article-info between text-xs sc">
+                <div class="space-vh"><i class="fa fa-folder-o" aria-hidden="true"></i> <a href="/category/%E5%B0%8F%E7%8E%A9%E6%84%8F/">小玩意</a></div>
+                
+                <div class="space-vh"><i class="fa fa-tag" aria-hidden="true"></i>
+                    <div class="h-list inline-block">
+                        <ul>
+                            
+                            <li><a href="/tags/#%E7%85%A7%E7%89%87">照片</a></li>
+                            
+                            <li><a href="/tags/#%E5%B0%8F%E5%B7%A5%E5%85%B7">小工具</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
         </div>
-    </article>    
+        
+      </div>
+      
+    </article>
+
+    
+    
+    <div class="article-adjacent full-wrapper row row-top row-loose row-wrap text-xs sc">
+        <div class="space-vh"></div>
+        <div class="space-vh">Next: <a href="/%E9%9A%8F%E5%BF%83%E6%B5%8B/music-app-of-choice/">摒弃鄙视链：我为何选择了QQ音乐</a> <i class="fa fa-arrow-right" aria-hidden="true"></i></div>
+    </div>
 </section>
 <script>
     mixins.push({
         data: {
-            currentCategory: "" ? "archive" : "随心测",
-            indicatorTop: 0,
-            miniload: false
+            anchorPos: [],
+            activeAnchor: -1
         },
         methods: {
-            categorySwitch (cate) {
-                if (cate == this.currentCategory) {
-                    return false
-                }
-                this.currentCategory = cate
-                this.indicatorPosition()
-                this.miniload = true
-                var self = this
-                reqwest({
-                    url: '/parts/category/'+cate+'.html',
-                    type: 'html',
-                    success: function (resp) {                      
-                        document.getElementById('category-main').innerHTML = resp
-                        self.miniload = false
-                    },
-                    error: function () {
-                        self.miniload = false
+            bindToc() {                
+                let allAnchors = document.querySelectorAll("#article-toc ul li a")
+                if (allAnchors.length>0) {
+                    for (anchor of allAnchors) {
+                        let targetID = anchor.hash
+                        this.anchorPos.push(document.getElementById(targetID.substring(1)).offsetTop)
                     }
-                })
-                
-                let urls
-                if (cate != "archive") {
-                    let urlPattern = '/category/{category}/'
-                    urls = urlPattern.replace(/{category}/, cate)
-                    this.activeNav = "category"
+                    console.log(this.anchorPos)
+                    window.addEventListener('scroll', this.updateToc) 
                 }
-                else {
-                    urls = '/archives/'
-                    this.activeNav = "archive"
-                }
-                window.history.pushState(null, null, urls)
-                
             },
-            indicatorPosition() {
-                this.$nextTick(() => {
-                    pos = document.querySelector(".category-indicator").offsetTop
-                    this.indicatorTop = pos+"px"
-                })
+            updateToc() {
+                if (this.anchorPos.length>0) {
+                    for (an in this.anchorPos) {
+                        if (this.anchorPos[an] <= this.windowScrolled) {
+                            this.activeAnchor = an
+                        }
+                        else {
+                            break;
+                        }
+                    }
+                    
+                    let allAnchors = document.querySelectorAll("#article-toc ul li")
+                    for (let i=0; i<allAnchors.length; i++) {
+                        if (i==this.activeAnchor) {
+                            allAnchors[i].classList.add("toc-highlight")
+                        }
+                        else {
+                            allAnchors[i].classList.remove("toc-highlight")
+                        }
+                    }
+                }
             }
         },
         mounted() {
-            setTimeout (this.indicatorPosition, 1000)
+            window.setTimeout(this.bindToc, 500)  
         }
     })
+
 </script>
 
           </div>
@@ -196,7 +183,7 @@
          windowScrolled: false,
          windowScrollUp: false,
          showLoader: false,
-         activeNav: 'category',
+         activeNav: 'article',
       },
       methods: {
           showMenu () {

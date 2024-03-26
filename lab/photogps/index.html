@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/css.css" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin="">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+    <title>Photo GPS Editor</title>
+</head>
+<body>
+    <button id="up">⇪</button>
+    <div id="pic">
+    </div>
+    <input type="file" id="files" multiple />
+    <div id="map"></div>
+    <div id="controls">
+        <input type="text" id="lat">
+        <input type="text" id="lng">
+        <button id="ok">OK</button>
+        <input type="text" id="keyword" placeholder="Place">
+    </div>
+    <div id="dome">
+        <div id="result">
+            New images created. Download links:<br><br>
+            <div id="links"></div> 
+        </div>
+        <div id="close"><span onclick="document.getElementById('dome').style.display='none'">&#x2715;</span></div>
+    </div>
+    <script src="./js/piexif.js"></script>
+    <script src="./js/jszip.min.js"></script>
+    <script>
+    var dropbox = document.getElementById("pic")
+    dropbox.addEventListener("dragenter", dragenter, false)
+    dropbox.addEventListener("dragover", dragover, false)
+    dropbox.addEventListener("dropleave", dragover, false)
+    dropbox.addEventListener("drop", drop, false)
+    function dragenter(e) { 
+        e.stopPropagation()
+        e.preventDefault()
+        dropbox.style.opacity = "0.8"
+    }
+    function dragover(e) { 
+        e.stopPropagation()
+        e.preventDefault()
+    }
+    function drop(e) {
+        e.stopPropagation()
+        e.preventDefault()
+        dropbox.style.opacity = "1"
+        // console.log(e)
+        handleFileSelect(e)
+    }
+    </script>
+
+    <script>
+    var latVal = 31.23
+    var lonVal = 121.47
+    var marker
+    var oFiles = []
+    var map = L.map('map').setView([latVal, lonVal], 16)
+    const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	}).addTo(map)
+    marker = L.marker([latVal, lonVal]).addTo(map)
+
+    function handleFileSelect(evt) {
+        var targetFiles = []
+        //Determine it is dropped or uploaded
+        if (evt.dataTransfer) { //From drag and drop
+            targetFiles = evt.dataTransfer.files 
+        }
+        else {
+            targetFiles = evt.target.files
+        }
+        if (targetFiles.length == 0) {
+            return false
+        }
+        document.getElementById("pic").innerHTML = ""
+        document.getElementById("links").innerHTML = ""
+        oFiles = []
+
+        var tmpNames = []
+        for (var i = 0; i < targetFiles.length; i++) {
+            tmpNames[i] = targetFiles[i].name
+        }
+        // console.log(targetFiles)
+        var i = 0
+        oFiles = []
+
+        var readFunction = function(e) {
+            var exifObj = piexif.load(e.target.result)
+            if (!exifObj) {
+                return false
+            }
+            // console.log(exifObj)
+            var image = new Image()
+            image.src = e.target.result
+            oFiles[i] = {obj: exifObj, data: e.target.result, name: tmpNames[i]}
+            // console.log(oFiles[i])
+            i++
+            document.getElementById("pic").append(image)
+            
+            for (var ifd in exifObj) {
+                if (ifd !== "GPS") {
+                    continue
+                }
+                for (var tag in exifObj[ifd]) {
+                    if (piexif.TAGS[ifd][tag]["name"] == "GPSLatitude") {
+                        latVal = piexif.GPSHelper.dmsRationalToDeg(exifObj[ifd][tag])
+                    }
+                    else if (piexif.TAGS[ifd][tag]["name"] == "GPSLongitude") {
+                        lonVal = piexif.GPSHelper.dmsRationalToDeg(exifObj[ifd][tag])
+                        drawMap(latVal, lonVal)
+                        document.getElementById('lat').value = latVal
+                        document.getElementById('lng').value = lonVal
+                    }
+                }
+            }
+        }
+        for (var fileID of targetFiles) {
+            var reader = new FileReader()
+            reader.onloadend = function(e) {
+                readFunction(e)
+            }
+            reader.readAsDataURL(fileID)
+        }
+        // console.log(oFiles)
+    } 
+
+    function handleUpdater() {
+        if (!document.getElementById('lat').value || !document.getElementById('lng').value) {
+            return false
+        }
+        document.getElementById('ok').textContent = "Processing..."
+        document.getElementById("links").innerHTML = ""
+    
+        var latlngCoord = [piexif.GPSHelper.degToDmsRational(document.getElementById('lat').value), piexif.GPSHelper.degToDmsRational(document.getElementById('lng').value)]
+        const zip = new JSZip()
+        var i = 0
+        for (i in oFiles) {
+            var exifObj = oFiles[i]['obj']
+            if (!exifObj.hasOwnProperty('GPS')) {
+                exifObj = {GPS: []}
+                exifObj.GPS[piexif.GPSIFD.GPSVersionID] = [2, 3, 0, 0]
+                exifObj.GPS[piexif.GPSIFD.GPSLatitude] = latlngCoord[0]
+                exifObj.GPS[piexif.GPSIFD.GPSLongitude] = latlngCoord[1]
+            }
+            else {
+                exifObj.GPS[piexif.GPSIFD.GPSVersionID] = [2, 3, 0, 0]
+                exifObj.GPS[piexif.GPSIFD.GPSLatitude] = latlngCoord[0]
+                exifObj.GPS[piexif.GPSIFD.GPSLongitude] = latlngCoord[1]
+            }
+            // console.log(exifObj)
+            var inserted = piexif.insert(piexif.dump(exifObj), oFiles[i]['data'])
+            var a = document.createElement("a")
+            var blobdata = dataURLtoBlob(inserted)
+            a.href = window.URL.createObjectURL(blobdata)
+            a.download = oFiles[i]['name']
+            a.textContent = oFiles[i]['name']
+            document.getElementById('links').append(a)
+
+            zip.file(oFiles[i]['name'], blobdata, {binary: true})
+        }
+        zip.generateAsync({
+            type: 'blob',
+            compression: 'STORE'
+        })
+        .then(function(content) {
+            var a = document.createElement("a")
+            a.href = window.URL.createObjectURL(content)
+            a.download = "download.zip"
+            a.textContent = "Download all files as ZIP"
+            document.getElementById('links').prepend(a)
+        })
+        document.getElementById('dome').style.display="block"
+        document.getElementById('ok').textContent = "OK"
+    }
+
+    function dataURLtoBlob(dataurl) {
+        var arr = dataurl.split(','), mime = arr[0].match(/:(.*?);/)[1], bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n)
+        while(n--){
+            u8arr[n] = bstr.charCodeAt(n)
+        }
+        return new Blob([u8arr], {type:mime})
+    }
+
+    function drawMap(lat, lng) {
+        map.setView([lat, lng], 16)
+        marker.remove()
+        marker = L.marker([lat, lng]).addTo(map)
+    }
+
+    function searchPlace(place) {
+        var baseURL = "https://www.google.com/maps/place/"
+        window.open (baseURL + place)
+    }
+
+    document.getElementById('files').addEventListener('change', handleFileSelect, false)
+    document.getElementById('up').onclick=function(){document.getElementById('files').click()}
+    document.getElementById('lat').addEventListener('focus', function(){
+        this.select()
+    })
+    document.getElementById('lng').addEventListener('focus', function(){
+        this.select()
+    })
+    document.getElementById('lat').addEventListener('change', function(){
+        var inputText = this.value
+        if (inputText.indexOf(', ') != -1) {
+            var latlng = inputText.split(', ')
+            document.getElementById('lat').value = latlng[0]
+            document.getElementById('lng').value = latlng[1]
+        }
+        drawMap(document.getElementById('lat').value, document.getElementById('lng').value)
+    })
+    document.getElementById('lng').addEventListener('change', function(){
+        var inputText = this.value
+        if (inputText.indexOf(', ') != -1) {
+            var latlng = inputText.split(', ')
+            document.getElementById('lat').value = latlng[0]
+            document.getElementById('lng').value = latlng[1]
+        }
+        drawMap(document.getElementById('lat').value, document.getElementById('lng').value)
+    })
+    document.getElementById('ok').addEventListener('click', handleUpdater, false)
+    document.getElementById('keyword').addEventListener('keyup', function(e){
+        if (e.keyCode == 13) {
+            searchPlace(this.value)
+        }
+    })
+    </script>
+</body>
+</html>

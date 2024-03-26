@@ -96,6 +96,15 @@ main {
     padding-left: 24px;
     margin-left: -18px;
     margin-bottom: -20px;
+    background-image: linear-gradient(
+        to right, var(--primary-bg-color), var(--panel-bg-color)
+    );
+    background-size: 0;
+    background-repeat: no-repeat;
+    transition: 0.6s ease-in-out;
+}
+.title-area:hover {
+    background-size: 80%;
 }
 .zone-main {
     padding: 0;

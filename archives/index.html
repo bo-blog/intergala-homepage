@@ -45,6 +45,12 @@
             <ul class="category-selector">
                 <li :class="{'category-indicator': currentCategory == 'archive'}" @click="categorySwitch('archive')" >All Articles</li>
                 
+                <li :class="{'category-indicator': currentCategory == '小玩意'}" @click="categorySwitch('小玩意')" class="ease">
+                
+                
+                小玩意
+                </li>
+                
                 <li :class="{'category-indicator': currentCategory == '游记'}" @click="categorySwitch('游记')" class="ease">
                 
                 
@@ -69,6 +75,22 @@
             
 <div class="body-text space-vh bold"><i class="fa fa-calendar" aria-hidden="true"></i> Archives</div>
 
+
+<div class="archive-wrapper body-text space-vh v-list text-s row row-top row-left row-wrap">
+    <div class="archive-yearmonth theme-color space-s row row-loose">
+        <div>Mar. 2024</div>
+        <div class="archive-dot"></div>
+    </div>
+    <div class="archive-articles space-s">
+        <ul>
+            
+            <li>
+                <a href="/%E5%B0%8F%E7%8E%A9%E6%84%8F/photo-gps/" class="major">批量修改照片的拍摄位置</a> &nbsp; <span class="minor text-xxs">3/26</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
 
 <div class="archive-wrapper body-text space-vh v-list text-s row row-top row-left row-wrap">
     <div class="archive-yearmonth theme-color space-s row row-loose">
@@ -411,8 +433,15 @@
   <script>
     document.addEventListener('DOMContentLoaded', (event) => {
       document.querySelectorAll('pre code').forEach((block) => {
-        hljs.highlightBlock(block);
-      });
+        hljs.highlightBlock(block)
+      })
+
+      document.querySelectorAll('article img').forEach((imgRes) => {
+        let imgSrc = imgRes.getAttribute("src")
+        imgRes.addEventListener("click", () => {
+          window.location = imgSrc
+        })
+      })
     });
   </script>
   
