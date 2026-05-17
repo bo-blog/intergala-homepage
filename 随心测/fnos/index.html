@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" type="image/png" href="/resource/favicon.png" />
+    <link rel="stylesheet" href="/resource/reset.min.css">
+    <link rel="stylesheet" href="/resource/light.css">
+    <link rel="stylesheet" href="/resource/gi.css">
+    <script src="/resource/htmx.min.js"></script>
+    <title>飞牛Nas系统体验 | Bob’s Corner</title>
+</head>
+<body>
+    <header>
+        <div id="top">
+            <div id="top-dec"></div>
+            <div id="nav" class="headline">
+                <div id="nav-left">
+                    <span id='menuBtn'>≡</span>
+                    <ul id="menu">
+                        <li><a href="/">Home</a></li>
+                        <li class="active-index active-article"><a href="/page/1/">Blogs</a></li>
+                        <li class="active-tag"><a href="/tags/">Tags</a></li>
+                        <li class="active-archivemenu"><a href="/archives/">Archive</a></li>
+                        <li class="active-category"><a href="">Categories</a></li>
+                        
+                    </ul>
+                </div>
+                <div id="nav-right">Bob’s Corner
+                </div>
+                <div id="nav-icon"><img src="/resource/avatar.jpg" alt="Avatar"></div>
+            </div>
+        </div>
+    </header>
+    <div id="nav-dec"></div>
+    <script>
+        let changedActiveItems = [];
+        function makeActive(id, currentV) {
+            document.querySelector("#"+id+" .active-"+currentV).classList.add(id+"-active");
+            changedActiveItems.forEach(function(item, i) {
+                if (document.querySelector("#"+id+" .active-"+item) && item != currentV) {
+                    document.querySelector("#"+id+" .active-"+item).classList.remove(id+"-active");
+                    changedActiveItems.splice(i, 1);
+                }
+            });
+            changedActiveItems.push(currentV);
+        }
+    </script>
+    <section id="main">
+    
+
+<div class="article">
+    
+    <div class="art-meta">
+        <div class="art-title headline">飞牛Nas系统体验</div>
+        <div class="art-time headline">Apr. 5, 2025 · <a href="/category/%E9%9A%8F%E5%BF%83%E6%B5%8B/">随心测</a><br>The article has 911 words and takes 4 min. to read.</div>
+    </div>
+    <div class="art-reader" id="main-wrapper">
+        <div class="wrapper-right art-body bodytext">
+            <p><img src="/upload/banner_home_1.png" alt="fnOS"><br>为了应对家庭轻度的Nas和软路由需求，我测试过许多方案，包括成品的轻量级Nas、PVE all-in-one+OpenMediaVault+Openwrt、闲置的MacBook Air等等。而先前被我装上黑苹果用了一年的Nuc也经过了all-in-one小主机和x86机顶盒等多次变身，最终长期闲置。</p>
+<p>直到飞牛NAS系统的横空出世并在b站一炮而红，我的家庭Nas和Nuc终于找到了正确的归宿。安装部署至今，已经稳定运行了数月，值得记录一番。</p>
+<h3 id="toc-%E7%A1%AC%E4%BB%B6">硬件</h3><p>这套系统的核心仍然是从黑苹果上退役下来的Nuc8i5，装了16g的内存，内置一块SSD（系统盘）和一块M.2，外接一块SSD硬盘，总共128G+4T全闪储存空间，按目前的用量来看绰绰有余。配置了一张2.5G USB网卡与路由器连接，需要时也可通过雷电网桥连接MacBook。</p>
+<h3 id="toc-%E7%B3%BB%E7%BB%9F">系统</h3><p>fnOS的优点是不挑硬件，安装便捷，功能相对完善，使用上手快门槛低，自带内网穿透，以及—— 完全免费。</p>
+<p><strong>飞牛影视</strong>作为其杀手锏，解决了我家两个android机顶盒+一台Apple TV+各色移动设备的看片需求。相比之前文件服务器+SMB的解决方案，飞牛影视的电视端操作更方便，海报墙更美观，刮削更智能，爱看韩剧的夫人对此赞不绝口。</p>
+<p>通过<strong>相册</strong>同步功能，我的iPhone相册和照相机的储存卡都可以妥善备份。而且新加入的AI功能让查找特定的照片也更方便了。</p>
+<p>我在<strong>虚拟机</strong>里安装了iStoreOS，运行OpenClash，作为旁路由使用。Nuc在充当软路由时无疑是性能过剩的。配合中兴主路由器的特色功能，可以在主路由的管理界面里就将特定设备的网关指派为旁路由，设备本身无需做任何设置。</p>
+<h3 id="toc-%E5%B1%95%E6%9C%9B">展望</h3><p>目前我对这套系统非常满意，不过Nuc毕竟是多年前的产品了，每次听到风扇的声音总会有一些小心思：是不是需要更新的小主机？或者跟风入一台mac mini（甚至我测试了用UTM虚拟机装了fnOS作为可行性验证，系统跑起来是完全没有问题的）？毕竟常言道，折腾Nas也是中年男人的乐趣之一。</p>
+
+        </div>
+        
+        <div class="wrapper-left toc">
+            <div class="headline toc-title">Contents</div>
+            <div class="side-list headline"><ul data-base-level="3"><li data-relative-level="3"><a href="#toc-%E7%A1%AC%E4%BB%B6">硬件</a></li><li data-relative-level="3"><a href="#toc-%E7%B3%BB%E7%BB%9F">系统</a></li><li data-relative-level="3"><a href="#toc-%E5%B1%95%E6%9C%9B">展望</a></li></ul></div>
+        </div>
+        
+    </div>
+    
+    <div class="art-tags headline"> 
+        <ul>
+            
+            <li><a href="/tags/#%E9%A3%9E%E7%89%9B">飞牛</a></li>
+            
+            <li><a href="/tags/#nuc">nuc</a></li>
+            
+        </ul>
+    </div>
+    
+    
+    <div id="adjacent">
+        <div>❮ Previous: <a href="/%E6%B8%B8%E8%AE%B0/onomichi/">日旅集 - EP3：尾道</a></div>
+        <div>Next: <a href="/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/falcom-kiseki/">轨迹也是一种习惯了</a> ❯</div>
+    </div>
+</div>
+<script>
+    function bindToc() {                
+        let allAnchors = document.querySelectorAll(".toc ul li a")
+        let windowHeight = document.documentElement.clientHeight
+        let ob = new IntersectionObserver(
+            function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        for (let i=0; i<allAnchors.length; i++) {
+                          if (allAnchors[i].href.split('#')[1] == entry.target.attributes.id.value) {
+                              allAnchors[i].classList.add("toc-highlight")
+                          }
+                          else {
+                              allAnchors[i].classList.remove("toc-highlight")
+                          }
+                        }
+                    }
+                });
+            },
+            {
+                rootMargin: '0px 0px -' + (windowHeight - 40) + 'px 0px',
+                threshold: 0.5,
+            }
+        );
+        if (allAnchors.length>0) {
+            for (anchor of allAnchors) {
+                let targetID = anchor.hash
+                ob.observe(document.getElementById(targetID.substring(1)))
+            }
+        }
+    }
+    window.setTimeout(bindToc, 500);
+</script>
+
+    </section>
+    <footer>
+        <div id="footer">
+            <div id="footer-row">
+                <div id="about">
+                    <div class="footer-title headline">About Me</div>
+                    <div class="footer-body bodytext">白羊座中年。不旅行的时候宅家，旅行的时候暴走。有家室，养猫。</div>
+                </div>
+                <div id="tag-group">
+                    <div class="footer-title headline">Tags</div>
+                    <div class="footer-body bodytext">
+                        <ul>
+                        
+                            <li><a href="/tags/#%E6%97%85%E8%A1%8C">旅行 (13)</a></li>
+                        
+                            <li><a href="/tags/#%E6%97%A5%E6%9C%AC">日本 (11)</a></li>
+                        
+                            <li><a href="/tags/#%E4%B8%9C%E4%BA%AC%E9%83%BD">东京都 (3)</a></li>
+                        
+                            <li><a href="/tags/#%E4%B8%8A%E6%B5%B7">上海 (3)</a></li>
+                        
+                            <li><a href="/tags/#%E4%B8%BB%E9%A1%B5">主页 (2)</a></li>
+                        
+                            <li><a href="/tags/#%E5%B9%BF%E5%B2%9B%E5%8E%BF">广岛县 (2)</a></li>
+                        
+                            <li><a href="/tags/#nuc">nuc (2)</a></li>
+                        
+                            <li><a href="/tags/#macOS">macOS (2)</a></li>
+                        
+                            <li><a href="/tags/#%E7%A5%9E%E5%A5%88%E5%B7%9D%E5%8E%BF">神奈川县 (2)</a></li>
+                        
+                            <li><a href="/tags/#%E7%BD%91%E4%BA%8B">网事 (2)</a></li>
+                        
+                        </ul>
+                    </div>
+                </div>
+                <div id="category">
+                    <div class="footer-title headline">Categories</div>
+                    <div class="footer-body bodytext">
+                        <ul id="cates-all">
+                        
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E5%B0%8F%E7%8E%A9%E6%84%8F/">小玩意</a></span> <span class="cate-count">(3)</span></li>
+                            
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E6%B8%B8%E8%AE%B0/">游记</a></span> <span class="cate-count">(13)</span></li>
+                            
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/">自言自语</a></span> <span class="cate-count">(21)</span></li>
+                            
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E9%9A%8F%E5%BF%83%E6%B5%8B/">随心测</a></span> <span class="cate-count">(6)</span></li>
+                            
+                            <li><span class="cate-name"><a href="/rss.xml">RSS</a></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="loader" class="htmx-indicator">
+       <span class="loader"></span>
+    </div>
+<script>
+let menuOpened = false;
+document.querySelector("#menuBtn").addEventListener("click", function() {
+    document.querySelector("#menu").style.marginLeft = menuOpened ? '-200px' : 0;
+    document.querySelector("#nav-right").style.opacity = menuOpened ? 1 : 0;
+    menuOpened = !menuOpened;
+    document.querySelector("#main").style.zIndex = menuOpened ? 0 : 100;
+});
+let layoutNow = "article";
+if (layoutNow == "archive") {
+    layoutNow = "archivemenu";
+}
+makeActive ("menu", layoutNow);
+function addImgClick() {
+    document.querySelectorAll('.art-body img').forEach(function (imgRes) {
+      let imgSrc = imgRes.getAttribute("src");
+      let aImg = document.createElement('a');
+      aImg.href = imgSrc;
+      aImg.target = '_blank';
+      imgRes.parentNode.insertBefore(aImg, imgRes);
+      aImg.appendChild(imgRes);
+    });
+}
+addImgClick();
+let firstCate = document.querySelector("#cates-all li a").getAttribute("href");
+document.querySelector(".active-category a").setAttribute("href", firstCate);
+htmx.on("htmx:load", function(evt) {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+    addImgClick();
+});
+</script>
+</body>
+</html>

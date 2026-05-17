@@ -1,0 +1,154 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #333;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+    text-align: center;
+}
+a {
+    color: #937b3e;
+    text-decoration: none; 
+}
+#pic {
+    margin: auto;
+    margin-top: 20px;
+    width: 80%;
+    background-color: rgba(255, 228, 196, 0.46);
+    min-height: 300px;
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+}
+#pic img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 5px;
+}
+#files {
+    visibility: hidden;
+}
+#map { 
+    width: 80%;
+    margin: auto;
+    height: 220px;
+    border-radius: 15px;
+}
+#lat, #lng, #ok, #up, #keyword {
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 8px;
+    border: 1px solid #efd081;
+    border-radius: 5px;
+    outline: none;
+}
+#lat, #lng {
+    width: 18%;
+}
+#keyword {
+    width: 15%;
+}
+#ok, #up {
+    border-radius: 10px;
+    background-color: burlywood;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: .3s ease-in-out;
+}
+#ok:hover, #up:hover {
+    opacity: 1;
+}
+#up {
+    position: absolute;
+    top: 10px;
+    left: 10%;
+    font-size: 16px;
+    height: 40px;
+}
+#result {
+    width: 60%;
+    height: 50%;
+    overflow-y: auto;
+    padding: 5%;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    text-align: left;
+    background-color: #f4e1cb;
+    border-radius: 20px;
+    z-index: 1000;
+}
+#links a {
+    display: block;
+    padding: 5px;
+    margin-left: -6px;
+}
+#links a:hover {
+    color: #000;
+}
+#dome {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1000;
+    display: none;
+}
+#close {
+    position: absolute;
+    top: 15%;
+    left: 82%;
+    z-index: 1000;
+    font-size: 26px;
+    cursor: pointer;
+}

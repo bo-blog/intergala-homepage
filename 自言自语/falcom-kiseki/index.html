@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" type="image/png" href="/resource/favicon.png" />
+    <link rel="stylesheet" href="/resource/reset.min.css">
+    <link rel="stylesheet" href="/resource/light.css">
+    <link rel="stylesheet" href="/resource/gi.css">
+    <script src="/resource/htmx.min.js"></script>
+    <title>轨迹也是一种习惯了 | Bob’s Corner</title>
+</head>
+<body>
+    <header>
+        <div id="top">
+            <div id="top-dec"></div>
+            <div id="nav" class="headline">
+                <div id="nav-left">
+                    <span id='menuBtn'>≡</span>
+                    <ul id="menu">
+                        <li><a href="/">Home</a></li>
+                        <li class="active-index active-article"><a href="/page/1/">Blogs</a></li>
+                        <li class="active-tag"><a href="/tags/">Tags</a></li>
+                        <li class="active-archivemenu"><a href="/archives/">Archive</a></li>
+                        <li class="active-category"><a href="">Categories</a></li>
+                        
+                    </ul>
+                </div>
+                <div id="nav-right">Bob’s Corner
+                </div>
+                <div id="nav-icon"><img src="/resource/avatar.jpg" alt="Avatar"></div>
+            </div>
+        </div>
+    </header>
+    <div id="nav-dec"></div>
+    <script>
+        let changedActiveItems = [];
+        function makeActive(id, currentV) {
+            document.querySelector("#"+id+" .active-"+currentV).classList.add(id+"-active");
+            changedActiveItems.forEach(function(item, i) {
+                if (document.querySelector("#"+id+" .active-"+item) && item != currentV) {
+                    document.querySelector("#"+id+" .active-"+item).classList.remove(id+"-active");
+                    changedActiveItems.splice(i, 1);
+                }
+            });
+            changedActiveItems.push(currentV);
+        }
+    </script>
+    <section id="main">
+    
+
+<div class="article">
+    
+    <div class="art-meta">
+        <div class="art-title headline">轨迹也是一种习惯了</div>
+        <div class="art-time headline">Mar. 21, 2025 · <a href="/category/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/">自言自语</a><br>The article has 852 words and takes 3 min. to read.</div>
+    </div>
+    <div class="art-reader" id="main-wrapper">
+        <div class="wrapper-right art-body bodytext">
+            <p><img src="/upload/IMG_3702.jpg" alt="轨迹全家福"></p>
+<p>我不是一个游戏爱好者，玩起游戏来技术也很差。但是Falcom的英雄传说·轨迹系列却是我的心头好。从《空之轨迹FC》入坑到最新的《界之轨迹》，设备也从PC开始一路升级到PS5。甚至可以说，买PlayStation的原因就是为了第一时间玩到轨迹的新作。去年又在Switch上把之前入手数字版的旧作全部转化为了NS版，形成了一个小小的收藏。(唯一的遗憾是空轨没有NS改，但很快就有重制版了，小小地期待一下吧。)</p>
+<p>轨迹算是一个纯粉丝向的系列。每一部之间都有盘根错节的设定和剧情上的羁绊，加上熟人社交圈一般的人物关系，发展至今甚至有一点积重难返的意味，使得中途入坑的难度巨大。<a name="more" id="more"></a>该系列的缺点也很多，比如过于套路化的剧本，由于资金有限而明显落后于时代的画面表现，玩法系统上的守旧导致推图过程有些乏味等等。不过，轨迹系列离“大作”两个字很远，反而成就了它在我心中最大的优点：真正的零负担游戏。不用担心因为迷路而卡关，不用担心手残带来的挫败感，也不用担心突然来个老登恶臭剧情恶心到自己。虽然《异度神剑》也是我很喜欢的JRPG，但它的系统设计过于复杂，以至于玩起来身心负担很重。</p>
+<p>轨迹的世界观很纯粹，甚至可以说有一点纯真 —— 但这种纯真挺好的。这个世界已经破破烂烂，如果在塞姆利亚大陆上能暂时寻得久违的热血与感动，何尝不是一种幸运呢。在波谲云诡的政治斗争下，总有一群试图改变现状的热血青年打破现状，用略显幼稚的理想主义击溃笼罩在这片土地上的战争阴霾。这也是一种成年人的童话吧。</p>
+<p>轨迹里的人物群像刻画虽然难免重复和鸡肋的设定，但总体是非常成功的。当空零碧闪的主角团齐聚一堂的时候，在组建主力团队时会有一种很难取舍的痛苦。每一个人物我都很喜欢，每一个角色都性格鲜明，谁放到后宫都是那么可惜。</p>
+<p>谨以此文感谢法社十余年来的陪伴，并期待早日入手空轨重制版。</p>
+<p><img src="/upload/20201014125713.jpg" alt="创之轨迹全员截图"></p>
+
+        </div>
+        
+    </div>
+    
+    <div class="art-tags headline"> 
+        <ul>
+            
+            <li><a href="/tags/#%E6%B8%B8%E6%88%8F">游戏</a></li>
+            
+        </ul>
+    </div>
+    
+    
+    <div id="adjacent">
+        <div>❮ Previous: <a href="/%E9%9A%8F%E5%BF%83%E6%B5%8B/fnos/">飞牛Nas系统体验</a></div>
+        <div>Next: <a href="/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/macos-tips/">macOS疑难杂症速查笔记</a> ❯</div>
+    </div>
+</div>
+<script>
+    function bindToc() {                
+        let allAnchors = document.querySelectorAll(".toc ul li a")
+        let windowHeight = document.documentElement.clientHeight
+        let ob = new IntersectionObserver(
+            function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        for (let i=0; i<allAnchors.length; i++) {
+                          if (allAnchors[i].href.split('#')[1] == entry.target.attributes.id.value) {
+                              allAnchors[i].classList.add("toc-highlight")
+                          }
+                          else {
+                              allAnchors[i].classList.remove("toc-highlight")
+                          }
+                        }
+                    }
+                });
+            },
+            {
+                rootMargin: '0px 0px -' + (windowHeight - 40) + 'px 0px',
+                threshold: 0.5,
+            }
+        );
+        if (allAnchors.length>0) {
+            for (anchor of allAnchors) {
+                let targetID = anchor.hash
+                ob.observe(document.getElementById(targetID.substring(1)))
+            }
+        }
+    }
+    window.setTimeout(bindToc, 500);
+</script>
+
+    </section>
+    <footer>
+        <div id="footer">
+            <div id="footer-row">
+                <div id="about">
+                    <div class="footer-title headline">About Me</div>
+                    <div class="footer-body bodytext">白羊座中年。不旅行的时候宅家，旅行的时候暴走。有家室，养猫。</div>
+                </div>
+                <div id="tag-group">
+                    <div class="footer-title headline">Tags</div>
+                    <div class="footer-body bodytext">
+                        <ul>
+                        
+                            <li><a href="/tags/#%E6%97%85%E8%A1%8C">旅行 (13)</a></li>
+                        
+                            <li><a href="/tags/#%E6%97%A5%E6%9C%AC">日本 (11)</a></li>
+                        
+                            <li><a href="/tags/#%E4%B8%9C%E4%BA%AC%E9%83%BD">东京都 (3)</a></li>
+                        
+                            <li><a href="/tags/#%E4%B8%8A%E6%B5%B7">上海 (3)</a></li>
+                        
+                            <li><a href="/tags/#%E4%B8%BB%E9%A1%B5">主页 (2)</a></li>
+                        
+                            <li><a href="/tags/#%E5%B9%BF%E5%B2%9B%E5%8E%BF">广岛县 (2)</a></li>
+                        
+                            <li><a href="/tags/#nuc">nuc (2)</a></li>
+                        
+                            <li><a href="/tags/#macOS">macOS (2)</a></li>
+                        
+                            <li><a href="/tags/#%E7%A5%9E%E5%A5%88%E5%B7%9D%E5%8E%BF">神奈川县 (2)</a></li>
+                        
+                            <li><a href="/tags/#%E7%BD%91%E4%BA%8B">网事 (2)</a></li>
+                        
+                        </ul>
+                    </div>
+                </div>
+                <div id="category">
+                    <div class="footer-title headline">Categories</div>
+                    <div class="footer-body bodytext">
+                        <ul id="cates-all">
+                        
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E5%B0%8F%E7%8E%A9%E6%84%8F/">小玩意</a></span> <span class="cate-count">(3)</span></li>
+                            
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E6%B8%B8%E8%AE%B0/">游记</a></span> <span class="cate-count">(13)</span></li>
+                            
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/">自言自语</a></span> <span class="cate-count">(21)</span></li>
+                            
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E9%9A%8F%E5%BF%83%E6%B5%8B/">随心测</a></span> <span class="cate-count">(6)</span></li>
+                            
+                            <li><span class="cate-name"><a href="/rss.xml">RSS</a></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="loader" class="htmx-indicator">
+       <span class="loader"></span>
+    </div>
+<script>
+let menuOpened = false;
+document.querySelector("#menuBtn").addEventListener("click", function() {
+    document.querySelector("#menu").style.marginLeft = menuOpened ? '-200px' : 0;
+    document.querySelector("#nav-right").style.opacity = menuOpened ? 1 : 0;
+    menuOpened = !menuOpened;
+    document.querySelector("#main").style.zIndex = menuOpened ? 0 : 100;
+});
+let layoutNow = "article";
+if (layoutNow == "archive") {
+    layoutNow = "archivemenu";
+}
+makeActive ("menu", layoutNow);
+function addImgClick() {
+    document.querySelectorAll('.art-body img').forEach(function (imgRes) {
+      let imgSrc = imgRes.getAttribute("src");
+      let aImg = document.createElement('a');
+      aImg.href = imgSrc;
+      aImg.target = '_blank';
+      imgRes.parentNode.insertBefore(aImg, imgRes);
+      aImg.appendChild(imgRes);
+    });
+}
+addImgClick();
+let firstCate = document.querySelector("#cates-all li a").getAttribute("href");
+document.querySelector(".active-category a").setAttribute("href", firstCate);
+htmx.on("htmx:load", function(evt) {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+    addImgClick();
+});
+</script>
+</body>
+</html>

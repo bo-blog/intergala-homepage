@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" type="image/png" href="/resource/favicon.png" />
+    <link rel="stylesheet" href="/resource/reset.min.css">
+    <link rel="stylesheet" href="/resource/light.css">
+    <link rel="stylesheet" href="/resource/gi.css">
+    <script src="/resource/htmx.min.js"></script>
+    <title>等待是一生最初的苍老 | Bob’s Corner</title>
+</head>
+<body>
+    <header>
+        <div id="top">
+            <div id="top-dec"></div>
+            <div id="nav" class="headline">
+                <div id="nav-left">
+                    <span id='menuBtn'>≡</span>
+                    <ul id="menu">
+                        <li><a href="/">Home</a></li>
+                        <li class="active-index active-article"><a href="/page/1/">Blogs</a></li>
+                        <li class="active-tag"><a href="/tags/">Tags</a></li>
+                        <li class="active-archivemenu"><a href="/archives/">Archive</a></li>
+                        <li class="active-category"><a href="">Categories</a></li>
+                        
+                    </ul>
+                </div>
+                <div id="nav-right">Bob’s Corner
+                </div>
+                <div id="nav-icon"><img src="/resource/avatar.jpg" alt="Avatar"></div>
+            </div>
+        </div>
+    </header>
+    <div id="nav-dec"></div>
+    <script>
+        let changedActiveItems = [];
+        function makeActive(id, currentV) {
+            document.querySelector("#"+id+" .active-"+currentV).classList.add(id+"-active");
+            changedActiveItems.forEach(function(item, i) {
+                if (document.querySelector("#"+id+" .active-"+item) && item != currentV) {
+                    document.querySelector("#"+id+" .active-"+item).classList.remove(id+"-active");
+                    changedActiveItems.splice(i, 1);
+                }
+            });
+            changedActiveItems.push(currentV);
+        }
+    </script>
+    <section id="main">
+    
+
+<div class="article">
+    
+    <div class="art-meta">
+        <div class="art-title headline">等待是一生最初的苍老</div>
+        <div class="art-time headline">Nov. 6, 2003 · <a href="/category/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/">自言自语</a><br>The article has 703 words and takes 3 min. to read.</div>
+    </div>
+    <div class="art-reader" id="main-wrapper">
+        <div class="wrapper-right art-body bodytext">
+            <p>当你开始等待，你就开始衰老了。但是不管会不会老，有的时候我们情愿以等待来换取希望的结果，有的时候自己不能做什么，只有等待。</p>
+<p>朋友说我是个没有耐性的人。因为他们老听到我在说“快点快点”，“哎呀烦死了不做了”。这点没有错。我一直很奇怪，一个性子不急的人怎么耐性会这么差。我喜欢在与人约定的见面时间前一刻终到，然后开始看着时间缓缓流逝，等得心气暴躁，等得极不耐烦，等得发短信去催他，等得原地踱来踱去。但是当等待的人终于出现在面前的时候，我倒也不会生气。我会告诉他我刚刚到。不是我脾气好，是因为我的愤怒被另一种更强烈的感情所取代，那就是等待终于得到结果时的喜悦。</p>
+<p>在这个世上有很多人很多事是可遇不可求的。等待是邂逅这些人这些事的唯一途径。我不爱等待，但我深知等待之必须性的无奈性。有的人值得为他等待一个小时，有的人值得等他一个月，有的人值得等待一年，有的人值得等十年；而有些人，值得我等待一生一世。</p>
+<p>那些只值得等一小时的人，我把他的名字放在脑后；值得等一个月的人，我把他的名字写在纸上；值得等一年的人，他的名字我会记在脑子里；值得等十年的人，我放在心里；值得等一生的人，我会将他的名字，他的形，他的影，他的一切，牢牢地刻在心底。</p>
+<p>等待，像一阵风，吹散了原本混杂在一起的丝丝缕缕的形形色色。有些人被风带走了，再也不回来了，于是我很快把他忘怀；有些人在空中打飘，落在了遥远的前方，于是我踌躇了一下，放弃了他；有些人在我眼前飘忽，最终降在脚边，于是我弯腰把他拾起；有些人，却如生根般地在我的手中，无论风再大再猛烈都不肯走，或者，是我自己不愿不舍放手吧。当风乍停，我会把他抓得更紧，小心呵护，不忍另一阵风再伤害他。</p>
+
+        </div>
+        
+    </div>
+    
+    
+    <div id="adjacent">
+        <div>❮ Previous: <a href="/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/fayewong-lyrics/">评王菲在《将爱》中的作词</a></div>
+        <div>Next: <a href="/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/wang-wei/">水、色、人 ―― 浅析王维之诗中有画</a> ❯</div>
+    </div>
+</div>
+<script>
+    function bindToc() {                
+        let allAnchors = document.querySelectorAll(".toc ul li a")
+        let windowHeight = document.documentElement.clientHeight
+        let ob = new IntersectionObserver(
+            function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        for (let i=0; i<allAnchors.length; i++) {
+                          if (allAnchors[i].href.split('#')[1] == entry.target.attributes.id.value) {
+                              allAnchors[i].classList.add("toc-highlight")
+                          }
+                          else {
+                              allAnchors[i].classList.remove("toc-highlight")
+                          }
+                        }
+                    }
+                });
+            },
+            {
+                rootMargin: '0px 0px -' + (windowHeight - 40) + 'px 0px',
+                threshold: 0.5,
+            }
+        );
+        if (allAnchors.length>0) {
+            for (anchor of allAnchors) {
+                let targetID = anchor.hash
+                ob.observe(document.getElementById(targetID.substring(1)))
+            }
+        }
+    }
+    window.setTimeout(bindToc, 500);
+</script>
+
+    </section>
+    <footer>
+        <div id="footer">
+            <div id="footer-row">
+                <div id="about">
+                    <div class="footer-title headline">About Me</div>
+                    <div class="footer-body bodytext">白羊座中年。不旅行的时候宅家，旅行的时候暴走。有家室，养猫。</div>
+                </div>
+                <div id="tag-group">
+                    <div class="footer-title headline">Tags</div>
+                    <div class="footer-body bodytext">
+                        <ul>
+                        
+                            <li><a href="/tags/#%E6%97%85%E8%A1%8C">旅行 (13)</a></li>
+                        
+                            <li><a href="/tags/#%E6%97%A5%E6%9C%AC">日本 (11)</a></li>
+                        
+                            <li><a href="/tags/#%E4%B8%9C%E4%BA%AC%E9%83%BD">东京都 (3)</a></li>
+                        
+                            <li><a href="/tags/#%E4%B8%8A%E6%B5%B7">上海 (3)</a></li>
+                        
+                            <li><a href="/tags/#%E4%B8%BB%E9%A1%B5">主页 (2)</a></li>
+                        
+                            <li><a href="/tags/#%E5%B9%BF%E5%B2%9B%E5%8E%BF">广岛县 (2)</a></li>
+                        
+                            <li><a href="/tags/#nuc">nuc (2)</a></li>
+                        
+                            <li><a href="/tags/#macOS">macOS (2)</a></li>
+                        
+                            <li><a href="/tags/#%E7%A5%9E%E5%A5%88%E5%B7%9D%E5%8E%BF">神奈川县 (2)</a></li>
+                        
+                            <li><a href="/tags/#%E7%BD%91%E4%BA%8B">网事 (2)</a></li>
+                        
+                        </ul>
+                    </div>
+                </div>
+                <div id="category">
+                    <div class="footer-title headline">Categories</div>
+                    <div class="footer-body bodytext">
+                        <ul id="cates-all">
+                        
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E5%B0%8F%E7%8E%A9%E6%84%8F/">小玩意</a></span> <span class="cate-count">(3)</span></li>
+                            
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E6%B8%B8%E8%AE%B0/">游记</a></span> <span class="cate-count">(13)</span></li>
+                            
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/">自言自语</a></span> <span class="cate-count">(21)</span></li>
+                            
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E9%9A%8F%E5%BF%83%E6%B5%8B/">随心测</a></span> <span class="cate-count">(6)</span></li>
+                            
+                            <li><span class="cate-name"><a href="/rss.xml">RSS</a></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="loader" class="htmx-indicator">
+       <span class="loader"></span>
+    </div>
+<script>
+let menuOpened = false;
+document.querySelector("#menuBtn").addEventListener("click", function() {
+    document.querySelector("#menu").style.marginLeft = menuOpened ? '-200px' : 0;
+    document.querySelector("#nav-right").style.opacity = menuOpened ? 1 : 0;
+    menuOpened = !menuOpened;
+    document.querySelector("#main").style.zIndex = menuOpened ? 0 : 100;
+});
+let layoutNow = "article";
+if (layoutNow == "archive") {
+    layoutNow = "archivemenu";
+}
+makeActive ("menu", layoutNow);
+function addImgClick() {
+    document.querySelectorAll('.art-body img').forEach(function (imgRes) {
+      let imgSrc = imgRes.getAttribute("src");
+      let aImg = document.createElement('a');
+      aImg.href = imgSrc;
+      aImg.target = '_blank';
+      imgRes.parentNode.insertBefore(aImg, imgRes);
+      aImg.appendChild(imgRes);
+    });
+}
+addImgClick();
+let firstCate = document.querySelector("#cates-all li a").getAttribute("href");
+document.querySelector(".active-category a").setAttribute("href", firstCate);
+htmx.on("htmx:load", function(evt) {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+    addImgClick();
+});
+</script>
+</body>
+</html>

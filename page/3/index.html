@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" type="image/png" href="/resource/favicon.png" />
+    <link rel="stylesheet" href="/resource/reset.min.css">
+    <link rel="stylesheet" href="/resource/light.css">
+    <link rel="stylesheet" href="/resource/gi.css">
+    <script src="/resource/htmx.min.js"></script>
+    <title>Bob’s Corner</title>
+</head>
+<body>
+    <header>
+        <div id="top">
+            <div id="top-dec"></div>
+            <div id="nav" class="headline">
+                <div id="nav-left">
+                    <span id='menuBtn'>≡</span>
+                    <ul id="menu">
+                        <li><a href="/">Home</a></li>
+                        <li class="active-index active-article"><a href="/page/1/">Blogs</a></li>
+                        <li class="active-tag"><a href="/tags/">Tags</a></li>
+                        <li class="active-archivemenu"><a href="/archives/">Archive</a></li>
+                        <li class="active-category"><a href="">Categories</a></li>
+                        
+                    </ul>
+                </div>
+                <div id="nav-right">Bob’s Corner
+                </div>
+                <div id="nav-icon"><img src="/resource/avatar.jpg" alt="Avatar"></div>
+            </div>
+        </div>
+    </header>
+    <div id="nav-dec"></div>
+    <script>
+        let changedActiveItems = [];
+        function makeActive(id, currentV) {
+            document.querySelector("#"+id+" .active-"+currentV).classList.add(id+"-active");
+            changedActiveItems.forEach(function(item, i) {
+                if (document.querySelector("#"+id+" .active-"+item) && item != currentV) {
+                    document.querySelector("#"+id+" .active-"+item).classList.remove(id+"-active");
+                    changedActiveItems.splice(i, 1);
+                }
+            });
+            changedActiveItems.push(currentV);
+        }
+    </script>
+    <section id="main">
+    
+
+<div class="article">
+    <div class="art-meta">
+        <div class="art-title headline"><a href="/%E6%B8%B8%E8%AE%B0/takayama-shirogawa/">日旅集 - EP5：飞騨高山 × 白川乡</a></div>
+        <div class="art-time headline">Mar. 22, 2026 · <a href="/category/%E6%B8%B8%E8%AE%B0/">游记</a></div>
+    </div>
+    <div class="art-body bodytext">
+    <p>这篇写岐阜县的飞騨高山与白川乡。<br><img src="/upload/takayama_title.jpg" alt="高山+白川乡"></p>
+<blockquote>
+<p>高山（たかやま，Takayama）是日本岐阜县北部（飞驒地方）的一个市。该市为日本面积最大的市町村，甚至超过香川县和大阪府，相当于整个东京都的面积。该市有“飞驒的小京都”之称。（Source：维基百科）</p>
+</blockquote>
+<h3 id="toc-%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9D%A5%E8%BF%99%E9%87%8C">为什么来这里</h3><p>冬天的白川乡点灯太火，导致很多人忽略了夏天。选择夏末的9月出发，可以避开拥挤的人潮。上海直飞名古屋，然后一路JR北上即可，两个多小时就能到达高山站。从高山坐浓飞大巴可以直奔白川乡，也只需一小时左右。整个行程只要两到三天，慢慢逛完的节奏正好。<br><img src="/upload/takayama_ticket.jpg" alt="JR车票"></p>
+<h3 id="toc-%E5%AE%AB%E5%B7%9D%E6%9C%9D%E5%B8%82%EF%BC%9A%E9%AB%98%E5%B1%B1%E7%9A%84%E6%B8%85%E6%99%A8%E6%97%A5%E5%B8%B8">宫川朝市：高山的清晨日常</h3><p>住宿在高山，早起去宫川朝市。它沿宫川河岸铺开，是日本三大朝市之一，每天清晨都有。</p>
+
+        <div><a href="/%E6%B8%B8%E8%AE%B0/takayama-shirogawa/#more">More...</a></div>
+    </div>
+    
+    <div class="art-tags headline"> 
+        <ul>
+            
+            <li><a href="/tags/#%E6%97%85%E8%A1%8C">旅行</a></li>
+            
+            <li><a href="/tags/#%E6%97%A5%E6%9C%AC">日本</a></li>
+            
+            <li><a href="/tags/#%E5%B2%90%E9%98%9C%E5%8E%BF">岐阜县</a></li>
+            
+        </ul>
+    </div>
+    
+      
+</div>
+
+<div class="article">
+    <div class="art-meta">
+        <div class="art-title headline"><a href="/%E6%B8%B8%E8%AE%B0/takamatsu/">日旅集 - EP4：高松</a></div>
+        <div class="art-time headline">Mar. 13, 2026 · <a href="/category/%E6%B8%B8%E8%AE%B0/">游记</a></div>
+    </div>
+    <div class="art-body bodytext">
+    <p>来到这个系列的第四篇，去高松邂逅山海与岛屿。<br><img src="/upload/takamatsu_title.jpg" alt="Takamatsu"></p>
+<blockquote>
+<p>高松（たかまつ，Takamatsu）是日本香川县的首府，坐落在四国岛东北部的濑户内海沿岸，既是香川的交通与文化核心，更是通往濑户内海诸岛的“跳岛起点”，直岛、丰岛、小豆岛皆从这里乘船可达。(Source: 濑户内海观光局)</p>
+</blockquote>
+<h3 id="toc-%E4%B8%B8%E9%BE%9F%E7%94%BA%E5%95%86%E4%B8%9A%E8%A1%97%E4%B8%8E%E5%8C%97%E6%BB%A8Alley">丸龟町商业街与北滨Alley</h3><p>市中心的丸龟町商业街，是日本最长的拱顶商业街，2.5公里的街道，被赞岐乌冬面的热气熏陶出了最为地道的市井味道。来到高松，每天恨不得两碗乌冬面。即便不小心错过了饭点没有餐食可选，仍可以随便拐进一家街角的乌冬面店，点一碗天妇罗乌冬。<br><img src="/upload/takamatsu_sea.jpg" alt="高松"></p>
+<p>从丸龟町走到高松港，十分钟的路程便到了北滨Alley。这片由老仓库改造的文创区，是高松的文艺灵魂所在。斑驳的水泥墙、复古的铁艺窗，面朝濑户内海的工业风咖啡馆里，坐满了文艺青年。选了一家靠窗的位置，点一杯冰美式，海风带着淡淡的咸意吹进来。</p>
+
+        <div><a href="/%E6%B8%B8%E8%AE%B0/takamatsu/#more">More...</a></div>
+    </div>
+    
+    <div class="art-tags headline"> 
+        <ul>
+            
+            <li><a href="/tags/#%E6%97%85%E8%A1%8C">旅行</a></li>
+            
+            <li><a href="/tags/#%E6%97%A5%E6%9C%AC">日本</a></li>
+            
+            <li><a href="/tags/#%E9%A6%99%E5%B7%9D%E5%8E%BF">香川县</a></li>
+            
+        </ul>
+    </div>
+    
+      
+</div>
+
+<div class="article">
+    <div class="art-meta">
+        <div class="art-title headline"><a href="/%E6%B8%B8%E8%AE%B0/onomichi/">日旅集 - EP3：尾道</a></div>
+        <div class="art-time headline">Mar. 1, 2026 · <a href="/category/%E6%B8%B8%E8%AE%B0/">游记</a></div>
+    </div>
+    <div class="art-body bodytext">
+    <p>第三篇，回忆一下盛夏的濑户内边小城——尾道（おのみち，Onomichi）。</p>
+<p><img src="/upload/onomichi_title.jpg" alt="Onomichi Title"></p>
+<blockquote>
+<p>尾道市是位于日本广岛县东南部的城市，位处冈山市与广岛市两个大都会区之中间处；辖区还包括濑户内海上的向岛、生口岛等。(Source: Wikipedia)</p>
+</blockquote>
+<h2 id="toc-%E5%8F%8D%E5%A4%8D%E8%A2%AB%E7%A7%8D%E8%8D%89">反复被种草</h2><p>2024年 - 2025年初，B站的各大日本旅游Up主们，不约而同地反复来到尾道这个地方，他们的理由出奇地一致：安逸、文学气质浓重的海边小镇，可以在这里住上很久。</p>
+<p>看多了，对这个地方印象也越来越深。安静的坡道、海边的房子、濑户内海的气息，好像隔着屏幕就能感受到。渐渐地，这成了我特别想亲自去看看的地方。</p>
+<p>于是在2025年的夏天，结束了一段忙碌的工作之后，终于踏上了我的“日本中国地区”旅行。从上海直飞广岛，并且留出了一天半时间给尾道。从广岛站坐JR新干线，在福山换乘普通列车，就到了心心念念的这座小城。<br><img src="/upload/onomichi_street.jpg" alt="尾道的街"></p>
+<h2 id="toc-%E6%9C%AC%E9%80%9A%E5%95%86%E5%BA%97%E8%A1%97">本通商店街</h2><p>由于下午在宫岛多逗留了一阵子，导致我到达尾道的时候已近黄昏。只能去往本通商店街先感受一下气氛了。</p>
+<p>本通就在尾道站的边上。这是日本每个城市都有的那种商店街，而和其他小城的同类一样，如今的尾道本通也随着人口的减少而稍显破败。天色还没有暗，街道里却已几乎无人。虽然第二天我又在商店街来回走了两三趟，但第一晚它迎接我的却是“下班”后的冷清。一路走下来，店铺大多已经打烊。</p>
+
+        <div><a href="/%E6%B8%B8%E8%AE%B0/onomichi/#more">More...</a></div>
+    </div>
+    
+    <div class="art-tags headline"> 
+        <ul>
+            
+            <li><a href="/tags/#%E6%97%85%E8%A1%8C">旅行</a></li>
+            
+            <li><a href="/tags/#%E6%97%A5%E6%9C%AC">日本</a></li>
+            
+            <li><a href="/tags/#%E5%B9%BF%E5%B2%9B%E5%8E%BF">广岛县</a></li>
+            
+        </ul>
+    </div>
+    
+      
+</div>
+
+<div id="pages" class="headline">
+    <ul>
+        
+        <li class="page-prev"><a hx-get="/page/2/" hx-swap="outerHTML" hx-target="#main" hx-select="#main" hx-push-url="true" hx-indicator="#loader" href="/page/2/">❮</a></li>
+        
+        <li class="page-actived">3</li>
+        
+        <li class="page-next"><a hx-get="/page/4/" hx-swap="outerHTML" hx-target="#main" hx-select="#main" hx-push-url="true" hx-indicator="#loader" href="/page/4/">❯</a></li>
+        
+    </ul>
+    
+</div>
+
+    </section>
+    <footer>
+        <div id="footer">
+            <div id="footer-row">
+                <div id="about">
+                    <div class="footer-title headline">About Me</div>
+                    <div class="footer-body bodytext">白羊座中年。不旅行的时候宅家，旅行的时候暴走。有家室，养猫。</div>
+                </div>
+                <div id="tag-group">
+                    <div class="footer-title headline">Tags</div>
+                    <div class="footer-body bodytext">
+                        <ul>
+                        
+                            <li><a href="/tags/#%E6%97%85%E8%A1%8C">旅行 (13)</a></li>
+                        
+                            <li><a href="/tags/#%E6%97%A5%E6%9C%AC">日本 (11)</a></li>
+                        
+                            <li><a href="/tags/#%E4%B8%9C%E4%BA%AC%E9%83%BD">东京都 (3)</a></li>
+                        
+                            <li><a href="/tags/#%E4%B8%8A%E6%B5%B7">上海 (3)</a></li>
+                        
+                            <li><a href="/tags/#%E4%B8%BB%E9%A1%B5">主页 (2)</a></li>
+                        
+                            <li><a href="/tags/#%E5%B9%BF%E5%B2%9B%E5%8E%BF">广岛县 (2)</a></li>
+                        
+                            <li><a href="/tags/#nuc">nuc (2)</a></li>
+                        
+                            <li><a href="/tags/#macOS">macOS (2)</a></li>
+                        
+                            <li><a href="/tags/#%E7%A5%9E%E5%A5%88%E5%B7%9D%E5%8E%BF">神奈川县 (2)</a></li>
+                        
+                            <li><a href="/tags/#%E7%BD%91%E4%BA%8B">网事 (2)</a></li>
+                        
+                        </ul>
+                    </div>
+                </div>
+                <div id="category">
+                    <div class="footer-title headline">Categories</div>
+                    <div class="footer-body bodytext">
+                        <ul id="cates-all">
+                        
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E5%B0%8F%E7%8E%A9%E6%84%8F/">小玩意</a></span> <span class="cate-count">(3)</span></li>
+                            
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E6%B8%B8%E8%AE%B0/">游记</a></span> <span class="cate-count">(13)</span></li>
+                            
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/">自言自语</a></span> <span class="cate-count">(21)</span></li>
+                            
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E9%9A%8F%E5%BF%83%E6%B5%8B/">随心测</a></span> <span class="cate-count">(6)</span></li>
+                            
+                            <li><span class="cate-name"><a href="/rss.xml">RSS</a></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="loader" class="htmx-indicator">
+       <span class="loader"></span>
+    </div>
+<script>
+let menuOpened = false;
+document.querySelector("#menuBtn").addEventListener("click", function() {
+    document.querySelector("#menu").style.marginLeft = menuOpened ? '-200px' : 0;
+    document.querySelector("#nav-right").style.opacity = menuOpened ? 1 : 0;
+    menuOpened = !menuOpened;
+    document.querySelector("#main").style.zIndex = menuOpened ? 0 : 100;
+});
+let layoutNow = "index";
+if (layoutNow == "archive") {
+    layoutNow = "archivemenu";
+}
+makeActive ("menu", layoutNow);
+function addImgClick() {
+    document.querySelectorAll('.art-body img').forEach(function (imgRes) {
+      let imgSrc = imgRes.getAttribute("src");
+      let aImg = document.createElement('a');
+      aImg.href = imgSrc;
+      aImg.target = '_blank';
+      imgRes.parentNode.insertBefore(aImg, imgRes);
+      aImg.appendChild(imgRes);
+    });
+}
+addImgClick();
+let firstCate = document.querySelector("#cates-all li a").getAttribute("href");
+document.querySelector(".active-category a").setAttribute("href", firstCate);
+htmx.on("htmx:load", function(evt) {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+    addImgClick();
+});
+</script>
+</body>
+</html>

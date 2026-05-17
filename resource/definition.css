@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "Aileron";
+    src: url("Aileron.otf");
+}
+:root {
+    --overall-width: 100%;
+    --main-width: 88%;
+    --space-base: 20px;
+    --fontsize-base: 18px;
+    --theme-color: #00b7c3;
+}
+
+@media screen and (max-width: 600px){  
+    :root {
+        --main-width: 92%;
+    }
+}

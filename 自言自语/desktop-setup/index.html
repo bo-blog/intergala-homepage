@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta property="og:url" content="https://www.bobshen.com/自言自语/desktop-setup/" />
+<meta property="og:title" content="desktop-setup" /><meta property="og:image" content="https://www.bobshen.com/facebook_default.png" /><meta property="og:description" content="随记一个八零后的生活。" />
+  <link href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/resource/main.css">
+  <link rel="stylesheet" href="/resource/parts.css">
+  <script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/vue/2.6.11/vue.min.js"></script>
+  <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/reqwest/2.0.5/reqwest.min.js"></script>
+  <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/highlight.js/10.1.1/highlight.min.js"></script>
+  <link href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/highlight.js/10.1.1/styles/monokai-sublime.min.css" rel="stylesheet">
+  <title>desktop-setup | Bob&#39;s Corner</title>
+</head>
+  <body>
+    <script>
+      var mixins = []
+    </script>
+    <div id="canvas">
+        <header class="full-wrapper bg space-xs" :class="{'hide-header': hideHeader, 'shrink-header': shrinkHeader, 'blurred': showLoader}">
+  <div class="header-wrap main-wrapper row row-loose">
+    <div class="col-5 text-xl bolder site-name major"><a href="/">Bob&#39;s Corner</a></div>
+      <div class="col-5 menu pointer to-right" @click="showMenu()"><div class="text-l bold inline-block menu-btn" :class="{'menu-open': menuOpen}"><i class="fa fa-chevron-right" aria-hidden="true"></i></div></div>
+      <nav class="nav-body col-8" :class="{'nav-open': menuOpen}">
+        <ul class="h-list to-right sc">
+          <li class="bg-sc-hover space-vh rounded ease" :class="{'nav-active': activeNav=='index' || activeNav=='category' || activeNav=='article'}"><a href="/">Home</a></li>
+          <li class="bg-sc-hover space-vh rounded ease" :class="{'nav-active': activeNav=='tag'}"><a href="/tags/">Tags</a></li>
+          <li class="bg-sc-hover space-vh rounded ease" :class="{'nav-active': activeNav=='archive'}"><a href="/archives/">Archive</a></li>
+          
+        </ul>
+      </nav>
+    </div>
+</header>
+
+        <main class="main-wrapper row row-loose row-top row-wrap space-xs" :class="{blurred: showLoader}">
+          <div class="main-zone-wrapper full-wrapper">
+          
+
+<section class="zone-main" id="zone-main">
+    <article class="space-s bg-panel rounded article-animate" style="animation-duration: 0.8s">
+    
+      <div class="title-area">
+        <div class="text-xs minor">Mar. 21, 2022</div>  
+        <div class="text-l bold theme-color">desktop-setup</div>
+      </div>
+      <div class="article-wrapper row row-loose row-top">
+        <div>
+            <div class="body-text between space-vh">
+                <h1 id="toc-%E7%BB%99%E8%87%AA%E5%B7%B1%E7%9A%84%E6%A1%8C%E9%9D%A2%E5%A4%A7%E6%94%B9%E9%80%A0">给自己的桌面大改造</h1><h3 id="toc-%E5%89%8D%E8%A8%80">前言</h3><p>大概，拥有一个理想中的舒适电脑桌面是每一个男人的梦想。在接触到B站、小红书和YouTube上各种桌面美学视频之前，我对自己需要怎样一个在家使用电脑的场景并没有什么深刻的认识。直到，这些平台的算法识别了我的兴趣点，向我推送了更多的桌面视频，直到，这些视频让我觉得“中毒”了。</p>
+<p>于是，在若干星期前的一天，我也计划着对自己的电脑桌动手了。</p>
+<h3 id="toc-%E8%A7%84%E5%88%92">规划</h3><p>在决定自己的桌面应该如何改造之前，我先总结了一下实际的使用需求和已有/缺少的设备。</p>
+<p>我的桌面主要是用来在家办公，码码字、画画PPT、写写代码什么的。娱乐需求（刷剧、看电影、玩Switch等）则会在电视机或者iPad上完成。所以我仍然打算沿用一台2020年初的MacBook Air 13”、外加2019年购入的Sumsung 34吋带鱼屏显示器作为桌面的主角，并且确定，这个年纪的我不需要一个RGB灯光来营造的环境。</p>
+<p>我确定要保留的现有设备是：MacBook Air、显示屏、音箱、屏幕挂灯、机械键盘、鼠标；需要增加的设备是：一个可以实现一线通的雷电3扩展坞、一块Magic Trackpad触摸板、一个显示器支架、一个显示器增高架（实际作为置物架使用）、一条LED灯带，以及理线工具、多插口的电源排插、新的鼠标垫、键盘手托、绿植、摆件等。</p>
+<p>可以看到，虽然新增的东西价格都不贵，但比较细碎，一样样挑选、一样样下单，然后等快递一一到货实在有些繁琐。所以前前后后花了差不多三四个星期，才把改造做完。</p>
+<h3 id="toc-%E6%A1%8C%E5%AD%90">桌子</h3><p>我之前使用的桌子是宜家的纯白抽屉桌，长1.8米，可以满足家里两人同时使用电脑。但深度只有40厘米，在装上了34吋带鱼屏之后剩余的面积已经捉襟见肘，双手只能在局促的空间里打字，肘部长期处于悬空状态，非常难受。<br><img src="https://i.loli.net/2021/04/18/rY78PO4gcnQoswl.png" alt="BESTÅ BURS桌子"><br>所以，第一步我先要解决桌子过浅的问题，不然后续所有的改造都无法进行。</p>
+<p>要说桌面视频中的常客，非电动升降桌莫属。我在B站和“张大妈”（什么值得买）钻研了一番，反复考量了自己的需求之后，最终选择了——</p>
+<p>不更换为升降桌。</p>
+<p>一是因为非定做的升降桌基本没有1.8米的宽度，二是我们家仍然需要原来桌子自带的两个抽屉，而升降桌很少带抽屉。再加上使用场景有限、理线难度高等因素，升降桌就被我排除了。</p>
+<p>最后，我淘了一个15厘米深，颜色、宽度和高度都与原来的桌子一样的小桌子，放置在宜家的桌子前，拼出了一个55厘米深的新工作区域。之所以没有新增一个更深的桌子，是受到场地限制——55厘米的深度是不影响房间开门的极限值了。</p>
+<h3 id="toc-%E6%89%A9%E5%B1%95%E5%9D%9E">扩展坞</h3><p>在考察各种桌子的同时，我也开始挑选一款扩展坞来实现笔记本与外设的一线连接。扩展坞真是一个各路品牌百花齐放，却又选择极为有限的市场。为什么呢？因为大部分扩展坞都是USB Type-C规格而不是雷电3规格。虽然两者的外观没有区别，但性能却是天壤之别。在淘汰了形形色色的Type-C扩展坞之后，我发现能选择的产品只剩下了个位数，比如贝尔金、CalDigit、Anker等，而它们共同的特征是：都很贵。</p>
+<p>最终，在一众1000 - 2000的雷电扩展坞之中，我选择了HP的G2 Thunderbolt Dock 120W。淘宝找到一家卖欧版的，800大洋入。它能扩展出多个USB Type-A 和 Type-C接口，通过2个DP接口和一个支持图像传输的C口，能够接3台显示器（macOS下为两台），也有可实现菊花链的雷电口，并且可以为笔记本反向充电。<br><img src="https://i.loli.net/2021/04/18/RDOnSwEUAopdKBy.jpg" alt="HP Thunderbolt Dock G2"></p>
+<p>现在每次工作时，只需要将扩展坞的一根线插入MacBook的雷电口就能连接上所有外设，而且MacBook本身的电源线也不再需要。</p>
+<p>另外，这款扩展坞方形的敦实造型也意外地带来了另一个功用，下文再表。</p>
+<p>Macbook Air在连接扩展坞后，我嫌它有点占地方，毕竟桌子小。于是我搞了一个比桌子矮20公分的支撑物（用老婆的靴子盒子做的）放在桌子边上，把电脑搁在上面，以人坐在桌子前的视线来看，笔记本瞬间就“隐形”了。</p>
+<h3 id="toc-%E6%98%BE%E7%A4%BA%E5%99%A8%E3%80%81%E9%9F%B3%E7%AE%B1%E5%92%8C%E9%94%AE%E9%BC%A0">显示器、音箱和键鼠</h3><p>桌子安装完成后，就开始陆续采购新增的外设了。显示器支架选了乐歌的D5，价格适中而且自带两个USB口。一开始由于三星的带鱼屏太重，一个人安装有点吃力。把显示器怼上连接孔时忘记塞垫片，导致沉头；后来塞入了垫片并加大了气动臂的力度，显示器可以稳稳地悬停在所需的位置，非常完美。</p>
+<p>小米的屏幕挂灯是去年跟风入手的，现在看来性价比颇高，毕竟不需要再配置桌上台灯了。无线遥控旋钮本身也是一件不错的桌面摆件。</p>
+<p>音箱沿用某次618入手的JBL监听音箱104。本来也考虑更换为颜值能打、口碑不错的声擎A2，但鉴于囊中羞涩，暂时先不败家了。JBL 104作为一款同轴有源监听音箱，其音质对于我来说是足够优秀的。这款音箱后来又出了升级版104BT，支持蓝牙连接。我这款由于没有蓝牙，卖家送了一个蓝牙音频接收器，本次也终于派上用场了。</p>
+<p>键盘是我一直用得非常顺手的Filco机械键盘，几年前从东京扛回来的，爱护有加，真心不想换。美中不足的是它不是无线键盘。好在有了置物架后，不打字的时候可以把整把键盘藏在置物架下方，也就在视觉上做到了“无线”。</p>
+<p>为了在此次改造中让键盘体验得到提升，我买了一块红胡桃木色的手托，还把Win键和Alt键的键帽改成了Mac键和Option键。</p>
+<p>鼠标保留了罗技G304。但macOS的最佳拍档其实是触摸板，鼠标只有在Excel等需要更精确定位的场合会比较好用。所以我新购了一块iMac拆机的Magic Trackpad作为主力输入设备。卖家说是“略有”刮痕，实际上么……好在划痕都在触摸板背部，眼不见为净吧。<br><img src="https://i.loli.net/2021/04/18/a2OceNDlS1IGmyH.png" alt="Magic Trackpad 拆机版"></p>
+<h3 id="toc-%E8%87%AA%E5%88%B6%E7%9A%84%E7%BD%AE%E7%89%A9%E6%9E%B6">自制的置物架</h3><p>桌搭的另一个必备品就是一副“胡桃木”显示器增高架，并且不放显示器而是放一些小物件，比如充电器、手办之类的。</p>
+<p>在淘宝寻找这样的架子时，我想起了闲置在某个角落的一块廉价复合材料板，因为颜色太难看，所以一直弃置。也许，我可以用它来当置物架？于是我把这块板找了出来，尺寸居然完全合适。我把其中一头搁在HP扩展坞上，另一头用一些与扩展坞等高的闲置物品（一台Apple TV 3和Airpods的包装盒）架了起来，在不购买撑脚的前提下就搭成了一个置物架。扩展坞和Apple TV都足够厚实，因而这个架子也非常稳当。</p>
+<p>唯一的问题是，这块板有点难看，与整体桌面环境也不搭。所以，我又淘来了一卷柚木纹理贴纸，把整块板贴成了木质。不仔细看的话，还真有点以假乱真，仿佛质感也瞬间提升了。<br><img src="https://i.loli.net/2021/04/18/nuM4vmd8W9xt1ja.jpg" alt="自制的置物架"></p>
+<p>在置物架上，我放上了一块无线充电板（社区发的赠品，上面印刷的宣传口号被我用星巴克的贴纸遮住了）、一台闲置的iPhone XR作为时钟（使用app为谜底时钟）、一个USB Type-A的扩展坞（便于快速插拔U盘、读卡器等设备），以及假绿植、摆件、显示器挂灯遥控器等。</p>
+<h3 id="toc-%E7%81%AF%E5%85%89">灯光</h3><p>这个房间其实是有吸顶灯的，所以照明并不差。但在夜晚，顶灯可能太过明亮，这时关掉顶灯，打开小米屏幕挂灯就行了。</p>
+<p>虽然我不喜欢RGB的光污染，但还是在桌子背面贴了一条LED灯带，并调成了微弱的暖黄色。这使得整体环境更加柔和、温暖。（不过其实很少有打开的必要就是了。）</p>
+<h3 id="toc-%E7%94%B5%E6%BA%90%E5%92%8C%E7%90%86%E7%BA%BF">电源和理线</h3><p>不得不说，理线看着简单，实则很难。这一次的线材实在太多，我尽力了，但结果还是只能勉强达到不看着心烦意乱而已。</p>
+<p>我一开始的设想是用一个排插满足所有供电，这样只要理好桌面到排插的线，再把排插固定在桌子下面就可以理好线。而这个排插还可以连接到智能插座实现一键开关总电源，避免能源浪费。</p>
+<p>但实际上，问题要复杂得多。有一些设备如充电板，我希望随时可以使用而不受总电源状态限制；一些线材（比如屏幕挂灯的USB线）没有那么长（需要接USB延长线）；一些设备必须连着扩展坞而不能插在排插上。</p>
+<p>最终，我把设备分成了两组：需要常亮的设备和可以随主机一起开启的设备。前一组（包括无线充电板、手表底座和屏幕挂灯等）用一个一分三的USB插头直接连电源插座，后一组（扩展坞、音箱、显示屏、LED灯带、蓝牙音频接收器）插在排插上，经小米智能插座连入电源。</p>
+<p>为了尽可能不形成盘丝洞，我用了理线捆扎带来整合线缆，方法是每隔一段距离就捆扎一次；左右音箱连接线则用电线固定器从桌子背面走线。</p>
+<p>为了便于迅速开启电源，我在鼠标垫上粘贴了一个NFC卡片，配合iOS的快捷方式，每次要用电脑时只需用iPhone触碰鼠标垫，就能打开电源。当然，还可以让Siri来代劳。</p>
+<h3 id="toc-%E6%95%88%E6%9E%9C%E5%92%8C%E6%80%BB%E7%BB%93">效果和总结</h3><p>至此，我终于完成了对桌面的一次大改造。最终效果可能不如B站和油管上的大神，但改造的过程却让我乐在其中。（好吧，我要去确认一下这快乐不是因为在淘宝上买买买。）当我在改造完成的桌面上敲下这篇文字时，其实已经在不知不觉中享受着效率的提升。而这，就是桌面文化存在的意义吧。</p>
+<p>如果你也有想要做一些改变，为自己换一个心情，提高一下在家办公（或者游戏）的效率，那么也可以行动起来。</p>
+<p>最后附上桌面设备清单，包含设备详情、入手价格和推荐度。<br><img src="https://i.loli.net/2021/04/18/l4h5zuBI1tW863G.jpg" alt="清单"></p>
+
+            </div>
+            <div class="article-info between text-xs sc">
+                <div class="space-vh"><i class="fa fa-folder-o" aria-hidden="true"></i> <a href="/category/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/">自言自语</a></div>
+                
+            </div>
+        </div>
+        
+        <div class="article-toc space-vh text-s col-3">
+            <div class="bold"><i class="fa fa-bookmark" aria-hidden="true"></i> Table of Contents</div>
+            <div class="v-list" id="article-toc"><ul data-base-level="1"><li data-relative-level="1"><a href="#toc-%E7%BB%99%E8%87%AA%E5%B7%B1%E7%9A%84%E6%A1%8C%E9%9D%A2%E5%A4%A7%E6%94%B9%E9%80%A0">给自己的桌面大改造</a></li><li data-relative-level="3"><a href="#toc-%E5%89%8D%E8%A8%80">前言</a></li><li data-relative-level="3"><a href="#toc-%E8%A7%84%E5%88%92">规划</a></li><li data-relative-level="3"><a href="#toc-%E6%A1%8C%E5%AD%90">桌子</a></li><li data-relative-level="3"><a href="#toc-%E6%89%A9%E5%B1%95%E5%9D%9E">扩展坞</a></li><li data-relative-level="3"><a href="#toc-%E6%98%BE%E7%A4%BA%E5%99%A8%E3%80%81%E9%9F%B3%E7%AE%B1%E5%92%8C%E9%94%AE%E9%BC%A0">显示器、音箱和键鼠</a></li><li data-relative-level="3"><a href="#toc-%E8%87%AA%E5%88%B6%E7%9A%84%E7%BD%AE%E7%89%A9%E6%9E%B6">自制的置物架</a></li><li data-relative-level="3"><a href="#toc-%E7%81%AF%E5%85%89">灯光</a></li><li data-relative-level="3"><a href="#toc-%E7%94%B5%E6%BA%90%E5%92%8C%E7%90%86%E7%BA%BF">电源和理线</a></li><li data-relative-level="3"><a href="#toc-%E6%95%88%E6%9E%9C%E5%92%8C%E6%80%BB%E7%BB%93">效果和总结</a></li></ul></div>
+        </div>
+        
+      </div>
+      
+    </article>
+
+    
+    
+    <div class="article-adjacent full-wrapper row row-top row-loose row-wrap text-xs sc">
+        <div class="space-vh"></div>
+        <div class="space-vh">Next: <a href="/%E9%9A%8F%E5%BF%83%E6%B5%8B/music-app-of-choice/">摒弃鄙视链：我为何选择了QQ音乐</a> <i class="fa fa-arrow-right" aria-hidden="true"></i></div>
+    </div>
+</section>
+<script>
+    mixins.push({
+        data: {
+            anchorPos: [],
+            activeAnchor: -1
+        },
+        methods: {
+            bindToc() {                
+                let allAnchors = document.querySelectorAll("#article-toc ul li a")
+                if (allAnchors.length>0) {
+                    for (anchor of allAnchors) {
+                        let targetID = anchor.hash
+                        this.anchorPos.push(document.getElementById(targetID.substring(1)).offsetTop)
+                    }
+                    console.log(this.anchorPos)
+                    window.addEventListener('scroll', this.updateToc) 
+                }
+            },
+            updateToc() {
+                if (this.anchorPos.length>0) {
+                    for (an in this.anchorPos) {
+                        if (this.anchorPos[an] <= this.windowScrolled) {
+                            this.activeAnchor = an
+                        }
+                        else {
+                            break;
+                        }
+                    }
+                    
+                    let allAnchors = document.querySelectorAll("#article-toc ul li")
+                    for (let i=0; i<allAnchors.length; i++) {
+                        if (i==this.activeAnchor) {
+                            allAnchors[i].classList.add("toc-highlight")
+                        }
+                        else {
+                            allAnchors[i].classList.remove("toc-highlight")
+                        }
+                    }
+                }
+            }
+        },
+        mounted() {
+            window.setTimeout(this.bindToc, 500)  
+        }
+    })
+
+</script>
+
+          </div>
+          
+        </main>
+
+        <footer class="main-wrapper" :class="{blurred: showLoader}">
+  
+  <div class="space-s between to-center">
+    <div class="space-xxs to-center">
+      <div class="h-list sc text-l">
+        <ul>
+          
+          <li class="contact-item"><a href="http://weibo.com/bobshen" target="_blank" title="Weibo"><i class="fa fa-weibo" aria-hidden="true"></i></a></li>
+          
+          <li class="contact-item"><a href="https://twitter.com/bob_shen" target="_blank" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+          
+          <li class="contact-item"><a href="https://instagram.com/bobshen" target="_blank" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="text-xs sc">&copy; Bob 2021.</div>
+  </div>
+</footer>
+
+<div class="loader ease" :class="{'loader-on': showLoader}">
+  <div class="lightbox"></div>
+  <div class="loading">
+    <i class="left"></i>
+    <i class="middle"></i>
+    <i class="right"></i>
+  </div>
+</div>
+    </div> 
+    
+  <script>
+  Vue.component ('place-holder', {
+      template: "<div class=\"place-holder\" :style=\"{width: phWidth}\">.</div>",
+      props: ['width'],
+      computed: {
+          phWidth() {
+              return this.width + "%"
+          }
+      }
+  })
+  var app = new Vue({
+      el: "#canvas",
+      mixins: mixins,
+      data: {
+         menuOpen: false,
+         windowScrolled: false,
+         windowScrollUp: false,
+         showLoader: false,
+         activeNav: 'article',
+      },
+      methods: {
+          showMenu () {
+              this.menuOpen = !this.menuOpen;
+          },
+          windowScroller () {
+              var scrolled = document.documentElement.scrollTop || document.body.scrollTop
+              this.windowScrollUp = scrolled < this.windowScrolled
+              this.windowScrolled = scrolled
+          },
+          scrollToTop () {
+              window.scrollTo({ 
+                  top: 0, 
+                  behavior: "smooth" 
+              })
+          },
+          lightsOn () {
+              var self = this
+              setTimeout(function() {
+                  self.scrollToTop ()
+                  self.showLoader = false
+              }, 600)
+          }
+      },
+      mounted () { 
+          window.addEventListener('scroll', this.windowScroller) 
+          if (location.hash && location.hash!=="#") {
+            window.setTimeout(function(){
+                let dest = location.hash.substring(1)
+                document.getElementById(dest).scrollIntoView()                
+            }, 500)  
+        }
+      },
+      computed: {
+          hideHeader() {
+              return this.windowScrolled > 30
+          },
+          shrinkHeader() {
+              return this.windowScrolled > 30 && this.windowScrollUp
+          },                
+      }
+  })
+</script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelectorAll('pre code').forEach((block) => {
+        hljs.highlightBlock(block);
+      });
+    });
+  </script>
+  
+  </body>
+</html>

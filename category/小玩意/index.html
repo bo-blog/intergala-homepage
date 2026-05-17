@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" type="image/png" href="/resource/favicon.png" />
+    <link rel="stylesheet" href="/resource/reset.min.css">
+    <link rel="stylesheet" href="/resource/light.css">
+    <link rel="stylesheet" href="/resource/gi.css">
+    <script src="/resource/htmx.min.js"></script>
+    <title>小玩意 | Bob’s Corner</title>
+</head>
+<body>
+    <header>
+        <div id="top">
+            <div id="top-dec"></div>
+            <div id="nav" class="headline">
+                <div id="nav-left">
+                    <span id='menuBtn'>≡</span>
+                    <ul id="menu">
+                        <li><a href="/">Home</a></li>
+                        <li class="active-index active-article"><a href="/page/1/">Blogs</a></li>
+                        <li class="active-tag"><a href="/tags/">Tags</a></li>
+                        <li class="active-archivemenu"><a href="/archives/">Archive</a></li>
+                        <li class="active-category"><a href="">Categories</a></li>
+                        
+                    </ul>
+                </div>
+                <div id="nav-right">Bob’s Corner
+                </div>
+                <div id="nav-icon"><img src="/resource/avatar.jpg" alt="Avatar"></div>
+            </div>
+        </div>
+    </header>
+    <div id="nav-dec"></div>
+    <script>
+        let changedActiveItems = [];
+        function makeActive(id, currentV) {
+            document.querySelector("#"+id+" .active-"+currentV).classList.add(id+"-active");
+            changedActiveItems.forEach(function(item, i) {
+                if (document.querySelector("#"+id+" .active-"+item) && item != currentV) {
+                    document.querySelector("#"+id+" .active-"+item).classList.remove(id+"-active");
+                    changedActiveItems.splice(i, 1);
+                }
+            });
+            changedActiveItems.push(currentV);
+        }
+    </script>
+    <section id="main">
+    
+<div id="main-wrapper">
+    <div class="wrapper-left cate-switcher">
+        <div class="side-list headline">
+            <ul id="cates">
+            <li class="active-archive"><span class="cate-name"><a hx-get="/archives/" hx-swap="outerHTML" hx-target="#fill" hx-select="#fill" hx-push-url="true" hx-indicator="#loader" href="/archives/" onclick="makeActive('cates', 'archive'); makeActive('menu', 'archivemenu')">All Articles</a></span></li>
+            
+            <li class="active-小玩意">
+            
+            
+            <span class="cate-name"><a hx-get="/category/小玩意" hx-swap="outerHTML" hx-target="#fill" hx-select="#fill" hx-push-url="true" hx-indicator="#loader" href="/category/小玩意" onclick="makeActive('cates', '小玩意'); makeActive('menu', 'category')">小玩意</a></span></li>
+            
+            <li class="active-游记">
+            
+            
+            <span class="cate-name"><a hx-get="/category/游记" hx-swap="outerHTML" hx-target="#fill" hx-select="#fill" hx-push-url="true" hx-indicator="#loader" href="/category/游记" onclick="makeActive('cates', '游记'); makeActive('menu', 'category')">游记</a></span></li>
+            
+            <li class="active-自言自语">
+            
+            
+            <span class="cate-name"><a hx-get="/category/自言自语" hx-swap="outerHTML" hx-target="#fill" hx-select="#fill" hx-push-url="true" hx-indicator="#loader" href="/category/自言自语" onclick="makeActive('cates', '自言自语'); makeActive('menu', 'category')">自言自语</a></span></li>
+            
+            <li class="active-随心测">
+            
+            
+            <span class="cate-name"><a hx-get="/category/随心测" hx-swap="outerHTML" hx-target="#fill" hx-select="#fill" hx-push-url="true" hx-indicator="#loader" href="/category/随心测" onclick="makeActive('cates', '随心测'); makeActive('menu', 'category')">随心测</a></span></li>
+            
+            </ul>
+        </div>
+    </div>
+    <div class="wrapper-right bodytext" id="fill">
+        <ul>
+
+    <li><a href="/%E5%B0%8F%E7%8E%A9%E6%84%8F/grass-instinct/">复刻了2008年的blog主题</a> &nbsp; <span class="cate-count">Apr. 21, 2026</span></li>
+
+    <li><a href="/%E5%B0%8F%E7%8E%A9%E6%84%8F/new-homepage/">新主页</a> &nbsp; <span class="cate-count">Apr. 8, 2024</span></li>
+
+    <li><a href="/%E5%B0%8F%E7%8E%A9%E6%84%8F/photo-gps/">批量修改照片的拍摄位置</a> &nbsp; <span class="cate-count">Mar. 26, 2024</span></li>
+
+</ul>
+    </div>
+</div>
+<script>
+    let currentCategory = "" ? "archive" : "小玩意";
+    makeActive ("cates", currentCategory);
+</script>
+
+    </section>
+    <footer>
+        <div id="footer">
+            <div id="footer-row">
+                <div id="about">
+                    <div class="footer-title headline">About Me</div>
+                    <div class="footer-body bodytext">白羊座中年。不旅行的时候宅家，旅行的时候暴走。有家室，养猫。</div>
+                </div>
+                <div id="tag-group">
+                    <div class="footer-title headline">Tags</div>
+                    <div class="footer-body bodytext">
+                        <ul>
+                        
+                            <li><a href="/tags/#%E6%97%85%E8%A1%8C">旅行 (13)</a></li>
+                        
+                            <li><a href="/tags/#%E6%97%A5%E6%9C%AC">日本 (11)</a></li>
+                        
+                            <li><a href="/tags/#%E4%B8%9C%E4%BA%AC%E9%83%BD">东京都 (3)</a></li>
+                        
+                            <li><a href="/tags/#%E4%B8%8A%E6%B5%B7">上海 (3)</a></li>
+                        
+                            <li><a href="/tags/#%E4%B8%BB%E9%A1%B5">主页 (2)</a></li>
+                        
+                            <li><a href="/tags/#%E5%B9%BF%E5%B2%9B%E5%8E%BF">广岛县 (2)</a></li>
+                        
+                            <li><a href="/tags/#nuc">nuc (2)</a></li>
+                        
+                            <li><a href="/tags/#macOS">macOS (2)</a></li>
+                        
+                            <li><a href="/tags/#%E7%A5%9E%E5%A5%88%E5%B7%9D%E5%8E%BF">神奈川县 (2)</a></li>
+                        
+                            <li><a href="/tags/#%E7%BD%91%E4%BA%8B">网事 (2)</a></li>
+                        
+                        </ul>
+                    </div>
+                </div>
+                <div id="category">
+                    <div class="footer-title headline">Categories</div>
+                    <div class="footer-body bodytext">
+                        <ul id="cates-all">
+                        
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E5%B0%8F%E7%8E%A9%E6%84%8F/">小玩意</a></span> <span class="cate-count">(3)</span></li>
+                            
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E6%B8%B8%E8%AE%B0/">游记</a></span> <span class="cate-count">(13)</span></li>
+                            
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/">自言自语</a></span> <span class="cate-count">(21)</span></li>
+                            
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E9%9A%8F%E5%BF%83%E6%B5%8B/">随心测</a></span> <span class="cate-count">(6)</span></li>
+                            
+                            <li><span class="cate-name"><a href="/rss.xml">RSS</a></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="loader" class="htmx-indicator">
+       <span class="loader"></span>
+    </div>
+<script>
+let menuOpened = false;
+document.querySelector("#menuBtn").addEventListener("click", function() {
+    document.querySelector("#menu").style.marginLeft = menuOpened ? '-200px' : 0;
+    document.querySelector("#nav-right").style.opacity = menuOpened ? 1 : 0;
+    menuOpened = !menuOpened;
+    document.querySelector("#main").style.zIndex = menuOpened ? 0 : 100;
+});
+let layoutNow = "category";
+if (layoutNow == "archive") {
+    layoutNow = "archivemenu";
+}
+makeActive ("menu", layoutNow);
+function addImgClick() {
+    document.querySelectorAll('.art-body img').forEach(function (imgRes) {
+      let imgSrc = imgRes.getAttribute("src");
+      let aImg = document.createElement('a');
+      aImg.href = imgSrc;
+      aImg.target = '_blank';
+      imgRes.parentNode.insertBefore(aImg, imgRes);
+      aImg.appendChild(imgRes);
+    });
+}
+addImgClick();
+let firstCate = document.querySelector("#cates-all li a").getAttribute("href");
+document.querySelector(".active-category a").setAttribute("href", firstCate);
+htmx.on("htmx:load", function(evt) {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+    addImgClick();
+});
+</script>
+</body>
+</html>

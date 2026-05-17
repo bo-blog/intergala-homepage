@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta property="og:url" content="https://www.bobshen.com/自言自语/posting-from-github-issues/" />
+<meta property="og:title" content="测试一个用Issue发blog的方法" /><meta property="og:image" content="https://www.bobshen.com/facebook_default.png" /><meta property="og:description" content="随记一个八零后的生活。" />
+  <link href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/resource/main.css">
+  <link rel="stylesheet" href="/resource/parts.css">
+  <script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/vue/2.6.11/vue.min.js"></script>
+  <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/reqwest/2.0.5/reqwest.min.js"></script>
+  <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/highlight.js/10.1.1/highlight.min.js"></script>
+  <link href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/highlight.js/10.1.1/styles/monokai-sublime.min.css" rel="stylesheet">
+  <title>测试一个用Issue发blog的方法 | Bob’s Corner</title>
+</head>
+  <body>
+    <script>
+      var mixins = []
+    </script>
+    <div id="canvas">
+        <header class="full-wrapper space-xs" :class="{'hide-header': hideHeader, 'shrink-header': shrinkHeader, 'blurred': showLoader}">
+  <div class="header-wrap main-wrapper row row-loose">
+    <div class="col-5 text-xl bolder site-name major"><a href="/">Bob’s Corner</a></div>
+      <div class="col-5 menu pointer to-right" @click="showMenu()"><div class="text-l bold inline-block menu-btn" :class="{'menu-open': menuOpen}"><i class="fa fa-chevron-right" aria-hidden="true"></i></div></div>
+      <nav class="nav-body col-8" :class="{'nav-open': menuOpen}">
+        <ul class="h-list to-right sc">
+          <li class="bg-sc-hover space-vh rounded ease" :class="{'nav-active': activeNav=='index' || activeNav=='category' || activeNav=='article'}"><a href="/">Home</a></li>
+          <li class="bg-sc-hover space-vh rounded ease" :class="{'nav-active': activeNav=='tag'}"><a href="/tags/">Tags</a></li>
+          <li class="bg-sc-hover space-vh rounded ease" :class="{'nav-active': activeNav=='archive'}"><a href="/archives/">Archive</a></li>
+          
+        </ul>
+      </nav>
+    </div>
+</header>
+
+        <main class="main-wrapper row row-loose row-top row-wrap space-xs" :class="{blurred: showLoader}">
+          <div class="main-zone-wrapper full-wrapper">
+          
+
+<section class="zone-main" id="zone-main">
+    <article class="space-s bg-panel rounded article-animate" style="animation-duration: 0.8s">
+    
+      <div class="title-area">
+        <div class="text-xs minor">Apr. 19, 2024</div>  
+        <div class="text-l bold theme-color">测试一个用Issue发blog的方法</div>
+      </div>
+      <div class="article-wrapper row row-loose row-top">
+        <div>
+            <div class="body-text between space-vh dynamic-underline">
+                <p>记录一下Hokshi的改进过程吧。<br>在给Hokshi加上了自动commit change到GitHub的功能后，突然觉得GH的API很好用啊。想到每次发日志都要正儿八经地打开mac，再deno run xxxxxx 啥的，好像有点麻烦，不如利用一下GitHub Issues增加一个自动发文章的功能吧，这样作为一个静态博客生成器也能随时更新了。</p>
+<p>思路是在家里的All-in-one服务器上运行一个脚本，定时抓取GitHub repo内由本人发布的、符合特定条件的Open Issues，抓到新的Issues后将其保存为新的.md文件并触发生成器的build + deploy功能，然后把Issue关闭。</p>
+<p>现在这篇日志就是用这个思路实现的，如果能在我的博客上看到这篇日志，说明研发成功。</p>
+
+            </div>
+            <div class="article-info between text-xs sc">
+                <div class="space-vh dynamic-underline"><i class="fa fa-folder-o" aria-hidden="true"></i> <a href="/category/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/">自言自语</a></div>
+                
+                <div class="space-vh dynamic-underline"><i class="fa fa-tag" aria-hidden="true"></i>
+                    <div class="h-list inline-block">
+                        <ul>
+                            
+                            <li><a href="/tags/#GitHub">GitHub</a></li>
+                            
+                            <li><a href="/tags/#%E5%B0%8F%E5%B7%A5%E5%85%B7">小工具</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+      </div>
+      
+    </article>
+
+    
+    
+    <div class="article-adjacent full-wrapper row row-top row-loose row-wrap text-xs sc">
+        <div class="space-vh"></div>
+        <div class="space-vh">Next: <a href="/%E5%B0%8F%E7%8E%A9%E6%84%8F/new-homepage/">新主页</a> <i class="fa fa-arrow-right" aria-hidden="true"></i></div>
+    </div>
+</section>
+<script>
+    mixins.push({
+        data: {
+            anchorPos: [],
+            activeAnchor: -1
+        },
+        methods: {
+            bindToc() {                
+                let allAnchors = document.querySelectorAll("#article-toc ul li a")
+                let windowHeight = document.documentElement.clientHeight
+                let ob = new IntersectionObserver(
+                  (entries)=>{
+                    entries.forEach((entry) => {
+                      if (entry.isIntersecting) {
+                        for (let i=0; i<allAnchors.length; i++) {
+                          if (allAnchors[i].href.split('#')[1]==entry.target.attributes.id.value) {
+                              allAnchors[i].classList.add("toc-highlight")
+                          }
+                          else {
+                              allAnchors[i].classList.remove("toc-highlight")
+                          }
+                        }
+                      }
+                    })
+                  },
+                  {
+                    rootMargin: '0px 0px -' + (windowHeight - 26) + 'px 0px',
+                    threshold: 0.5,
+                  }
+                )
+                if (allAnchors.length>0) {
+                    for (anchor of allAnchors) {
+                        let targetID = anchor.hash
+                        ob.observe(document.getElementById(targetID.substring(1)))
+                    }
+                }
+            },
+        },
+        mounted() {
+            window.setTimeout(this.bindToc, 500)  
+        }
+    })
+
+</script>
+
+          </div>
+          
+        </main>
+
+        <footer class="main-wrapper" :class="{blurred: showLoader}">
+  
+  <div class="space-s between to-center">
+    <div class="space-xxs to-center">
+      <div class="h-list sc text-l">
+        <ul>
+          
+          <li class="contact-item"><a href="http://weibo.com/bobshen" target="_blank" title="Weibo"><i class="fa fa-weibo" aria-hidden="true"></i></a></li>
+          
+          <li class="contact-item"><a href="https://twitter.com/bob_shen" target="_blank" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+          
+          <li class="contact-item"><a href="https://instagram.com/bobshen" target="_blank" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="text-xs sc">&copy; Bob. Powered by Hokshi.</div>
+  </div>
+</footer>
+
+<div class="float-buttons row" v-if="hideHeader">
+  <div class="h-list text-s bg-sc pointer scheme-select rounded">
+    <li title="Dark mode" v-if="currentScheme == 'light'"><i class="fa fa-moon-o" aria-hidden="true" @click="selScheme('dark')"></i></li>
+    <li title="Light mode" v-if="currentScheme == 'dark'"><i class="fa fa-sun-o" aria-hidden="true" @click="selScheme('light')"></i></li>
+    <li title="Use system color scheme"><i class="fa fa-desktop" aria-hidden="true" @click="selScheme('system')"></i></li>
+  </div>
+  <div class="goto-top text-l rounded pointer">
+    <i class="fa fa-arrow-circle-up" aria-hidden="true" @click="scrollToTop"></i>
+  </div>
+</div>
+
+<div class="loader ease" :class="{'loader-on': showLoader}">
+  <div class="lightbox"></div>
+  <div class="loading">
+    <i class="left"></i>
+    <i class="middle"></i>
+    <i class="right"></i>
+  </div>
+</div>
+    </div> 
+    
+  <script>
+  Vue.component ('place-holder', {
+      template: "<div class=\"place-holder\" :style=\"{width: phWidth}\">.</div>",
+      props: ['width'],
+      computed: {
+          phWidth() {
+              return this.width + "%"
+          }
+      }
+  })
+  var app = new Vue({
+      el: "#canvas",
+      mixins: mixins,
+      data: {
+         menuOpen: false,
+         windowScrolled: false,
+         windowScrollUp: false,
+         showLoader: false,
+         activeNav: 'article',
+         currentScheme: 'light',
+         ctagID: '',
+      },
+      methods: {
+          showMenu () {
+              this.menuOpen = !this.menuOpen;
+          },
+          windowScroller () {
+              var scrolled = document.documentElement.scrollTop || document.body.scrollTop
+              this.windowScrollUp = scrolled < this.windowScrolled
+              this.windowScrolled = scrolled
+          },
+          scrollToTop () {
+              window.scrollTo({ 
+                  top: 0, 
+                  behavior: "smooth" 
+              })
+          },
+          lightsOn () {
+              var self = this
+              setTimeout(function() {
+                  self.scrollToTop ()
+                  self.showLoader = false
+              }, 600)
+          },
+          selScheme(scheme) {
+            if (scheme == "system") {
+              localStorage.removeItem('prefers-scheme')
+            }
+            else if (scheme == "dark" || scheme == "light") {
+              localStorage.setItem('prefers-scheme', scheme)
+            }
+            this.setScheme(scheme)
+          },
+          setScheme(currentScheme) {
+            currentScheme = currentScheme == "dark" || currentScheme == "light" ? currentScheme : window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+            this.currentScheme = currentScheme
+            let link = document.createElement("link")
+            link.type = "text/css"
+            link.rel = "stylesheet"
+            link.href = "/resource/" + currentScheme + ".css"
+            document.getElementsByTagName("head")[0].appendChild(link)
+          },
+          setTagID() {
+            this.ctagID = location.hash.split("#").length == 2 ? location.hash.split("#")[1] : ""
+          }
+      },
+      mounted () { 
+          window.addEventListener('scroll', this.windowScroller) 
+          if (location.hash && location.hash!=="#") {
+            window.setTimeout(function(){
+                let dest = location.hash.substring(1)
+                document.getElementById(dest).scrollIntoView()                
+            }, 500)  
+          }
+          let currentScheme = localStorage.getItem('prefers-scheme') ? localStorage.getItem('prefers-scheme')
+          : window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+          this.setScheme(currentScheme)
+          this.setTagID()
+          window.addEventListener('hashchange', this.setTagID)
+      },
+      computed: {
+          hideHeader() {
+              return this.windowScrolled > 30
+          },
+          shrinkHeader() {
+              return this.windowScrolled > 30 && this.windowScrollUp
+          },                
+      }
+  })
+</script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelectorAll('pre code').forEach((block) => {
+        hljs.highlightBlock(block)
+      })
+    })
+
+    function addImgClick() {
+    document.querySelectorAll('article img').forEach((imgRes) => {
+          let imgSrc = imgRes.getAttribute("src")
+          imgRes.addEventListener("click", () => {
+            window.location = imgSrc
+          })
+        })
+    }
+    addImgClick()
+  </script>
+  
+  </body>
+</html>

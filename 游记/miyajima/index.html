@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" type="image/png" href="/resource/favicon.png" />
+    <link rel="stylesheet" href="/resource/reset.min.css">
+    <link rel="stylesheet" href="/resource/light.css">
+    <link rel="stylesheet" href="/resource/gi.css">
+    <script src="/resource/htmx.min.js"></script>
+    <title>日旅集 - EP6：宫岛 | Bob’s Corner</title>
+</head>
+<body>
+    <header>
+        <div id="top">
+            <div id="top-dec"></div>
+            <div id="nav" class="headline">
+                <div id="nav-left">
+                    <span id='menuBtn'>≡</span>
+                    <ul id="menu">
+                        <li><a href="/">Home</a></li>
+                        <li class="active-index active-article"><a href="/page/1/">Blogs</a></li>
+                        <li class="active-tag"><a href="/tags/">Tags</a></li>
+                        <li class="active-archivemenu"><a href="/archives/">Archive</a></li>
+                        <li class="active-category"><a href="">Categories</a></li>
+                        
+                    </ul>
+                </div>
+                <div id="nav-right">Bob’s Corner
+                </div>
+                <div id="nav-icon"><img src="/resource/avatar.jpg" alt="Avatar"></div>
+            </div>
+        </div>
+    </header>
+    <div id="nav-dec"></div>
+    <script>
+        let changedActiveItems = [];
+        function makeActive(id, currentV) {
+            document.querySelector("#"+id+" .active-"+currentV).classList.add(id+"-active");
+            changedActiveItems.forEach(function(item, i) {
+                if (document.querySelector("#"+id+" .active-"+item) && item != currentV) {
+                    document.querySelector("#"+id+" .active-"+item).classList.remove(id+"-active");
+                    changedActiveItems.splice(i, 1);
+                }
+            });
+            changedActiveItems.push(currentV);
+        }
+    </script>
+    <section id="main">
+    
+
+<div class="article">
+    
+    <div class="art-meta">
+        <div class="art-title headline">日旅集 - EP6：宫岛</div>
+        <div class="art-time headline">Apr. 4, 2026 · <a href="/category/%E6%B8%B8%E8%AE%B0/">游记</a><br>The article has 842 words and takes 3 min. to read.</div>
+    </div>
+    <div class="art-reader" id="main-wrapper">
+        <div class="wrapper-right art-body bodytext">
+            <p>本篇记录日本三景之一，位于广岛县的宫岛。<br><img src="/upload/miyajima_title.jpg" alt="宫岛"></p>
+<p>宫岛又称严岛，位于日本广岛县西南部的广岛湾西部，1996年严岛神社与弥山原始森林被列入世界文化遗产名录。这座面积约30平方公里的小岛，气候温暖、林木茂密，还生活着被视为神之使者的温顺小鹿。<a name="more" id="more"></a><br><img src="/upload/miyajima_deer.jpg" alt="宫岛的小鹿"></p>
+<p>从广岛市区出发，坐JR到宫岛口站，之后步行5分钟就到轮渡码头。10分钟的航程特别平稳，站在甲板上就能远远望见海上鸟居和弥山的轮廓。<br><img src="/upload/miyajima_ferry.jpg" alt="宫岛渡轮"></p>
+<p>下船后走一小段路，就到了严岛神社。这座始建于公元593年的海上木制神社，历经多次重建，却依旧完好保留着平安时代晚期的模样。朱红廊柱映着碧海蓝天，木质栈道慢慢延伸到海里。<br><img src="/upload/miyajima_shrine.jpg" alt="严岛神社"></p>
+<p>海上鸟居每天的涨潮和退潮时分有两种样子。退潮时，鸟居的基座露出来，人们能从沙石路走近它，近距离感受那一抹斑驳的朱红。涨潮时，鸟居就像漂浮在海面上一般，这就是宫岛最具代表性的建筑。通过官网查询每天的潮起潮落，留出充足的时间在岛上，即可捕捉到两种不同的海上鸟居风景。<br><img src="/upload/miyajima_torii.jpg" alt="严岛神社鸟居"></p>
+<p>在等待潮水涨落的时候，可以跟着指示牌走到红叶谷公园附近的缆车点，坐循环式缆车上弥山。缆车耗时少于20分钟，终点是狮子岩。从狮子岩的山顶展望台向下俯瞰，整座宫岛、蔚蓝的濑户内海，还有远处连绵的山脉，全都映入眼帘，是宫岛不容错过的胜境。<br><img src="/upload/miyajima_mountain_top.jpg" alt="从山顶俯瞰"></p>
+<p>离开宫岛前，不妨顺路逛一下神社边上的商店街。牡蛎料理值得一试，还有星鳗饭、小鹿造型馒头等本地美食，以及鸟居造型的小纪念品，路上偶尔会遇到温顺的小鹿，给旅程加了不少乐趣。</p>
+
+        </div>
+        
+    </div>
+    
+    <div class="art-tags headline"> 
+        <ul>
+            
+            <li><a href="/tags/#%E6%97%85%E8%A1%8C">旅行</a></li>
+            
+            <li><a href="/tags/#%E6%97%A5%E6%9C%AC">日本</a></li>
+            
+            <li><a href="/tags/#%E5%B9%BF%E5%B2%9B%E5%8E%BF">广岛县</a></li>
+            
+        </ul>
+    </div>
+    
+    
+    <div id="adjacent">
+        <div>❮ Previous: <a href="/%E5%B0%8F%E7%8E%A9%E6%84%8F/grass-instinct/">复刻了2008年的blog主题</a></div>
+        <div>Next: <a href="/%E6%B8%B8%E8%AE%B0/takayama-shirogawa/">日旅集 - EP5：飞騨高山 × 白川乡</a> ❯</div>
+    </div>
+</div>
+<script>
+    function bindToc() {                
+        let allAnchors = document.querySelectorAll(".toc ul li a")
+        let windowHeight = document.documentElement.clientHeight
+        let ob = new IntersectionObserver(
+            function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        for (let i=0; i<allAnchors.length; i++) {
+                          if (allAnchors[i].href.split('#')[1] == entry.target.attributes.id.value) {
+                              allAnchors[i].classList.add("toc-highlight")
+                          }
+                          else {
+                              allAnchors[i].classList.remove("toc-highlight")
+                          }
+                        }
+                    }
+                });
+            },
+            {
+                rootMargin: '0px 0px -' + (windowHeight - 40) + 'px 0px',
+                threshold: 0.5,
+            }
+        );
+        if (allAnchors.length>0) {
+            for (anchor of allAnchors) {
+                let targetID = anchor.hash
+                ob.observe(document.getElementById(targetID.substring(1)))
+            }
+        }
+    }
+    window.setTimeout(bindToc, 500);
+</script>
+
+    </section>
+    <footer>
+        <div id="footer">
+            <div id="footer-row">
+                <div id="about">
+                    <div class="footer-title headline">About Me</div>
+                    <div class="footer-body bodytext">白羊座中年。不旅行的时候宅家，旅行的时候暴走。有家室，养猫。</div>
+                </div>
+                <div id="tag-group">
+                    <div class="footer-title headline">Tags</div>
+                    <div class="footer-body bodytext">
+                        <ul>
+                        
+                            <li><a href="/tags/#%E6%97%85%E8%A1%8C">旅行 (13)</a></li>
+                        
+                            <li><a href="/tags/#%E6%97%A5%E6%9C%AC">日本 (11)</a></li>
+                        
+                            <li><a href="/tags/#%E4%B8%9C%E4%BA%AC%E9%83%BD">东京都 (3)</a></li>
+                        
+                            <li><a href="/tags/#%E4%B8%8A%E6%B5%B7">上海 (3)</a></li>
+                        
+                            <li><a href="/tags/#%E4%B8%BB%E9%A1%B5">主页 (2)</a></li>
+                        
+                            <li><a href="/tags/#%E5%B9%BF%E5%B2%9B%E5%8E%BF">广岛县 (2)</a></li>
+                        
+                            <li><a href="/tags/#nuc">nuc (2)</a></li>
+                        
+                            <li><a href="/tags/#macOS">macOS (2)</a></li>
+                        
+                            <li><a href="/tags/#%E7%A5%9E%E5%A5%88%E5%B7%9D%E5%8E%BF">神奈川县 (2)</a></li>
+                        
+                            <li><a href="/tags/#%E7%BD%91%E4%BA%8B">网事 (2)</a></li>
+                        
+                        </ul>
+                    </div>
+                </div>
+                <div id="category">
+                    <div class="footer-title headline">Categories</div>
+                    <div class="footer-body bodytext">
+                        <ul id="cates-all">
+                        
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E5%B0%8F%E7%8E%A9%E6%84%8F/">小玩意</a></span> <span class="cate-count">(3)</span></li>
+                            
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E6%B8%B8%E8%AE%B0/">游记</a></span> <span class="cate-count">(13)</span></li>
+                            
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/">自言自语</a></span> <span class="cate-count">(21)</span></li>
+                            
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E9%9A%8F%E5%BF%83%E6%B5%8B/">随心测</a></span> <span class="cate-count">(6)</span></li>
+                            
+                            <li><span class="cate-name"><a href="/rss.xml">RSS</a></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="loader" class="htmx-indicator">
+       <span class="loader"></span>
+    </div>
+<script>
+let menuOpened = false;
+document.querySelector("#menuBtn").addEventListener("click", function() {
+    document.querySelector("#menu").style.marginLeft = menuOpened ? '-200px' : 0;
+    document.querySelector("#nav-right").style.opacity = menuOpened ? 1 : 0;
+    menuOpened = !menuOpened;
+    document.querySelector("#main").style.zIndex = menuOpened ? 0 : 100;
+});
+let layoutNow = "article";
+if (layoutNow == "archive") {
+    layoutNow = "archivemenu";
+}
+makeActive ("menu", layoutNow);
+function addImgClick() {
+    document.querySelectorAll('.art-body img').forEach(function (imgRes) {
+      let imgSrc = imgRes.getAttribute("src");
+      let aImg = document.createElement('a');
+      aImg.href = imgSrc;
+      aImg.target = '_blank';
+      imgRes.parentNode.insertBefore(aImg, imgRes);
+      aImg.appendChild(imgRes);
+    });
+}
+addImgClick();
+let firstCate = document.querySelector("#cates-all li a").getAttribute("href");
+document.querySelector(".active-category a").setAttribute("href", firstCate);
+htmx.on("htmx:load", function(evt) {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+    addImgClick();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" type="image/png" href="/resource/favicon.png" />
+    <link rel="stylesheet" href="/resource/reset.min.css">
+    <link rel="stylesheet" href="/resource/light.css">
+    <link rel="stylesheet" href="/resource/gi.css">
+    <script src="/resource/htmx.min.js"></script>
+    <title>Bob’s Corner</title>
+</head>
+<body>
+    <header>
+        <div id="top">
+            <div id="top-dec"></div>
+            <div id="nav" class="headline">
+                <div id="nav-left">
+                    <span id='menuBtn'>≡</span>
+                    <ul id="menu">
+                        <li><a href="/">Home</a></li>
+                        <li class="active-index active-article"><a href="/page/1/">Blogs</a></li>
+                        <li class="active-tag"><a href="/tags/">Tags</a></li>
+                        <li class="active-archivemenu"><a href="/archives/">Archive</a></li>
+                        <li class="active-category"><a href="">Categories</a></li>
+                        
+                    </ul>
+                </div>
+                <div id="nav-right">Bob’s Corner
+                </div>
+                <div id="nav-icon"><img src="/resource/avatar.jpg" alt="Avatar"></div>
+            </div>
+        </div>
+    </header>
+    <div id="nav-dec"></div>
+    <script>
+        let changedActiveItems = [];
+        function makeActive(id, currentV) {
+            document.querySelector("#"+id+" .active-"+currentV).classList.add(id+"-active");
+            changedActiveItems.forEach(function(item, i) {
+                if (document.querySelector("#"+id+" .active-"+item) && item != currentV) {
+                    document.querySelector("#"+id+" .active-"+item).classList.remove(id+"-active");
+                    changedActiveItems.splice(i, 1);
+                }
+            });
+            changedActiveItems.push(currentV);
+        }
+    </script>
+    <section id="main">
+    
+
+<div class="article">
+    <div class="art-meta">
+        <div class="art-title headline"><a href="/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/msn-china/">MSN China - 分门别类地打击异己</a></div>
+        <div class="art-time headline">May 31, 2005 · <a href="/category/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/">自言自语</a></div>
+    </div>
+    <div class="art-body bodytext">
+    <p>关注网络动态的朋友一定知道微软在酝酿许久以后终于推出了MSN的<a href="http://www.msn.com.cn/">中文站点</a>，也一定看到了对这个新站点的各种评价。不过对我来说，比起该站点在内容上的贫乏和无趣，更让我无法忍受的是其IE Only的不友好界面。在站点发布后没几个小时，网上已经充斥着对于MSN China的站点设计的批评，尤其是它在Firefox和Netscape浏览器下惨不忍睹的非正常显示更是愤怒。<br>最初以为这只是微软中国无视Fx和Nc用户存在的一贯作风罢了。不过近日，从Firefox中文社区了解到，MSN China的页面之所以在Fx下这么不堪，不是它没有考虑到Fx的用户，而恰恰是因为考虑到了Fx的存在，给了Fx用户特殊的“照顾”。<br>以下引用Nighttalker的发言，原帖地址在：<a href="http://www.firefox.net.cn/newforum/viewtopic.php?t=5882&amp;postdays=0&amp;postorder=asc&amp;&amp;start=15">这里</a>。</p>
+<blockquote>
+<p>ft, msn.com.cn似乎对浏览器进行分辨，然后对不同浏览器发送不同的stylesheet, opera8里面，如果伪装成mozilla 5.0 就会一塌糊涂。哪位装了UA switcher的试试看把FX伪装成IE6有什么结果？<br>update: 我无法相信msn中国竟然真的还在使用如此拙劣的手段来打击异己，他们应该是忘记了2年前，因为微软的msn针对opera发送不同CSS而导致opera对于msn.com渲染出错，opera状告微软而获得几千万美元赔款的前车之鉴了。这帮子没脑子的东西。<br>以下截图是安装了user agent switcher,然后把fx伪装成IE 6之后的结果。</p>
+</blockquote>
+<p>于是我用UA Switcher扩展分别伪装成IE 6.0、Opera 7.54和Netscape 4.8访问了MSN China的主页，该站点对不同浏览器发送的css是：<br>IE 6.0： /gen/css/MSN9UX/home-ie6.css?V=1.03<br>Firefox 1.0.4：/gen/css/MSN9UX/home-fire.css?V=1.03<br>Opera 7：/gen/css/MSN9UX/home-opera7.css?V=1.03<br>Netscape：没有CSS！<br>其中IE和Opera的两套CSS显示正常，Fx的CSS显示为白茫茫的一片，Nc由于没有关联css，显示效果比Fx还差。</p>
+<p><05.31 22:16更新：其实是根本不存在home-fire.css这个文件，也就是说是故意让Fx引用不存在的css></p>
+<p><06.04更新：MSN China终于在近期弥补上了Firefox的css文件，现在用fx访问已经正常。但愿这次事件的原委如我本文最后所说。><br>因此，MSN China通过这个伎俩打压对其构成威胁的浏览器的事实基本上是存在的。为什么没有对Opera7给与特殊待遇呢？大概是MS吃过2年前的亏，这次变聪明了。Fx是目前除Opera以外最大的对手，当然要对它好好招待。至于Nc，看来已经被遗忘了吧，这些用户索性也就不要浏览了。<br>MSN China站点在这件事上，有那么几点让人不齿：<br>1.利用卑鄙的暗招阻碍其他浏览器用户的正常访问，借以打压异己。<br>2.欺软怕硬，两副嘴脸迎客。<br>3.拾MSN全球站点2年前的牙慧。<br>其实，MSN China应该意识到，凭借其目前提供的内容咨询，这样的小花招根本无济于事。Fx和Nc的用户大不了不去你这个什锦拼盘，免得眼睛和精神受到双重折磨。<br>当然，为他们开脱一下也是可以的。可以理解为站点处于测试阶段，针对Fx和Nc的css还没有开发好（众所周知IE和Fx在css的解释上常常南辕北辙）。也对，MSN China的站点筹备计划了这么久才面世，也不在乎多拖上那么几个月嘛！届时IE 7一发布，重振雄风以后，Fx和其他浏览器还用考虑么！</p>
+
+    </div>
+    
+      
+</div>
+
+<div class="article">
+    <div class="art-meta">
+        <div class="art-title headline"><a href="/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/fayewong-lyrics/">评王菲在《将爱》中的作词</a></div>
+        <div class="art-time headline">Dec. 1, 2003 · <a href="/category/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/">自言自语</a></div>
+    </div>
+    <div class="art-body bodytext">
+    <p>这次的新专辑王菲自己做了不少词，因此很期待地看了《不留》，看完以后却难掩心酸。她，一个在爱情上不算成功且饱受非议的女人，把她的经历，她的想法，一丝丝地融入进了自己亲手写下的词句中。《只爱陌生人》里她处于刚与窦唯决裂后的阵痛期，所以里面的每一首亲自创作都是无穷无尽的哀伤和无奈。尤其是《推翻》，这首她自己演绎时难以抑止泪水的歌，让我震惊为什么如此天籁声音可以呈示如此不堪的心碎。</p>
+<blockquote>
+<p>突然间你连瞒都不瞒　想也不想<br>就这么推翻<br>就这么说过去只是闹剧一场<br>就这样你连探都不探　看也不看<br>像与你无关<br>像是只有我还可以承受<br>这无解的遗憾</p>
+</blockquote>
+<p>当一个女人用如此直接的话语展示感情的创伤的时候，已经没有必要去解释和算清谁负了谁了。无论如何，她都是受伤者，一个伤痕累累的伤者。这就是很长一段时间内我不敢去也不愿去听窦唯，那个带给她如此巨大的伤害的男人（尽管不一定是他的错）。甚至当我看着当年王菲激情十足地演唱《Don&#39;t Break My Heart》，窦唯在其身后奋力伴奏的那些画面，心里也不是滋味。我想这首歌王菲今后都不会再翻唱了，因为唱一次，兴许就是在伤口洒盐，在心口划刀。</p>
+
+        <div><a href="/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/fayewong-lyrics/#more">More...</a></div>
+    </div>
+    
+    <div class="art-tags headline"> 
+        <ul>
+            
+            <li><a href="/tags/#Music">Music</a></li>
+            
+        </ul>
+    </div>
+    
+      
+</div>
+
+<div class="article">
+    <div class="art-meta">
+        <div class="art-title headline"><a href="/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/about-waiting/">等待是一生最初的苍老</a></div>
+        <div class="art-time headline">Nov. 6, 2003 · <a href="/category/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/">自言自语</a></div>
+    </div>
+    <div class="art-body bodytext">
+    <p>当你开始等待，你就开始衰老了。但是不管会不会老，有的时候我们情愿以等待来换取希望的结果，有的时候自己不能做什么，只有等待。</p>
+<p>朋友说我是个没有耐性的人。因为他们老听到我在说“快点快点”，“哎呀烦死了不做了”。这点没有错。我一直很奇怪，一个性子不急的人怎么耐性会这么差。我喜欢在与人约定的见面时间前一刻终到，然后开始看着时间缓缓流逝，等得心气暴躁，等得极不耐烦，等得发短信去催他，等得原地踱来踱去。但是当等待的人终于出现在面前的时候，我倒也不会生气。我会告诉他我刚刚到。不是我脾气好，是因为我的愤怒被另一种更强烈的感情所取代，那就是等待终于得到结果时的喜悦。</p>
+<p>在这个世上有很多人很多事是可遇不可求的。等待是邂逅这些人这些事的唯一途径。我不爱等待，但我深知等待之必须性的无奈性。有的人值得为他等待一个小时，有的人值得等他一个月，有的人值得等待一年，有的人值得等十年；而有些人，值得我等待一生一世。</p>
+<p>那些只值得等一小时的人，我把他的名字放在脑后；值得等一个月的人，我把他的名字写在纸上；值得等一年的人，他的名字我会记在脑子里；值得等十年的人，我放在心里；值得等一生的人，我会将他的名字，他的形，他的影，他的一切，牢牢地刻在心底。</p>
+<p>等待，像一阵风，吹散了原本混杂在一起的丝丝缕缕的形形色色。有些人被风带走了，再也不回来了，于是我很快把他忘怀；有些人在空中打飘，落在了遥远的前方，于是我踌躇了一下，放弃了他；有些人在我眼前飘忽，最终降在脚边，于是我弯腰把他拾起；有些人，却如生根般地在我的手中，无论风再大再猛烈都不肯走，或者，是我自己不愿不舍放手吧。当风乍停，我会把他抓得更紧，小心呵护，不忍另一阵风再伤害他。</p>
+
+    </div>
+    
+      
+</div>
+
+<div id="pages" class="headline">
+    <ul>
+        
+        <li class="page-prev"><a hx-get="/page/13/" hx-swap="outerHTML" hx-target="#main" hx-select="#main" hx-push-url="true" hx-indicator="#loader" href="/page/13/">❮</a></li>
+        
+        <li class="page-actived">14</li>
+        
+        <li class="page-next"><a hx-get="/page/15/" hx-swap="outerHTML" hx-target="#main" hx-select="#main" hx-push-url="true" hx-indicator="#loader" href="/page/15/">❯</a></li>
+        
+    </ul>
+    
+</div>
+
+    </section>
+    <footer>
+        <div id="footer">
+            <div id="footer-row">
+                <div id="about">
+                    <div class="footer-title headline">About Me</div>
+                    <div class="footer-body bodytext">白羊座中年。不旅行的时候宅家，旅行的时候暴走。有家室，养猫。</div>
+                </div>
+                <div id="tag-group">
+                    <div class="footer-title headline">Tags</div>
+                    <div class="footer-body bodytext">
+                        <ul>
+                        
+                            <li><a href="/tags/#%E6%97%85%E8%A1%8C">旅行 (13)</a></li>
+                        
+                            <li><a href="/tags/#%E6%97%A5%E6%9C%AC">日本 (11)</a></li>
+                        
+                            <li><a href="/tags/#%E4%B8%9C%E4%BA%AC%E9%83%BD">东京都 (3)</a></li>
+                        
+                            <li><a href="/tags/#%E4%B8%8A%E6%B5%B7">上海 (3)</a></li>
+                        
+                            <li><a href="/tags/#%E4%B8%BB%E9%A1%B5">主页 (2)</a></li>
+                        
+                            <li><a href="/tags/#%E5%B9%BF%E5%B2%9B%E5%8E%BF">广岛县 (2)</a></li>
+                        
+                            <li><a href="/tags/#nuc">nuc (2)</a></li>
+                        
+                            <li><a href="/tags/#macOS">macOS (2)</a></li>
+                        
+                            <li><a href="/tags/#%E7%A5%9E%E5%A5%88%E5%B7%9D%E5%8E%BF">神奈川县 (2)</a></li>
+                        
+                            <li><a href="/tags/#%E7%BD%91%E4%BA%8B">网事 (2)</a></li>
+                        
+                        </ul>
+                    </div>
+                </div>
+                <div id="category">
+                    <div class="footer-title headline">Categories</div>
+                    <div class="footer-body bodytext">
+                        <ul id="cates-all">
+                        
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E5%B0%8F%E7%8E%A9%E6%84%8F/">小玩意</a></span> <span class="cate-count">(3)</span></li>
+                            
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E6%B8%B8%E8%AE%B0/">游记</a></span> <span class="cate-count">(13)</span></li>
+                            
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/">自言自语</a></span> <span class="cate-count">(21)</span></li>
+                            
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E9%9A%8F%E5%BF%83%E6%B5%8B/">随心测</a></span> <span class="cate-count">(6)</span></li>
+                            
+                            <li><span class="cate-name"><a href="/rss.xml">RSS</a></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="loader" class="htmx-indicator">
+       <span class="loader"></span>
+    </div>
+<script>
+let menuOpened = false;
+document.querySelector("#menuBtn").addEventListener("click", function() {
+    document.querySelector("#menu").style.marginLeft = menuOpened ? '-200px' : 0;
+    document.querySelector("#nav-right").style.opacity = menuOpened ? 1 : 0;
+    menuOpened = !menuOpened;
+    document.querySelector("#main").style.zIndex = menuOpened ? 0 : 100;
+});
+let layoutNow = "index";
+if (layoutNow == "archive") {
+    layoutNow = "archivemenu";
+}
+makeActive ("menu", layoutNow);
+function addImgClick() {
+    document.querySelectorAll('.art-body img').forEach(function (imgRes) {
+      let imgSrc = imgRes.getAttribute("src");
+      let aImg = document.createElement('a');
+      aImg.href = imgSrc;
+      aImg.target = '_blank';
+      imgRes.parentNode.insertBefore(aImg, imgRes);
+      aImg.appendChild(imgRes);
+    });
+}
+addImgClick();
+let firstCate = document.querySelector("#cates-all li a").getAttribute("href");
+document.querySelector(".active-category a").setAttribute("href", firstCate);
+htmx.on("htmx:load", function(evt) {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+    addImgClick();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aus.cn Listicles</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+    <style>
+        html {
+          font-family: "Arial"; 
+          font-size: 16px; 
+        }
+        #gen, #download {
+            display: none;
+        }
+        .num {
+            width: 19px;
+        }
+        .sub {
+            width: 220px;
+        }
+        input {
+            padding: 2px;
+            margin: 3px;
+        }
+        button {
+            padding: 6px;
+        }
+        textarea {
+            width: 100%;
+            height: 50px;
+        }
+        body {
+            display: flex;
+            overscroll-behavior: none;
+        }
+        #left {
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+            padding: 10px;
+            max-height: 100vh;
+            position: sticky;
+            top: 0;
+        }
+        #left button {
+            width: 100px;
+        }
+        #mid, #right {
+            max-width: 30%;
+            padding: 10px;
+            flex-grow: 0;
+        }
+        #pic img {
+            width: 350px;
+        }
+        #pic {
+            display: flex;
+            flex-direction: column;
+        }
+        #car img {
+            width: 40px;
+            height: 40px;
+        }
+        #des input {
+            width: 260px;
+        }
+        #txt {
+            margin-top: 10px;
+            display: none;
+            height: 500px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div id="left">
+        <h4>Paste the source code:</h4>
+        <p><input type="radio" value="1" name="isPreview">Preview <input type="radio" value="0" name="isPreview" checked>China <input type="radio" value="2" name="isPreview">Global<br>
+        <textarea name="bodyText" id="bodyText"></textarea></p>
+        <button onclick="extractFromSrc()">Extract</button>
+        <script src="run.js">
+        </script>
+        <div id="bodytxt"><textarea id="txt" onmouseout="document.execCommand('copy');"></textarea></div>
+        
+    </div>
+    <div id="mid">
+        <div id="car"></div>
+        <div id="des"></div>
+    </div>
+    <div id="right">
+        <div id="area"></div>
+        <div id="gen">
+            <button onclick="createImages()">Create</button>
+        </div>
+        <br><br><br>
+        <div id="pic"></div>
+        <div id="download">
+            <button onclick="dlImages()">Download</button>
+        </div>
+    </div>
+</body>
+</html>

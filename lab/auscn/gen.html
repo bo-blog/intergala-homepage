@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .container {
+            max-width: 1400px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .form-group {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-sizing: border-box;
+        }
+        .form-group h3 {
+            margin-top: 0;
+            color: #333;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            font-size: 18px;
+        }
+        .input-field {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        textarea.input-field {
+            min-height: 100px;
+            resize: vertical;
+        }
+        .generate-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        .generate-btn:hover {
+            background-color: #45a049;
+        }
+        .result-area {
+            margin-top: 20px;
+        }
+        .result-image {
+            width: 100%;
+            max-width: 300px;
+            margin-top: 15px;
+        }
+        .download-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="aab">
+        <textarea name="" id="bodyText"></textarea> <br>
+        <button onclick="extractFromSrc()">Extract</button>
+    </div>
+    <div class="container">
+        <div class="form-grid">
+            <!-- 第1组表单 -->
+            <div class="form-group" id="g1">
+                <h3>图片生成器 #1</h3>
+                <input type="file" class="file-input input-field" accept="image/jpeg">
+                <input type="text" class="title-input input-field" placeholder="请输入标题">
+                <textarea class="body-input input-field" placeholder="请输入正文"></textarea>
+                <button class="generate-btn" onclick="handleSubmit(this)">生成图片</button>
+                <div class="result-area"></div>
+            </div>
+
+            <!-- 第2组表单 -->
+            <div class="form-group" id="g2">
+                <h3>图片生成器 #2</h3>
+                <input type="file" class="file-input input-field" accept="image/jpeg">
+                <input type="text" class="title-input input-field" placeholder="请输入标题">
+                <textarea class="body-input input-field" placeholder="请输入正文"></textarea>
+                <button class="generate-btn" onclick="handleSubmit(this)">生成图片</button>
+                <div class="result-area"></div>
+            </div>
+
+            <!-- 第3组表单 -->
+            <div class="form-group" id="g3">
+                <h3>图片生成器 #3</h3>
+                <input type="file" class="file-input input-field" accept="image/jpeg">
+                <input type="text" class="title-input input-field" placeholder="请输入标题">
+                <textarea class="body-input input-field" placeholder="请输入正文"></textarea>
+                <button class="generate-btn" onclick="handleSubmit(this)">生成图片</button>
+                <div class="result-area"></div>
+            </div>
+
+            <!-- 第4组表单 -->
+            <div class="form-group" id="g4">
+                <h3>图片生成器 #4</h3>
+                <input type="file" class="file-input input-field" accept="image/jpeg">
+                <input type="text" class="title-input input-field" placeholder="请输入标题">
+                <textarea class="body-input input-field" placeholder="请输入正文"></textarea>
+                <button class="generate-btn" onclick="handleSubmit(this)">生成图片</button>
+                <div class="result-area"></div>
+            </div>
+
+            <!-- 第5组表单 -->
+            <div class="form-group" id="g5">
+                <h3>图片生成器 #5</h3>
+                <input type="file" class="file-input input-field" accept="image/jpeg">
+                <input type="text" class="title-input input-field" placeholder="请输入标题">
+                <textarea class="body-input input-field" placeholder="请输入正文"></textarea>
+                <button class="generate-btn" onclick="handleSubmit(this)">生成图片</button>
+                <div class="result-area"></div>
+            </div>
+
+            <!-- 第6组表单 -->
+            <div class="form-group" id="g6">
+                <h3>图片生成器 #6</h3>
+                <input type="file" class="file-input input-field" accept="image/jpeg">
+                <input type="text" class="title-input input-field" placeholder="请输入标题">
+                <textarea class="body-input input-field" placeholder="请输入正文"></textarea>
+                <button class="generate-btn" onclick="handleSubmit(this)">生成图片</button>
+                <div class="result-area"></div>
+            </div>
+
+            <!-- 第7组表单 -->
+            <div class="form-group" id="g7">
+                <h3>图片生成器 #7</h3>
+                <input type="file" class="file-input input-field" accept="image/jpeg">
+                <input type="text" class="title-input input-field" placeholder="请输入标题">
+                <textarea class="body-input input-field" placeholder="请输入正文"></textarea>
+                <button class="generate-btn" onclick="handleSubmit(this)">生成图片</button>
+                <div class="result-area"></div>
+            </div>
+
+            <!-- 第8组表单 -->
+            <div class="form-group" id="g8">
+                <h3>图片生成器 #8</h3>
+                <input type="file" class="file-input input-field" accept="image/jpeg">
+                <input type="text" class="title-input input-field" placeholder="请输入标题">
+                <textarea class="body-input input-field" placeholder="请输入正文"></textarea>
+                <button class="generate-btn" onclick="handleSubmit(this)">生成图片</button>
+                <div class="result-area"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function handleSubmit(button) {
+            // 获取当前组的元素
+            const formGroup = button.closest('.form-group');
+            const fileInput = formGroup.querySelector('.file-input');
+            const titleInput = formGroup.querySelector('.title-input');
+            const bodyInput = formGroup.querySelector('.body-input');
+            const resultArea = formGroup.querySelector('.result-area');
+            
+            // 清空之前的结果
+            resultArea.innerHTML = '';
+            
+            // 获取输入内容
+            const file = fileInput.files[0];
+            const titleText = titleInput.value.trim();
+            const bodyText = bodyInput.value.trim();
+            
+            // 验证输入
+            if (!file) {
+                alert('请选择图片文件');
+                return;
+            }
+            
+            if (!file.type.match('image/jpeg')) {
+                alert('请选择JPG格式的图片');
+                return;
+            }
+            
+            if (!titleText) {
+                alert('请输入标题');
+                return;
+            }
+            
+            // 调用图片生成函数
+            generateCompositeImage(file, titleText, bodyText)
+                .then(blob => {
+                    const img = document.createElement('img');
+                    img.src = URL.createObjectURL(blob);
+                    img.className = 'result-image';
+                    resultArea.appendChild(img);
+                    
+                    const a = document.createElement('a');
+                    a.href = img.src;
+                    a.download = titleText + '.jpg';
+                    a.textContent = '下载图片';
+                    a.className = 'download-link';
+                    resultArea.appendChild(a);
+                })
+                .catch(error => {
+                    alert('生成图片失败: ' + error.message);
+                    console.error(error);
+                });
+        }
+
+        function generateCompositeImage(imgData, titleText, bodyText) {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            
+            canvas.width = 750;
+            canvas.height = 1200;
+            
+            ctx.save();
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            const img = new Image();
+            img.src = URL.createObjectURL(imgData);
+            
+            return new Promise((resolve, reject) => {
+                img.onload = function() {
+                    try {
+                        const imageX = 5;
+                        const imageY = 5;
+                        const targetWidth = 740;
+                        const targetHeight = 740;
+                        const cornerRadius = 20; // 顶图圆角20px
+                        
+                        // 计算图片裁剪区域（保持比例，中心裁切）
+                        const imgAspect = img.width / img.height;
+                        const targetAspect = 1;
+                        
+                        let cropWidth, cropHeight, cropX, cropY;
+                        
+                        if (imgAspect > targetAspect) {
+                            cropHeight = img.height;
+                            cropWidth = img.height * targetAspect;
+                            cropX = (img.width - cropWidth) / 2;
+                            cropY = 0;
+                        } else {
+                            cropWidth = img.width;
+                            cropHeight = img.width / targetAspect;
+                            cropX = 0;
+                            cropY = (img.height - cropHeight) / 2;
+                        }
+                        
+                        // 绘制带圆角的顶图
+                        ctx.beginPath();
+                        ctx.moveTo(imageX + cornerRadius, imageY);
+                        ctx.arcTo(imageX + targetWidth, imageY, imageX + targetWidth, imageY + targetHeight, cornerRadius);
+                        ctx.arcTo(imageX + targetWidth, imageY + targetHeight, imageX, imageY + targetHeight, cornerRadius);
+                        ctx.arcTo(imageX, imageY + targetHeight, imageX, imageY, cornerRadius);
+                        ctx.arcTo(imageX, imageY, imageX + targetWidth, imageY, cornerRadius);
+                        ctx.closePath();
+                        ctx.clip();
+                        
+                        ctx.drawImage(
+                            img, 
+                            cropX, cropY, cropWidth, cropHeight,
+                            imageX, imageY, targetWidth, targetHeight
+                        );
+                        
+                        ctx.restore();
+                        ctx.save();
+                        
+                        // 字体设置 - 字号加大一倍（原为26pt，现为52pt）
+                        const fontSize = 36;
+                        const fontSize2 = 28;
+                        ctx.font = `bold ${fontSize}pt "Noto Sans SC", sans-serif`;
+                        ctx.fillStyle = '#000000';
+                        ctx.textBaseline = 'top';
+                        
+                        // 文本最大宽度
+                        const textMaxWidth = 750 - 10;
+                        
+                        // 绘制标题 - 距离顶图40px
+                        const titleX = 5;
+                        const titleY = imageY + targetHeight + 40;
+                        const titleHeight = wrapChineseText(ctx, titleText, titleX, titleY, textMaxWidth, fontSize * 1.5);
+                        
+                        // 绘制正文 - 距离标题40px
+                        const bodyX = 5;
+                        const bodyY = titleY + titleHeight + 40;
+                        ctx.font = `${fontSize2}pt "Noto Sans SC", sans-serif`;
+                        ctx.fillStyle = 'rgb(97, 110, 122)';
+
+                        wrapChineseText(ctx, bodyText, bodyX, bodyY, textMaxWidth, fontSize * 1.5);
+                        
+                        canvas.toBlob(blob => {
+                            if (blob) {
+                                resolve(blob);
+                            } else {
+                                reject(new Error('无法生成图片'));
+                            }
+                        }, 'image/jpeg', 0.95);
+                    } catch (error) {
+                        console.error('生成图片失败:', error);
+                        reject(error);
+                    } finally {
+                        URL.revokeObjectURL(img.src);
+                    }
+                };
+                
+                img.onerror = function() {
+                    reject(new Error('图片加载失败'));
+                };
+            });
+        }
+
+        // 中文文本换行函数
+        function wrapChineseText(ctx, text, x, y, maxWidth, lineHeight) {
+            if (!text || text.length === 0) return 0;
+            
+            let currentX = x;
+            let currentY = y;
+            let totalHeight = 0;
+            
+            // 处理换行符
+            const paragraphs = text.split('\n');
+            
+            paragraphs.forEach(paragraph => {
+                if (paragraph.length === 0) {
+                    currentY += lineHeight;
+                    totalHeight += lineHeight;
+                    return;
+                }
+                
+                // 逐个字符处理
+                for (let i = 0; i < paragraph.length; i++) {
+                    const char = paragraph[i];
+                    const charWidth = ctx.measureText(char).width;
+                    
+                    // 如果加上当前字符会超过最大宽度，则换行
+                    if (currentX + charWidth > x + maxWidth) {
+                        currentY += lineHeight;
+                        totalHeight += lineHeight;
+                        currentX = x; // 重置到行首
+                    }
+                    
+                    // 绘制当前字符
+                    ctx.fillText(char, currentX, currentY);
+                    currentX += charWidth;
+                }
+                
+                // 段落结束后换行
+                currentY += lineHeight;
+                totalHeight += lineHeight;
+                currentX = x;
+            });
+            
+            return totalHeight;
+        }
+    </script>
+    <script src="run2.js"></script>
+</body>
+</html>
+    

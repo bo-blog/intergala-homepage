@@ -1,0 +1,220 @@
+@font-face {
+    font-family: "Aileron";
+    src: url("Aileron.otf");
+}
+:root {
+    --mtop: 0px;
+    overflow-x: hidden;
+    font-family: Aileron, Aptos, Avenir, Arial, 'Segoe UI';
+    --bg1: url("./IMG_4130.jpeg");
+    --bg2: url("./background.jpg");
+    --bg3: url("./imgbg_4.jpg");
+}
+a {
+    text-decoration: none;
+}
+/* Start screen */
+#start, .bg {
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: top 0.7s ease-in-out;
+}
+.bg {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    z-index: 888;
+    transition: all 1s ease-in-out;
+    overflow-x: hidden;
+}
+.bg div {
+    flex-shrink: 0;
+    width: 100vw;
+    height: 100%; 
+    background: var(--bg3) no-repeat center center;
+}
+/* #bg1 {
+    background: var(--bg1) no-repeat center center;
+}
+#bg2 {
+    background: var(--bg2) no-repeat center center;
+}
+#bg3 {
+    background: var(--bg3) no-repeat center center;
+} */
+.bg, #bg1, #bg2, #bg3 {
+    background-size: cover;
+}
+#start::after {
+    content: '';
+    position: absolute;
+    inset: 20px;
+    z-index: -1;
+    border-radius: 1px;
+    background: linear-gradient(to left, #fff, #fff) left top no-repeat,
+    linear-gradient(to bottom, #fff, #fff) left top no-repeat,
+    linear-gradient(to left, #fff, #fff) right top no-repeat,
+    linear-gradient(to bottom, #fff, #fff) right top no-repeat,
+    linear-gradient(to left, #fff, #fff) left bottom no-repeat,
+    linear-gradient(to bottom, #fff, #fff) left bottom no-repeat,
+    linear-gradient(to left, #fff, #fff) right bottom no-repeat,
+    linear-gradient(to left, #fff, #fff) right bottom no-repeat;
+    background-size: 1px 25px, 25px 1px, 1px 25px, 25px 1px;
+}
+
+@media (prefers-color-scheme: dark) {
+    #start {
+        filter: brightness(0.87);
+    }
+}
+#start h1 {
+    color: #fff;
+    font-size: 72px;
+    font-weight: 400;
+    margin: auto;
+    margin-top: 40vh;
+    transform: translateY(-100%);
+    z-index: 2;
+    line-height: 80px;
+    display: inline-block;
+    /* text-align: left; */
+}
+.subtitle {
+    color: #efefef;
+    font-size: 18px;
+    margin-top: -22px;
+}
+#startmenu {
+    margin-top: auto;
+    padding: 0 10vw 0 20px;
+    text-align: right;
+    align-self: self-end;
+    position: relative;
+    width: 140px;
+    display: none;
+}
+#startmenu ul {
+    text-align: left;
+    color: #fff;
+    list-style: none;
+    border-left: 1px solid #fff;
+    padding-top: 16px;
+}
+#startmenu li {
+    padding-bottom: 16px;
+    text-shadow: 0 1px 1px #a6a6a6;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: .2s ease-in-out;
+}
+#startmenu li:hover {
+    opacity: 1;
+}
+#startdot {
+    position: absolute;
+    width: 22px;
+    height: 8px;
+    background: #fff;
+    border-radius: 12px;
+    top: calc(var(--mtop) + 40px);
+    left: 10px;
+    transition: .5s ease-in;
+    animation: shining 2s infinite alternate-reverse;
+}
+#mouse {
+    height: 50px;
+    opacity: 0.3;
+    animation: shining 1s infinite alternate-reverse;
+}
+#mouse img {
+    width: 30px;
+}
+.start-item {
+    position: absolute;
+    bottom: 100px;
+    z-index: 1000;
+    width: calc(100% - 10vw - 160px);
+    opacity: 0;
+    transform: translateY(-32px);
+    transition: .3s ease-in-out;
+    color: #efefef;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    height: 100px;
+    display: none;
+}
+.start-item a {
+    color: #efefef;
+}
+#start-about {
+    opacity: 1;
+    transform: translateY(0);
+}
+#avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+}
+#about-intro {
+    margin-left: 18px;
+    margin-top: 12px;
+}
+.enter, .enter2 {
+    display: inline-block;
+    padding: 2px 5px 2px 5px;
+    margin-top: 5px;
+    font-size: 15px;
+    border-radius: 5px;
+    background: #00b7c3;
+    cursor: pointer;
+    color: #fff;
+}
+.enter2 {
+    position: absolute;
+    margin-top: -140px;
+    font-size: 18px;
+    top: calc(40vh + 160px);
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 12px;
+    padding: 8px 12px 8px 12px;
+    transition: all 0.3s ease-in-out;
+}
+.enter2:hover {
+    transform: translateX(-48%) translateY(2%);
+    opacity: 0.8;
+}
+#covered {
+    width: 100vw;
+    height: 100%;
+    background-size: cover;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    text-align: center;
+}
+.moving-cursor {
+    display: inline-block;
+    font-weight: 100;
+    transform: scale(0.8);
+    animation: shining2 1.2s infinite forwards;
+}
+
+@keyframes shining {
+    to {
+        transform: scale(0.9);
+    }
+}
+
+@keyframes shining2 {
+    to {
+        opacity: 0;
+    }
+}

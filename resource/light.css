@@ -1,0 +1,16 @@
+:root {
+    --bgcolor: #f3f3f3;
+    --header: #AEED04;
+    --top-highlight: linear-gradient(180deg, #E0F89E 0%, #C1F140 100%);
+    --top-decor: linear-gradient(180deg, #CEF468 0%, #E7FAB4 100%);
+    --nav-text: #fff;
+    --nav-highlight: #117301;
+    --main: #fff;
+    --footer: linear-gradient(180deg, #F9FCFF 0%, #E6F4FD 14.42%, #D6E7F1 14.43%);
+    --major-text: #5E5E5E;
+    --minor-text: #82B6D4;
+    --strong-text: #9ac518;
+    --separator: #d2dee4;
+    --separator-bg: linear-gradient(180deg, #F3F9FC 0%, #ecf3f7 100%);
+    --footer-title: #A1A3A4;
+}

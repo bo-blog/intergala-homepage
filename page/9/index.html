@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" type="image/png" href="/resource/favicon.png" />
+    <link rel="stylesheet" href="/resource/reset.min.css">
+    <link rel="stylesheet" href="/resource/light.css">
+    <link rel="stylesheet" href="/resource/gi.css">
+    <script src="/resource/htmx.min.js"></script>
+    <title>Bob’s Corner</title>
+</head>
+<body>
+    <header>
+        <div id="top">
+            <div id="top-dec"></div>
+            <div id="nav" class="headline">
+                <div id="nav-left">
+                    <span id='menuBtn'>≡</span>
+                    <ul id="menu">
+                        <li><a href="/">Home</a></li>
+                        <li class="active-index active-article"><a href="/page/1/">Blogs</a></li>
+                        <li class="active-tag"><a href="/tags/">Tags</a></li>
+                        <li class="active-archivemenu"><a href="/archives/">Archive</a></li>
+                        <li class="active-category"><a href="">Categories</a></li>
+                        
+                    </ul>
+                </div>
+                <div id="nav-right">Bob’s Corner
+                </div>
+                <div id="nav-icon"><img src="/resource/avatar.jpg" alt="Avatar"></div>
+            </div>
+        </div>
+    </header>
+    <div id="nav-dec"></div>
+    <script>
+        let changedActiveItems = [];
+        function makeActive(id, currentV) {
+            document.querySelector("#"+id+" .active-"+currentV).classList.add(id+"-active");
+            changedActiveItems.forEach(function(item, i) {
+                if (document.querySelector("#"+id+" .active-"+item) && item != currentV) {
+                    document.querySelector("#"+id+" .active-"+item).classList.remove(id+"-active");
+                    changedActiveItems.splice(i, 1);
+                }
+            });
+            changedActiveItems.push(currentV);
+        }
+    </script>
+    <section id="main">
+    
+
+<div class="article">
+    <div class="art-meta">
+        <div class="art-title headline"><a href="/%E9%9A%8F%E5%BF%83%E6%B5%8B/kindle-voyage/">Kindle Voyage小评</a></div>
+        <div class="art-time headline">Jul. 24, 2016 · <a href="/category/%E9%9A%8F%E5%BF%83%E6%B5%8B/">随心测</a></div>
+    </div>
+    <div class="art-body bodytext">
+    <p><img src="https://i.loli.net/2018/11/05/5bdfedf4e1fdb.jpg" alt="-R">工欲善其事，必先利其器。好的工具不仅可以让我们事半功倍，更能反过来改变我们的做事方式。Kindle就是一个改变了无数人阅读方式的产品，也是让我本人重新拾回阅读习惯的优秀工具。</p>
+<p>Kindle Voyage作为Kindle家族曾经的旗舰，是不可多得的伙伴级数码产品。它轻盈小巧、便携力无敌，高dpi的电子墨水屏配合柔和的背光，让人一读起来就停不下（前提是有充足的空余时间）。</p>
+<p>值得一提的是两侧的实体翻页键，不仅安排在顺手的位置，而且贴心地在每一个键上都赋予了向前和向后翻页的功能，这对于有时倾向于左手持屏的我来说是一个加分项。更别提按键的力反馈十分舒服。</p>
+<p>硬件背后是强大的内容支持。亚马逊的电子书库非常全面，新书、畅销书齐全。最好的一点，不像国内某些互联网巨头的电子书城那样，一打开，屏幕就被各种霸道总裁和仙侠网络小说强奸，能够满足对文字有那么点（基本）要求的人。</p>
+<p><strong>Enjoy your life. Keep on reading.</strong> </p>
+<p>##附一篇：Filco Ninja Majestouch-2, Tenkeyless机械键盘</p>
+
+        <div><a href="/%E9%9A%8F%E5%BF%83%E6%B5%8B/kindle-voyage/#more">More...</a></div>
+    </div>
+    
+    <div class="art-tags headline"> 
+        <ul>
+            
+            <li><a href="/tags/#Kindle">Kindle</a></li>
+            
+            <li><a href="/tags/#Filco">Filco</a></li>
+            
+        </ul>
+    </div>
+    
+      
+</div>
+
+<div class="article">
+    <div class="art-meta">
+        <div class="art-title headline"><a href="/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/away-from-wechat-moments/">逃离朋友圈</a></div>
+        <div class="art-time headline">May 28, 2016 · <a href="/category/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/">自言自语</a></div>
+    </div>
+    <div class="art-body bodytext">
+    <p>去年以来，我身边的很多人都陆续说，他们想要逃离微信朋友圈。一方面是被各种微商、小广告和晒图狂逼的，另一方面，他们自己发帖子的兴趣也越来越寡淡。眼见不少人在朋友圈的信息流里渐渐沉默，就像几年前微博的信息流慢慢地只剩下大号在发声一样。</p>
+<p>让我们逃离朋友圈的原因很多，但对我来说，最重要的原因无非是羊群效应，导致朋友圈信息流质量低劣，读来甚为乏味。</p>
+<p><img src="/upload/5bdff0192720d.jpg" alt=""><br>正如忽然之间，所有的“朋友”都表示自己是科比的球迷，他们的青春在那一刻全部随他一起退役了。又是一夜之间，所有的“朋友”都成了文学爱好者，扼腕嗟叹杨绛先生的离世使得世间再无“我们仨”。假期一开始，A君发的九张自拍，和上个长假小C发的九张图的地点、角度大同小异。更有甚者，当公司的公众号发了一篇平淡无奇的文章，接下来的几个小时同事将不断用这篇刷屏自High。</p>
+
+        <div><a href="/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/away-from-wechat-moments/#more">More...</a></div>
+    </div>
+    
+      
+</div>
+
+<div class="article">
+    <div class="art-meta">
+        <div class="art-title headline"><a href="/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/no-baidu/">当我们厌恶百度时，我们在厌恶什么</a></div>
+        <div class="art-time headline">May 3, 2016 · <a href="/category/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/">自言自语</a></div>
+    </div>
+    <div class="art-body bodytext">
+    <p>一名年轻生命的逝去，将百度再次推到了风口浪尖。虽然很多人心里明白，涉事医院、莆田系及医疗监管机构的责任更大，百度作为审核了“三甲”资质的媒体平台，并不是首罪，但我们依然看到了各路网络自媒体对百度口诛笔伐，形成吊打之势。（<a href="https://zh.wikipedia.org/zh/%E9%AD%8F%E5%88%99%E8%A5%BF%E4%BA%8B%E4%BB%B6">参考维基百科</a>）</p>
+<p>就我个人而言，我宁可选择在这股浪潮中站到也许不那么理性的“倒度派”一方。是，我就是厌恶百度。</p>
+<p>对百度的厌恶，始于十多年前的一次经历。当时为了搬家，在百度上搜索了“公兴搬场”。结果可想而知，那排在第一位的山寨搬家公司先是放鸽子，整整耽误了几个小时不来车，好不容易来了车后更是坐地起价。想不到十几年过去了，百度搜索结果的可信性不但没有增加，反而进一步恶化，实在难以相信百度在这件事上到底花了多少功夫。</p>
+
+        <div><a href="/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/no-baidu/#more">More...</a></div>
+    </div>
+    
+    <div class="art-tags headline"> 
+        <ul>
+            
+            <li><a href="/tags/#%E7%99%BE%E5%BA%A6">百度</a></li>
+            
+        </ul>
+    </div>
+    
+      
+</div>
+
+<div id="pages" class="headline">
+    <ul>
+        
+        <li class="page-prev"><a hx-get="/page/8/" hx-swap="outerHTML" hx-target="#main" hx-select="#main" hx-push-url="true" hx-indicator="#loader" href="/page/8/">❮</a></li>
+        
+        <li class="page-actived">9</li>
+        
+        <li class="page-next"><a hx-get="/page/10/" hx-swap="outerHTML" hx-target="#main" hx-select="#main" hx-push-url="true" hx-indicator="#loader" href="/page/10/">❯</a></li>
+        
+    </ul>
+    
+</div>
+
+    </section>
+    <footer>
+        <div id="footer">
+            <div id="footer-row">
+                <div id="about">
+                    <div class="footer-title headline">About Me</div>
+                    <div class="footer-body bodytext">白羊座中年。不旅行的时候宅家，旅行的时候暴走。有家室，养猫。</div>
+                </div>
+                <div id="tag-group">
+                    <div class="footer-title headline">Tags</div>
+                    <div class="footer-body bodytext">
+                        <ul>
+                        
+                            <li><a href="/tags/#%E6%97%85%E8%A1%8C">旅行 (13)</a></li>
+                        
+                            <li><a href="/tags/#%E6%97%A5%E6%9C%AC">日本 (11)</a></li>
+                        
+                            <li><a href="/tags/#%E4%B8%9C%E4%BA%AC%E9%83%BD">东京都 (3)</a></li>
+                        
+                            <li><a href="/tags/#%E4%B8%8A%E6%B5%B7">上海 (3)</a></li>
+                        
+                            <li><a href="/tags/#%E4%B8%BB%E9%A1%B5">主页 (2)</a></li>
+                        
+                            <li><a href="/tags/#%E5%B9%BF%E5%B2%9B%E5%8E%BF">广岛县 (2)</a></li>
+                        
+                            <li><a href="/tags/#nuc">nuc (2)</a></li>
+                        
+                            <li><a href="/tags/#macOS">macOS (2)</a></li>
+                        
+                            <li><a href="/tags/#%E7%A5%9E%E5%A5%88%E5%B7%9D%E5%8E%BF">神奈川县 (2)</a></li>
+                        
+                            <li><a href="/tags/#%E7%BD%91%E4%BA%8B">网事 (2)</a></li>
+                        
+                        </ul>
+                    </div>
+                </div>
+                <div id="category">
+                    <div class="footer-title headline">Categories</div>
+                    <div class="footer-body bodytext">
+                        <ul id="cates-all">
+                        
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E5%B0%8F%E7%8E%A9%E6%84%8F/">小玩意</a></span> <span class="cate-count">(3)</span></li>
+                            
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E6%B8%B8%E8%AE%B0/">游记</a></span> <span class="cate-count">(13)</span></li>
+                            
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/">自言自语</a></span> <span class="cate-count">(21)</span></li>
+                            
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E9%9A%8F%E5%BF%83%E6%B5%8B/">随心测</a></span> <span class="cate-count">(6)</span></li>
+                            
+                            <li><span class="cate-name"><a href="/rss.xml">RSS</a></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="loader" class="htmx-indicator">
+       <span class="loader"></span>
+    </div>
+<script>
+let menuOpened = false;
+document.querySelector("#menuBtn").addEventListener("click", function() {
+    document.querySelector("#menu").style.marginLeft = menuOpened ? '-200px' : 0;
+    document.querySelector("#nav-right").style.opacity = menuOpened ? 1 : 0;
+    menuOpened = !menuOpened;
+    document.querySelector("#main").style.zIndex = menuOpened ? 0 : 100;
+});
+let layoutNow = "index";
+if (layoutNow == "archive") {
+    layoutNow = "archivemenu";
+}
+makeActive ("menu", layoutNow);
+function addImgClick() {
+    document.querySelectorAll('.art-body img').forEach(function (imgRes) {
+      let imgSrc = imgRes.getAttribute("src");
+      let aImg = document.createElement('a');
+      aImg.href = imgSrc;
+      aImg.target = '_blank';
+      imgRes.parentNode.insertBefore(aImg, imgRes);
+      aImg.appendChild(imgRes);
+    });
+}
+addImgClick();
+let firstCate = document.querySelector("#cates-all li a").getAttribute("href");
+document.querySelector(".active-category a").setAttribute("href", firstCate);
+htmx.on("htmx:load", function(evt) {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+    addImgClick();
+});
+</script>
+</body>
+</html>

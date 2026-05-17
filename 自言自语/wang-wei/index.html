@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" type="image/png" href="/resource/favicon.png" />
+    <link rel="stylesheet" href="/resource/reset.min.css">
+    <link rel="stylesheet" href="/resource/light.css">
+    <link rel="stylesheet" href="/resource/gi.css">
+    <script src="/resource/htmx.min.js"></script>
+    <title>水、色、人 ―― 浅析王维之诗中有画 | Bob’s Corner</title>
+</head>
+<body>
+    <header>
+        <div id="top">
+            <div id="top-dec"></div>
+            <div id="nav" class="headline">
+                <div id="nav-left">
+                    <span id='menuBtn'>≡</span>
+                    <ul id="menu">
+                        <li><a href="/">Home</a></li>
+                        <li class="active-index active-article"><a href="/page/1/">Blogs</a></li>
+                        <li class="active-tag"><a href="/tags/">Tags</a></li>
+                        <li class="active-archivemenu"><a href="/archives/">Archive</a></li>
+                        <li class="active-category"><a href="">Categories</a></li>
+                        
+                    </ul>
+                </div>
+                <div id="nav-right">Bob’s Corner
+                </div>
+                <div id="nav-icon"><img src="/resource/avatar.jpg" alt="Avatar"></div>
+            </div>
+        </div>
+    </header>
+    <div id="nav-dec"></div>
+    <script>
+        let changedActiveItems = [];
+        function makeActive(id, currentV) {
+            document.querySelector("#"+id+" .active-"+currentV).classList.add(id+"-active");
+            changedActiveItems.forEach(function(item, i) {
+                if (document.querySelector("#"+id+" .active-"+item) && item != currentV) {
+                    document.querySelector("#"+id+" .active-"+item).classList.remove(id+"-active");
+                    changedActiveItems.splice(i, 1);
+                }
+            });
+            changedActiveItems.push(currentV);
+        }
+    </script>
+    <section id="main">
+    
+
+<div class="article">
+    
+    <div class="art-meta">
+        <div class="art-title headline">水、色、人 ―― 浅析王维之诗中有画</div>
+        <div class="art-time headline">May 23, 2003 · <a href="/category/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/">自言自语</a><br>The article has 2106 words and takes 9 min. to read.</div>
+    </div>
+    <div class="art-reader" id="main-wrapper">
+        <div class="wrapper-right art-body bodytext">
+            <p>对于唐人王维之诗的评价，要数以苏东坡的“诗中有画，画中有诗”最为恰当了。历来的书画理论家和诗艺理论家从各自专业的视角和知识，对王维的诗进行过深入的评析，作为一个唐诗的爱好者，一个绘画和诗歌创作的门外汉，我只能从我自己欣赏王维田园山水诗的体会上管中窥豹，略抒拙见。</p>
+<h3 id="toc-%E7%8E%8B%E7%BB%B4%E8%AF%97%E4%B8%AD%E7%9A%84%E8%89%B2%20%EF%BC%8D%20%E6%B7%A1">王维诗中的色 － 淡</h3><p>每一个读过王维诗的人，都有一种在欣赏一幅水墨画一般的感受。一幅画中，色彩是起到举足轻重作用的。王维诗中有画，关键点是他对色彩的描摹很到位。而对于这一幅幅山水田园画的色彩，笼统的感觉可以用一个字来表达：淡。如果有人试图将这些诗还原为画的话，他也许会发现，王维真正用到的色彩很少。轻描淡写的玄，恰到好处的素，点到为止的绿，偶尔点缀的红，除此以外几乎就没有别的色彩了。<a name="more" id="more"></a><br>素色是王维诗中的主题色。无尽的白云，墟上的孤烟，松间的明月，都是诗中不可或缺的主要场景。红色则是诗里面难得一见的点缀，即便写到红色，也并不十分张扬。《赠裴十迪》中“桃李未开”，只是“荑蕚满其枝”，自然红得不透彻；《蓝田山石门精舍》里明明写到了桃花源，却以一句“花红复来觌”将红色略去，留给读者去想象；《桃源行》中红的比例兴许是最高的了，诗人“坐看红树不知远”，然而对于桃花仍然没有正面的描绘。总而言之，这些笔尖轻触而隐约留下的色彩，正符合王维诗中那淡淡的画境。<br>色彩淡了，但并不意味着所有的颜色都没有深浅的变化。以《辋川闲居赠裴秀才迪》首句为例，“寒山转苍翠”，这一句动态的诗，便把寒山的色彩过渡过程描写了出来。《终南山》里，“阴晴众壑殊”一句，把同一时段各个山沟的不同色彩深度一笔点出，可见作者的观察是十分细致入微的。<br>摩诘是个潜心禅学的诗人。在我的理解中，禅意多半是讲求在平淡的修行之中慢慢体悟的，而王维的诗里这些似隐似现的色彩，大概和修禅之人心静若水，不喜重抹的脾性有很大关系吧。</p>
+<h3 id="toc-%E7%8E%8B%E7%BB%B4%E8%AF%97%E4%B8%AD%E7%9A%84%E6%B0%B4%20%EF%BC%8D%20%E5%8F%98">王维诗中的水 － 变</h3><p>既然是山水田园诗，那么山和水自然是王维的诗中的常景。但我以为，较之于山，水似乎更符合诗人的心意，因而在诗作中亦受到更特别的关注。<br>王维诗中的水是富于变化的。有静态的水（积水不可极），也有动态的水（清泉石上流）；有清静的水（杨柳渡头行客稀），也有喧哗的水（秋水日潺湲）；有悠闲的水（渭水自萦秦塞曲），也有不安的水（笳悲马嘶乱，争渡金河水），真可谓千姿百态，个性十足。倘若把诗句中频频出现的雨也算在其中的话，变化更多。如此一来，诗人对于水的描述可以算是相当到位且富有质感的了。<br>对水的描绘使得王维的诗充满了灵性，因为水的特质便是流动和灵性。所以，无论是经过细雨洗刷的树林，还是绵延不绝的溪水，抑或是气势磅礴的大川，都带上了强烈的生命力与活跃的灵性。我想象着耳边流水的潺潺，雨点的嘀嗒，或清脆，或凝重，再读这些如画般的诗，它们便仿佛带上了动态，在我的眼前活动了起来。流水有意，诗亦有情。这多变的水无疑是王维诗中不可忽视的风景线。</p>
+<h3 id="toc-%E7%8E%8B%E7%BB%B4%E8%AF%97%E4%B8%AD%E7%9A%84%E4%BA%BA%20%EF%BC%8D%20%E9%9A%90">王维诗中的人 － 隐</h3><p>曾经听到不止一个美术老师在介绍绘画作品时说，如果一幅画里没有人，那么就是一幅死的画，只有当人的参与被描绘进去了，这幅画才有了生气，才有了真正的意义。诗亦如是。因而在分析王维的诗时，我便特地注意了其中人的参与。<br>在王维的诗中，提及的人物除却典故中的名流武夫外，多半都和他自己一样，或多或少带有一些隐士独有的气质。这种气质，就是闲逸脱俗，与世无争。“田舍有老翁，垂白衡门里。有时农事闲，斗酒呼邻里。喧聒茅檐下，或坐或复起。短褐不为薄，园葵固足美。”这与其说是老翁，不如说是在写一个知足常乐，不以物喜，不以己辈，而且颇懂得生活情趣的田园隐士。再看“空山不见人，但闻人语响”这句，在一片幽深静谧的山林里，人的具相被诗人有意地隐藏起来，只以声音作为暗示，仔细品味，这画外之人，包括捕捉到这一景象的诗人自己，何尝不都是久居山中的隐士呢？<br>诗是诗人心志的真实写照。王维作为修禅的人，他对于人的看法自然是以宁静、知足为尺度的，读着这些诗，想象诗中的隐士，不由地羡慕起那些潇洒自由、无拘无束的高人们来，也少了一些争名逐利的欲望。这，大概即是隐之魅力。<br>人们说，在现代社会里，人受到各方面的有形无形的压力，经常会变得心气浮躁。因此，宁静和安逸的处事之道是极为难能可贵的。受现实所限，我们自然不可能像隐士一般生活，我们躁动的心灵也很难达到像隐士那样平静似水的境界。但是，在心情烦躁、承受力透支之时，如果可以从艺术中寻求舒缓与排解，相信对于稳定情绪，积蓄斗志，提高涵养都是极有裨益的。读王维的诗，就像在欣赏国画，会让人情不自禁地去抛弃烦忧，沉浸到那淡雅、悠闲的境界里去。<br>王维笔下淡淡的色彩也好，灵动的山水也好，归隐的高人也好，既是他当时的生活的真实写照，也是我曾经的追求。如果欣赏诗的同时耳边还有空灵、洒脱的歌声相伴的话，一切的不快都会烟消云散。因此，在得到查老师出的这么多的思考题的时候，我未曾犹豫便决定了写写王维的诗。自然，我对这些诗句的理解难免浅显，并难脱断章取义之嫌，有些看法还可能是错误的，但我却仍尽力表达出我了的感受。但愿王维这分淡淡的恬静，可以如清泉般常流我心。</p>
+
+        </div>
+        
+        <div class="wrapper-left toc">
+            <div class="headline toc-title">Contents</div>
+            <div class="side-list headline"><ul data-base-level="3"><li data-relative-level="3"><a href="#toc-%E7%8E%8B%E7%BB%B4%E8%AF%97%E4%B8%AD%E7%9A%84%E8%89%B2%20%EF%BC%8D%20%E6%B7%A1">王维诗中的色 － 淡</a></li><li data-relative-level="3"><a href="#toc-%E7%8E%8B%E7%BB%B4%E8%AF%97%E4%B8%AD%E7%9A%84%E6%B0%B4%20%EF%BC%8D%20%E5%8F%98">王维诗中的水 － 变</a></li><li data-relative-level="3"><a href="#toc-%E7%8E%8B%E7%BB%B4%E8%AF%97%E4%B8%AD%E7%9A%84%E4%BA%BA%20%EF%BC%8D%20%E9%9A%90">王维诗中的人 － 隐</a></li></ul></div>
+        </div>
+        
+    </div>
+    
+    
+    <div id="adjacent">
+        <div>❮ Previous: <a href="/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/about-waiting/">等待是一生最初的苍老</a></div>
+        <div></div>
+    </div>
+</div>
+<script>
+    function bindToc() {                
+        let allAnchors = document.querySelectorAll(".toc ul li a")
+        let windowHeight = document.documentElement.clientHeight
+        let ob = new IntersectionObserver(
+            function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        for (let i=0; i<allAnchors.length; i++) {
+                          if (allAnchors[i].href.split('#')[1] == entry.target.attributes.id.value) {
+                              allAnchors[i].classList.add("toc-highlight")
+                          }
+                          else {
+                              allAnchors[i].classList.remove("toc-highlight")
+                          }
+                        }
+                    }
+                });
+            },
+            {
+                rootMargin: '0px 0px -' + (windowHeight - 40) + 'px 0px',
+                threshold: 0.5,
+            }
+        );
+        if (allAnchors.length>0) {
+            for (anchor of allAnchors) {
+                let targetID = anchor.hash
+                ob.observe(document.getElementById(targetID.substring(1)))
+            }
+        }
+    }
+    window.setTimeout(bindToc, 500);
+</script>
+
+    </section>
+    <footer>
+        <div id="footer">
+            <div id="footer-row">
+                <div id="about">
+                    <div class="footer-title headline">About Me</div>
+                    <div class="footer-body bodytext">白羊座中年。不旅行的时候宅家，旅行的时候暴走。有家室，养猫。</div>
+                </div>
+                <div id="tag-group">
+                    <div class="footer-title headline">Tags</div>
+                    <div class="footer-body bodytext">
+                        <ul>
+                        
+                            <li><a href="/tags/#%E6%97%85%E8%A1%8C">旅行 (13)</a></li>
+                        
+                            <li><a href="/tags/#%E6%97%A5%E6%9C%AC">日本 (11)</a></li>
+                        
+                            <li><a href="/tags/#%E4%B8%9C%E4%BA%AC%E9%83%BD">东京都 (3)</a></li>
+                        
+                            <li><a href="/tags/#%E4%B8%8A%E6%B5%B7">上海 (3)</a></li>
+                        
+                            <li><a href="/tags/#%E4%B8%BB%E9%A1%B5">主页 (2)</a></li>
+                        
+                            <li><a href="/tags/#%E5%B9%BF%E5%B2%9B%E5%8E%BF">广岛县 (2)</a></li>
+                        
+                            <li><a href="/tags/#nuc">nuc (2)</a></li>
+                        
+                            <li><a href="/tags/#macOS">macOS (2)</a></li>
+                        
+                            <li><a href="/tags/#%E7%A5%9E%E5%A5%88%E5%B7%9D%E5%8E%BF">神奈川县 (2)</a></li>
+                        
+                            <li><a href="/tags/#%E7%BD%91%E4%BA%8B">网事 (2)</a></li>
+                        
+                        </ul>
+                    </div>
+                </div>
+                <div id="category">
+                    <div class="footer-title headline">Categories</div>
+                    <div class="footer-body bodytext">
+                        <ul id="cates-all">
+                        
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E5%B0%8F%E7%8E%A9%E6%84%8F/">小玩意</a></span> <span class="cate-count">(3)</span></li>
+                            
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E6%B8%B8%E8%AE%B0/">游记</a></span> <span class="cate-count">(13)</span></li>
+                            
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/">自言自语</a></span> <span class="cate-count">(21)</span></li>
+                            
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E9%9A%8F%E5%BF%83%E6%B5%8B/">随心测</a></span> <span class="cate-count">(6)</span></li>
+                            
+                            <li><span class="cate-name"><a href="/rss.xml">RSS</a></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="loader" class="htmx-indicator">
+       <span class="loader"></span>
+    </div>
+<script>
+let menuOpened = false;
+document.querySelector("#menuBtn").addEventListener("click", function() {
+    document.querySelector("#menu").style.marginLeft = menuOpened ? '-200px' : 0;
+    document.querySelector("#nav-right").style.opacity = menuOpened ? 1 : 0;
+    menuOpened = !menuOpened;
+    document.querySelector("#main").style.zIndex = menuOpened ? 0 : 100;
+});
+let layoutNow = "article";
+if (layoutNow == "archive") {
+    layoutNow = "archivemenu";
+}
+makeActive ("menu", layoutNow);
+function addImgClick() {
+    document.querySelectorAll('.art-body img').forEach(function (imgRes) {
+      let imgSrc = imgRes.getAttribute("src");
+      let aImg = document.createElement('a');
+      aImg.href = imgSrc;
+      aImg.target = '_blank';
+      imgRes.parentNode.insertBefore(aImg, imgRes);
+      aImg.appendChild(imgRes);
+    });
+}
+addImgClick();
+let firstCate = document.querySelector("#cates-all li a").getAttribute("href");
+document.querySelector(".active-category a").setAttribute("href", firstCate);
+htmx.on("htmx:load", function(evt) {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+    addImgClick();
+});
+</script>
+</body>
+</html>

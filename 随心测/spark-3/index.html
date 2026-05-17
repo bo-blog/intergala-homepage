@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" type="image/png" href="/resource/favicon.png" />
+    <link rel="stylesheet" href="/resource/reset.min.css">
+    <link rel="stylesheet" href="/resource/light.css">
+    <link rel="stylesheet" href="/resource/gi.css">
+    <script src="/resource/htmx.min.js"></script>
+    <title>Spark III 简评 | Bob’s Corner</title>
+</head>
+<body>
+    <header>
+        <div id="top">
+            <div id="top-dec"></div>
+            <div id="nav" class="headline">
+                <div id="nav-left">
+                    <span id='menuBtn'>≡</span>
+                    <ul id="menu">
+                        <li><a href="/">Home</a></li>
+                        <li class="active-index active-article"><a href="/page/1/">Blogs</a></li>
+                        <li class="active-tag"><a href="/tags/">Tags</a></li>
+                        <li class="active-archivemenu"><a href="/archives/">Archive</a></li>
+                        <li class="active-category"><a href="">Categories</a></li>
+                        
+                    </ul>
+                </div>
+                <div id="nav-right">Bob’s Corner
+                </div>
+                <div id="nav-icon"><img src="/resource/avatar.jpg" alt="Avatar"></div>
+            </div>
+        </div>
+    </header>
+    <div id="nav-dec"></div>
+    <script>
+        let changedActiveItems = [];
+        function makeActive(id, currentV) {
+            document.querySelector("#"+id+" .active-"+currentV).classList.add(id+"-active");
+            changedActiveItems.forEach(function(item, i) {
+                if (document.querySelector("#"+id+" .active-"+item) && item != currentV) {
+                    document.querySelector("#"+id+" .active-"+item).classList.remove(id+"-active");
+                    changedActiveItems.splice(i, 1);
+                }
+            });
+            changedActiveItems.push(currentV);
+        }
+    </script>
+    <section id="main">
+    
+
+<div class="article">
+    
+    <div class="art-meta">
+        <div class="art-title headline">Spark III 简评</div>
+        <div class="art-time headline">Feb. 25, 2012 · <a href="/category/%E9%9A%8F%E5%BF%83%E6%B5%8B/">随心测</a><br>The article has 1283 words and takes 5 min. to read.</div>
+    </div>
+    <div class="art-reader" id="main-wrapper">
+        <div class="wrapper-right art-body bodytext">
+            <p><img src="https://i.loli.net/2018/11/05/5bdfedf4edd8f.jpg" alt=""></p>
+<p>入手飞利浦Spark III已经两周，身边不少人对这款mp3好奇，遂简单说几句。</p>
+<p>#外观及手感<br>Spark的定位是飞利浦用来抗衡苹果的类nano产品，但事与愿违。Spark拿到手上，第一感觉就是轻，轻飘飘、无质感的那种轻。后壳塑料感重，整体散发着廉价品的气息。换言之，如果你是外观党，那就直接无视这个机器吧。</p>
+<p>当然，便携性确实不错。配上随机附送的小背甲，夹在衣服上，再开启音量键切歌功能，基本上使用的感受是非常愉悦轻松的。</p>
+<p>#触屏与操控<br>老实说，看惯Retina屏之后，像Spark III 这种屏就是浮云。以前很在意mp3文件是不是内嵌了唱片封面，现在，再精致的封面到了这块硬币大的电阻屏上都没有任何意义。分辨率 128*128，像素感非常重，字体难看。因此，我很少看屏幕。</p>
+<p>至于触摸操控，只能说习惯就好。一开始把它当手机的电容屏来操作，结果进个子菜单都费劲。后来找到了方法，像按办公室打印机的触摸屏那样，下手准快狠，也就显得不那么难用了。当然，想要苹果设备那种行云流水般的触控是不可能的，毕竟价格摆在那儿呢。<a name="more" id="more"></a></p>
+<p>#音质与听感<br>这部分的主观性就更强了。我对音质的要求不高，因为不听Hi-Fi，只听流行。之所以买Spark，是因为我实在忍受不了iPhone 4那如同白开水一般的听感。所以我对MP3播放器的唯一期望就是听上去比苹果讨好耳朵。</p>
+<p>使用的耳机是200左右价位的森海MX470。这个耳机中规中矩，网上公认的评价是三段均衡，清淡路线。因此，与没有任何音染的iPhone一搭配，就是一湖死水，蔡琴和蔡明傻傻分不清。而且，高频部分还屡有毛刺出现。</p>
+<p>Spark III是一款低端运动型mp3，事实上在网上订下货之后一度后悔，为何舍不得银子买更贵的。不过，实际听来疑虑全消，两周下来，已经完全取代了iPhone的音乐播放功能。</p>
+<p>按照官方的宣传，Spark III搭载了所谓FullSound功能，能够修正MP3压缩时的损失，提升音质。但是，千万不要相信这个FullSound能化腐朽为神奇。在我听来，“飞声”会放大低质量MP3文件的缺陷。低质量的MP3，尤其是我在大学期间从校内FTP上下载的128Kbps的MP3（当时Lame还远远没有流行，MP3 rip软件的算法相当糟糕），其高频部分的损失会被“飞声”效果放大，失真让人无法容忍。而192 - 320K的MP3，在FullSound的渲染下，确实能带来比iPhone强很多的听感。开启FullSound后的Spark III听流行时清澈有质感，低频明显加强但不浑浊，反正我是第一次听到了MX470所谓“有弹性”的低音。总之这样的表现，让我很惊喜。不足之处是一小部分歌曲渲染过多（主要是录制时刻意加入一些底噪的歌或者Rip时没有控制好的MP3文件），听上去有很较严重的噪声——所以，音源高于一切，这是不变的真理！</p>
+<p>#总结<br>满意。在不升级耳机的前提下提高了听音感受。</p>
+
+        </div>
+        
+    </div>
+    
+    
+    <div id="adjacent">
+        <div>❮ Previous: <a href="/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/helloworld/">又是一个新的开始</a></div>
+        <div>Next: <a href="/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/shanghai-glass-museum/">玻璃也有博物馆</a> ❯</div>
+    </div>
+</div>
+<script>
+    function bindToc() {                
+        let allAnchors = document.querySelectorAll(".toc ul li a")
+        let windowHeight = document.documentElement.clientHeight
+        let ob = new IntersectionObserver(
+            function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        for (let i=0; i<allAnchors.length; i++) {
+                          if (allAnchors[i].href.split('#')[1] == entry.target.attributes.id.value) {
+                              allAnchors[i].classList.add("toc-highlight")
+                          }
+                          else {
+                              allAnchors[i].classList.remove("toc-highlight")
+                          }
+                        }
+                    }
+                });
+            },
+            {
+                rootMargin: '0px 0px -' + (windowHeight - 40) + 'px 0px',
+                threshold: 0.5,
+            }
+        );
+        if (allAnchors.length>0) {
+            for (anchor of allAnchors) {
+                let targetID = anchor.hash
+                ob.observe(document.getElementById(targetID.substring(1)))
+            }
+        }
+    }
+    window.setTimeout(bindToc, 500);
+</script>
+
+    </section>
+    <footer>
+        <div id="footer">
+            <div id="footer-row">
+                <div id="about">
+                    <div class="footer-title headline">About Me</div>
+                    <div class="footer-body bodytext">白羊座中年。不旅行的时候宅家，旅行的时候暴走。有家室，养猫。</div>
+                </div>
+                <div id="tag-group">
+                    <div class="footer-title headline">Tags</div>
+                    <div class="footer-body bodytext">
+                        <ul>
+                        
+                            <li><a href="/tags/#%E6%97%85%E8%A1%8C">旅行 (13)</a></li>
+                        
+                            <li><a href="/tags/#%E6%97%A5%E6%9C%AC">日本 (11)</a></li>
+                        
+                            <li><a href="/tags/#%E4%B8%9C%E4%BA%AC%E9%83%BD">东京都 (3)</a></li>
+                        
+                            <li><a href="/tags/#%E4%B8%8A%E6%B5%B7">上海 (3)</a></li>
+                        
+                            <li><a href="/tags/#%E4%B8%BB%E9%A1%B5">主页 (2)</a></li>
+                        
+                            <li><a href="/tags/#%E5%B9%BF%E5%B2%9B%E5%8E%BF">广岛县 (2)</a></li>
+                        
+                            <li><a href="/tags/#nuc">nuc (2)</a></li>
+                        
+                            <li><a href="/tags/#macOS">macOS (2)</a></li>
+                        
+                            <li><a href="/tags/#%E7%A5%9E%E5%A5%88%E5%B7%9D%E5%8E%BF">神奈川县 (2)</a></li>
+                        
+                            <li><a href="/tags/#%E7%BD%91%E4%BA%8B">网事 (2)</a></li>
+                        
+                        </ul>
+                    </div>
+                </div>
+                <div id="category">
+                    <div class="footer-title headline">Categories</div>
+                    <div class="footer-body bodytext">
+                        <ul id="cates-all">
+                        
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E5%B0%8F%E7%8E%A9%E6%84%8F/">小玩意</a></span> <span class="cate-count">(3)</span></li>
+                            
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E6%B8%B8%E8%AE%B0/">游记</a></span> <span class="cate-count">(13)</span></li>
+                            
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/">自言自语</a></span> <span class="cate-count">(21)</span></li>
+                            
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E9%9A%8F%E5%BF%83%E6%B5%8B/">随心测</a></span> <span class="cate-count">(6)</span></li>
+                            
+                            <li><span class="cate-name"><a href="/rss.xml">RSS</a></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="loader" class="htmx-indicator">
+       <span class="loader"></span>
+    </div>
+<script>
+let menuOpened = false;
+document.querySelector("#menuBtn").addEventListener("click", function() {
+    document.querySelector("#menu").style.marginLeft = menuOpened ? '-200px' : 0;
+    document.querySelector("#nav-right").style.opacity = menuOpened ? 1 : 0;
+    menuOpened = !menuOpened;
+    document.querySelector("#main").style.zIndex = menuOpened ? 0 : 100;
+});
+let layoutNow = "article";
+if (layoutNow == "archive") {
+    layoutNow = "archivemenu";
+}
+makeActive ("menu", layoutNow);
+function addImgClick() {
+    document.querySelectorAll('.art-body img').forEach(function (imgRes) {
+      let imgSrc = imgRes.getAttribute("src");
+      let aImg = document.createElement('a');
+      aImg.href = imgSrc;
+      aImg.target = '_blank';
+      imgRes.parentNode.insertBefore(aImg, imgRes);
+      aImg.appendChild(imgRes);
+    });
+}
+addImgClick();
+let firstCate = document.querySelector("#cates-all li a").getAttribute("href");
+document.querySelector(".active-category a").setAttribute("href", firstCate);
+htmx.on("htmx:load", function(evt) {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+    addImgClick();
+});
+</script>
+</body>
+</html>

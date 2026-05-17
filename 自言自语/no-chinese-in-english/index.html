@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" type="image/png" href="/resource/favicon.png" />
+    <link rel="stylesheet" href="/resource/reset.min.css">
+    <link rel="stylesheet" href="/resource/light.css">
+    <link rel="stylesheet" href="/resource/gi.css">
+    <script src="/resource/htmx.min.js"></script>
+    <title>就怕老外写中文 | Bob’s Corner</title>
+</head>
+<body>
+    <header>
+        <div id="top">
+            <div id="top-dec"></div>
+            <div id="nav" class="headline">
+                <div id="nav-left">
+                    <span id='menuBtn'>≡</span>
+                    <ul id="menu">
+                        <li><a href="/">Home</a></li>
+                        <li class="active-index active-article"><a href="/page/1/">Blogs</a></li>
+                        <li class="active-tag"><a href="/tags/">Tags</a></li>
+                        <li class="active-archivemenu"><a href="/archives/">Archive</a></li>
+                        <li class="active-category"><a href="">Categories</a></li>
+                        
+                    </ul>
+                </div>
+                <div id="nav-right">Bob’s Corner
+                </div>
+                <div id="nav-icon"><img src="/resource/avatar.jpg" alt="Avatar"></div>
+            </div>
+        </div>
+    </header>
+    <div id="nav-dec"></div>
+    <script>
+        let changedActiveItems = [];
+        function makeActive(id, currentV) {
+            document.querySelector("#"+id+" .active-"+currentV).classList.add(id+"-active");
+            changedActiveItems.forEach(function(item, i) {
+                if (document.querySelector("#"+id+" .active-"+item) && item != currentV) {
+                    document.querySelector("#"+id+" .active-"+item).classList.remove(id+"-active");
+                    changedActiveItems.splice(i, 1);
+                }
+            });
+            changedActiveItems.push(currentV);
+        }
+    </script>
+    <section id="main">
+    
+
+<div class="article">
+    
+    <div class="art-meta">
+        <div class="art-title headline">就怕老外写中文</div>
+        <div class="art-time headline">Sept. 18, 2007 · <a href="/category/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/">自言自语</a><br>The article has 1705 words and takes 7 min. to read.</div>
+    </div>
+    <div class="art-reader" id="main-wrapper">
+        <div class="wrapper-right art-body bodytext">
+            <p><img src="/upload/5bdff18ee8859.jpg" alt="514cb3b2_20070918.jpg"></p>
+<p>做E2C翻译做多了，肯定会有这样的体会：翻译过程中50%的时间是泡在了Google（or百度，what ever）上，满世界地寻找某些机构、人物名称的既有译法。特别是对于一些较为生僻的专有名词，那花的工夫可不是一两分钟这么简单，往往要把搜索结果全部看完，才敢初步判断这个词是不是的确没有约定俗成的译法。如果没有，方可自己按照读音译出。尤其可恨的是，网络上的文章由于求快求新，故而翻译往往草草完事，大堆大堆本该可以译出的人名地名照原文放在那里，所以在Google给出的几十个搜索页面里，往往有用的少之又少。</p>
+<p>我个人最怵的，还是老外“写”中文。博大精深的汉字到了他们的笔下，成为了一串表音的拉丁字母，“形”毁了先不说，更多的时候连“音”也元神俱丧。</p>
+<p>就拿一个“张”姓来说，我看到过的写法有 Zhang（大陆，如张靓颖 Jane Zhang）、Chang（台湾，张信哲 Jeff Chang）、Cheung（香港，张柏芝 Cecilia Cheung）、Jang（韩国，张东健 Jang Don Gun）、Teo（似乎是闽南语？张栋梁 Nicholas Teo），Cho（日语的汉字音读，张富士夫 Cho Fujio）。在同一张《Forbes新加坡富豪榜》上，同为黄家人的黄廷方（Ng Teng Fong）和黄祖耀（Wee Cho Yaw）就有“两个”姓了，同是郭家子孙的郭令明（Kwek Leng Beng）和郭孔丰（Kuok Khoon Hong）也变成了两家人。当然，这也不能怪老外，中文音译的藩系过多是主要原因。拼音、威妥玛两个套系，再加上复杂的方言系统和日、韩、越等汉字源流国家的各自转写，中文在拉丁文字系统里表现得如此混乱就不足为奇了。</p>
+<p>更增加事情复杂程度的是，很多华人喜欢取“英文名”。而且取来取去就是那么几个常用的英文名，时常发生“撞车”。你可以Google一下David Tsang，看看有几个不同的“破译”版本。在这点上，我不得不说，无论是日韩，还是印度、泰国人，纵使他们的名字用拉丁字母拼出来是多么怪异、冗长（看看Charoen Sirivadhanabhakdi和Somporn Juangroongruangkit有多少个字节），但很少有人用英文名的。所以我决定了，如果我哪天成名了，我一定不会用英文名。（哈哈，现在这个是网名，另当别论）</p>
+<p>当然，如果说以上这些只是老外写中文给我们翻译造成的“纯技术性问题”，只需要搜索几次就能知道答案的话，那么当老外试图“引经据典”的时候，才是真正梦魇的开始。<a name="more" id="more"></a></p>
+<p>每次看到老外写到：“Confucious said”，在我眼中就等于confused+sad。如果真是夫子他老人家说的到还好，翻不出可以去查《论语》，查不出责任在己，没有学好中华文明。但是往往，有些老外以为Confucious said everything。《偷天陷阱》的编剧们就认为，孔子曾说过“别拿大炮打蚊子”，硬生生地把火药的发明往前推了N个世纪。又但是，像这种情况也还好，至少你在译文中可以为毛主席恢复名誉，最无语的是那些无根无据的话语无顾无忌地加在无名无姓（性）的古人身上，真可谓无法无天。去年，我就曾与一个同事一起“破译”一首所谓的“Tang Poem”，结果在网络上发现了不少和我们一样被耍的国人，大家的结论，不论是用简体中文还是用繁体中文，都写的是“查无此诗”。“诗作”的原文不记得了，有机会的话找出来大家共赏。</p>
+<p>写了这么多，一方面是为了发发牢骚，一方面是有些感慨于心。现如今，我们可以看到中文中越来越多地出现英文的踪影，试想，如果老外在写到中文转译的东西（比如人名）的时候，能够在英文中嵌入中文，那有多好啊。为什么中国人可以写“我去了San Francisco”，老外不能写“I visited 长城”？《纽约时报》出现了一个中文标题就成了轰动的新闻，有没有可能某一天这样的情况成为司空见惯的情形？但愿吧。</p>
+
+        </div>
+        
+    </div>
+    
+    <div class="art-tags headline"> 
+        <ul>
+            
+            <li><a href="/tags/#%E7%BF%BB%E8%AF%91">翻译</a></li>
+            
+        </ul>
+    </div>
+    
+    
+    <div id="adjacent">
+        <div>❮ Previous: <a href="/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/freelancer/">告别蛰居</a></div>
+        <div>Next: <a href="/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/msn-china/">MSN China - 分门别类地打击异己</a> ❯</div>
+    </div>
+</div>
+<script>
+    function bindToc() {                
+        let allAnchors = document.querySelectorAll(".toc ul li a")
+        let windowHeight = document.documentElement.clientHeight
+        let ob = new IntersectionObserver(
+            function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        for (let i=0; i<allAnchors.length; i++) {
+                          if (allAnchors[i].href.split('#')[1] == entry.target.attributes.id.value) {
+                              allAnchors[i].classList.add("toc-highlight")
+                          }
+                          else {
+                              allAnchors[i].classList.remove("toc-highlight")
+                          }
+                        }
+                    }
+                });
+            },
+            {
+                rootMargin: '0px 0px -' + (windowHeight - 40) + 'px 0px',
+                threshold: 0.5,
+            }
+        );
+        if (allAnchors.length>0) {
+            for (anchor of allAnchors) {
+                let targetID = anchor.hash
+                ob.observe(document.getElementById(targetID.substring(1)))
+            }
+        }
+    }
+    window.setTimeout(bindToc, 500);
+</script>
+
+    </section>
+    <footer>
+        <div id="footer">
+            <div id="footer-row">
+                <div id="about">
+                    <div class="footer-title headline">About Me</div>
+                    <div class="footer-body bodytext">白羊座中年。不旅行的时候宅家，旅行的时候暴走。有家室，养猫。</div>
+                </div>
+                <div id="tag-group">
+                    <div class="footer-title headline">Tags</div>
+                    <div class="footer-body bodytext">
+                        <ul>
+                        
+                            <li><a href="/tags/#%E6%97%85%E8%A1%8C">旅行 (13)</a></li>
+                        
+                            <li><a href="/tags/#%E6%97%A5%E6%9C%AC">日本 (11)</a></li>
+                        
+                            <li><a href="/tags/#%E4%B8%9C%E4%BA%AC%E9%83%BD">东京都 (3)</a></li>
+                        
+                            <li><a href="/tags/#%E4%B8%8A%E6%B5%B7">上海 (3)</a></li>
+                        
+                            <li><a href="/tags/#%E4%B8%BB%E9%A1%B5">主页 (2)</a></li>
+                        
+                            <li><a href="/tags/#%E5%B9%BF%E5%B2%9B%E5%8E%BF">广岛县 (2)</a></li>
+                        
+                            <li><a href="/tags/#nuc">nuc (2)</a></li>
+                        
+                            <li><a href="/tags/#macOS">macOS (2)</a></li>
+                        
+                            <li><a href="/tags/#%E7%A5%9E%E5%A5%88%E5%B7%9D%E5%8E%BF">神奈川县 (2)</a></li>
+                        
+                            <li><a href="/tags/#%E7%BD%91%E4%BA%8B">网事 (2)</a></li>
+                        
+                        </ul>
+                    </div>
+                </div>
+                <div id="category">
+                    <div class="footer-title headline">Categories</div>
+                    <div class="footer-body bodytext">
+                        <ul id="cates-all">
+                        
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E5%B0%8F%E7%8E%A9%E6%84%8F/">小玩意</a></span> <span class="cate-count">(3)</span></li>
+                            
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E6%B8%B8%E8%AE%B0/">游记</a></span> <span class="cate-count">(13)</span></li>
+                            
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/">自言自语</a></span> <span class="cate-count">(21)</span></li>
+                            
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E9%9A%8F%E5%BF%83%E6%B5%8B/">随心测</a></span> <span class="cate-count">(6)</span></li>
+                            
+                            <li><span class="cate-name"><a href="/rss.xml">RSS</a></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="loader" class="htmx-indicator">
+       <span class="loader"></span>
+    </div>
+<script>
+let menuOpened = false;
+document.querySelector("#menuBtn").addEventListener("click", function() {
+    document.querySelector("#menu").style.marginLeft = menuOpened ? '-200px' : 0;
+    document.querySelector("#nav-right").style.opacity = menuOpened ? 1 : 0;
+    menuOpened = !menuOpened;
+    document.querySelector("#main").style.zIndex = menuOpened ? 0 : 100;
+});
+let layoutNow = "article";
+if (layoutNow == "archive") {
+    layoutNow = "archivemenu";
+}
+makeActive ("menu", layoutNow);
+function addImgClick() {
+    document.querySelectorAll('.art-body img').forEach(function (imgRes) {
+      let imgSrc = imgRes.getAttribute("src");
+      let aImg = document.createElement('a');
+      aImg.href = imgSrc;
+      aImg.target = '_blank';
+      imgRes.parentNode.insertBefore(aImg, imgRes);
+      aImg.appendChild(imgRes);
+    });
+}
+addImgClick();
+let firstCate = document.querySelector("#cates-all li a").getAttribute("href");
+document.querySelector(".active-category a").setAttribute("href", firstCate);
+htmx.on("htmx:load", function(evt) {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+    addImgClick();
+});
+</script>
+</body>
+</html>

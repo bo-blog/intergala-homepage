@@ -1,0 +1,11 @@
+:root {
+    --primary-color: #ccc;
+    --secordary-color: #f0f2f3;
+    --minor-color: #dae4e8;
+    --primary-bg-color: #212020;
+    --secondary-bg-color: #2c2e2f;
+    --panel-bg-color: #3a3636;
+    --block-bg-color: #313335;
+    --dim-bg-color: #1c1b1b;
+    --separator-color: #555759;  
+}

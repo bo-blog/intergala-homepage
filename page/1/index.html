@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" type="image/png" href="/resource/favicon.png" />
+    <link rel="stylesheet" href="/resource/reset.min.css">
+    <link rel="stylesheet" href="/resource/light.css">
+    <link rel="stylesheet" href="/resource/gi.css">
+    <script src="/resource/htmx.min.js"></script>
+    <title>Bob’s Corner</title>
+</head>
+<body>
+    <header>
+        <div id="top">
+            <div id="top-dec"></div>
+            <div id="nav" class="headline">
+                <div id="nav-left">
+                    <span id='menuBtn'>≡</span>
+                    <ul id="menu">
+                        <li><a href="/">Home</a></li>
+                        <li class="active-index active-article"><a href="/page/1/">Blogs</a></li>
+                        <li class="active-tag"><a href="/tags/">Tags</a></li>
+                        <li class="active-archivemenu"><a href="/archives/">Archive</a></li>
+                        <li class="active-category"><a href="">Categories</a></li>
+                        
+                    </ul>
+                </div>
+                <div id="nav-right">Bob’s Corner
+                </div>
+                <div id="nav-icon"><img src="/resource/avatar.jpg" alt="Avatar"></div>
+            </div>
+        </div>
+    </header>
+    <div id="nav-dec"></div>
+    <script>
+        let changedActiveItems = [];
+        function makeActive(id, currentV) {
+            document.querySelector("#"+id+" .active-"+currentV).classList.add(id+"-active");
+            changedActiveItems.forEach(function(item, i) {
+                if (document.querySelector("#"+id+" .active-"+item) && item != currentV) {
+                    document.querySelector("#"+id+" .active-"+item).classList.remove(id+"-active");
+                    changedActiveItems.splice(i, 1);
+                }
+            });
+            changedActiveItems.push(currentV);
+        }
+    </script>
+    <section id="main">
+    
+
+<div class="article">
+    <div class="art-meta">
+        <div class="art-title headline"><a href="/%E6%B8%B8%E8%AE%B0/netsu-shibamata/">日旅集 - EP10：东京根津神社、柴又</a></div>
+        <div class="art-time headline">May 17, 2026 · <a href="/category/%E6%B8%B8%E8%AE%B0/">游记</a></div>
+    </div>
+    <div class="art-body bodytext">
+    <p>今天造访的这两处“秘境”，一边是千年神社的绚烂花事，一边是上个时代的烟火气。<br><img src="/upload/netsu.jpg" alt="标题"></p>
+<h2 id="toc-%E6%A0%B9%E6%B4%A5%E7%A5%9E%E7%A4%BE">根津神社</h2><p>东京的春天不缺繁花与古意。想要避开人潮，一头扎进春日花海，<strong>根津神社</strong>的杜鹃盛世是一个不错的季节限定款好去处。</p>
+<p>从东京地铁根津站步行 5 分钟，便可抵达这座拥有1900年历史的古老神社，也是东京最古老的神社之一。每年4月中旬至5月初，<strong>文京杜鹃花祭</strong>如期而至，3000株百余种杜鹃铺满了山坡，将这座古老神社映衬得炫目而又浪漫。<br><img src="/upload/netsu-shrine.jpg" alt="根津神社"></p>
+<p>神社的建筑是典型的江户风格，朱红色鸟居与深色木质殿宇相映，庄重雅致。西侧的杜鹃花园是花季的主角，依斜坡地势而建，盛开时节，层层叠叠的花簇从山脚铺至山腰，深红、粉白、淡紫、绯色的花互相交织，像一块织锦地毯。支付入场券后就可慢慢欣赏了。登上高处，可俯瞰整片杜鹃花海与神社全貌，红柱、繁花、绿树相映，每一帧都是治愈画面。</p>
+
+        <div><a href="/%E6%B8%B8%E8%AE%B0/netsu-shibamata/#more">More...</a></div>
+    </div>
+    
+    <div class="art-tags headline"> 
+        <ul>
+            
+            <li><a href="/tags/#%E6%97%85%E8%A1%8C">旅行</a></li>
+            
+            <li><a href="/tags/#%E6%97%A5%E6%9C%AC">日本</a></li>
+            
+            <li><a href="/tags/#%E4%B8%9C%E4%BA%AC%E9%83%BD">东京都</a></li>
+            
+        </ul>
+    </div>
+    
+      
+</div>
+
+<div class="article">
+    <div class="art-meta">
+        <div class="art-title headline"><a href="/%E6%B8%B8%E8%AE%B0/parks-in-tokyoto/">日旅集 - EP9：公园篇·井之头、日比谷、上野</a></div>
+        <div class="art-time headline">May 11, 2026 · <a href="/category/%E6%B8%B8%E8%AE%B0/">游记</a></div>
+    </div>
+    <div class="art-body bodytext">
+    <p>一个大城市最舒服最放松的一面，往往蕴藏在都市里一座座公园的绿意里。那么本篇就来一个公园合集，写写东京（及都市圈内）三个令我印象深刻的公园吧。<br><img src="/upload/Parks.jpg" alt="标题图"></p>
+<h2 id="toc-%E4%BA%95%E4%B9%8B%E5%A4%B4%E6%81%A9%E8%B5%90%E5%85%AC%E5%9B%AD">井之头恩赐公园</h2><p>从新宿坐中央线20分钟到吉祥寺站，步行5分钟便可抵达井之头恩赐公园，是本地人私藏的近郊净土。</p>
+<p>公园以井之头池为核心，澄澈的湖面像一块温润的碧玉，四周被茂密的林木环绕，春有樱花垂落水面，夏有浓荫蔽日，冬有寒林静水，四季景致都值得一提。当然，最标志的景观是在樱花绽放的春日里，租一艘天鹅船，慢悠悠划行在湖面，穿梭在水波和花瓣之间。不过赏樱期是旺季，樱花和安逸不可得兼。我去的时候正值盛夏，完全没有游客的喧嚣，满目的绿色将旅途的浮躁一扫而空。</p>
+
+        <div><a href="/%E6%B8%B8%E8%AE%B0/parks-in-tokyoto/#more">More...</a></div>
+    </div>
+    
+    <div class="art-tags headline"> 
+        <ul>
+            
+            <li><a href="/tags/#%E6%97%85%E8%A1%8C">旅行</a></li>
+            
+            <li><a href="/tags/#%E6%97%A5%E6%9C%AC">日本</a></li>
+            
+            <li><a href="/tags/#%E4%B8%9C%E4%BA%AC%E9%83%BD">东京都</a></li>
+            
+        </ul>
+    </div>
+    
+      
+</div>
+
+<div class="article">
+    <div class="art-meta">
+        <div class="art-title headline"><a href="/%E6%B8%B8%E8%AE%B0/maiko-korakuen-gotokuji/">日旅集 - EP8：舞子公园、后乐园、豪德寺</a></div>
+        <div class="art-time headline">May 8, 2026 · <a href="/category/%E6%B8%B8%E8%AE%B0/">游记</a></div>
+    </div>
+    <div class="art-body bodytext">
+    <p>感谢公众号的各位看官支持。从这篇起，也会将一些零碎的小景点汇总在一篇里，照例是想到哪儿写到哪儿。<br><img src="/upload/ep9_title.jpg" alt="标题图"></p>
+<h2 id="toc-%E8%88%9E%E5%AD%90%E5%85%AC%E5%9B%AD">舞子公园</h2><p>舞子公園（まいここうえん）是神户的一处拍照打卡胜地。从神户三宫站出发，乘坐山阳本线，从须磨站开始，窗外的风景就切换到了延绵不绝的蔚蓝海岸线。按捺住激动的心情直到舞子站，下车后往海边走就是舞子公园。</p>
+<p>作为舞子公园的最大看点之一，这里有着拍摄明石海峡大桥的最佳地点。大桥横亘于明石海峡之上，连接神户市和淡路市，据说是世界上最长的吊桥。在舞子公园，可以无遮挡地拍摄到大桥，也可以眺望到明石市的天际线。</p>
+
+        <div><a href="/%E6%B8%B8%E8%AE%B0/maiko-korakuen-gotokuji/#more">More...</a></div>
+    </div>
+    
+    <div class="art-tags headline"> 
+        <ul>
+            
+            <li><a href="/tags/#%E6%97%85%E8%A1%8C">旅行</a></li>
+            
+            <li><a href="/tags/#%E6%97%A5%E6%9C%AC">日本</a></li>
+            
+            <li><a href="/tags/#%E5%85%B5%E5%BA%93%E5%8E%BF">兵库县</a></li>
+            
+            <li><a href="/tags/#%E5%86%88%E5%B1%B1%E5%8E%BF">冈山县</a></li>
+            
+            <li><a href="/tags/#%E4%B8%9C%E4%BA%AC%E9%83%BD">东京都</a></li>
+            
+        </ul>
+    </div>
+    
+      
+</div>
+
+<div id="pages" class="headline">
+    <ul>
+        
+        <li class="page-actived">1</li>
+        
+        <li class="page-next"><a hx-get="/page/2/" hx-swap="outerHTML" hx-target="#main" hx-select="#main" hx-push-url="true" hx-indicator="#loader" href="/page/2/">❯</a></li>
+        
+    </ul>
+    
+</div>
+
+    </section>
+    <footer>
+        <div id="footer">
+            <div id="footer-row">
+                <div id="about">
+                    <div class="footer-title headline">About Me</div>
+                    <div class="footer-body bodytext">白羊座中年。不旅行的时候宅家，旅行的时候暴走。有家室，养猫。</div>
+                </div>
+                <div id="tag-group">
+                    <div class="footer-title headline">Tags</div>
+                    <div class="footer-body bodytext">
+                        <ul>
+                        
+                            <li><a href="/tags/#%E6%97%85%E8%A1%8C">旅行 (13)</a></li>
+                        
+                            <li><a href="/tags/#%E6%97%A5%E6%9C%AC">日本 (11)</a></li>
+                        
+                            <li><a href="/tags/#%E4%B8%9C%E4%BA%AC%E9%83%BD">东京都 (3)</a></li>
+                        
+                            <li><a href="/tags/#%E4%B8%8A%E6%B5%B7">上海 (3)</a></li>
+                        
+                            <li><a href="/tags/#%E4%B8%BB%E9%A1%B5">主页 (2)</a></li>
+                        
+                            <li><a href="/tags/#%E5%B9%BF%E5%B2%9B%E5%8E%BF">广岛县 (2)</a></li>
+                        
+                            <li><a href="/tags/#nuc">nuc (2)</a></li>
+                        
+                            <li><a href="/tags/#macOS">macOS (2)</a></li>
+                        
+                            <li><a href="/tags/#%E7%A5%9E%E5%A5%88%E5%B7%9D%E5%8E%BF">神奈川县 (2)</a></li>
+                        
+                            <li><a href="/tags/#%E7%BD%91%E4%BA%8B">网事 (2)</a></li>
+                        
+                        </ul>
+                    </div>
+                </div>
+                <div id="category">
+                    <div class="footer-title headline">Categories</div>
+                    <div class="footer-body bodytext">
+                        <ul id="cates-all">
+                        
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E5%B0%8F%E7%8E%A9%E6%84%8F/">小玩意</a></span> <span class="cate-count">(3)</span></li>
+                            
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E6%B8%B8%E8%AE%B0/">游记</a></span> <span class="cate-count">(13)</span></li>
+                            
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E8%87%AA%E8%A8%80%E8%87%AA%E8%AF%AD/">自言自语</a></span> <span class="cate-count">(21)</span></li>
+                            
+                            <li>
+                            
+                            
+                            <li><span class="cate-name"><a href="/category/%E9%9A%8F%E5%BF%83%E6%B5%8B/">随心测</a></span> <span class="cate-count">(6)</span></li>
+                            
+                            <li><span class="cate-name"><a href="/rss.xml">RSS</a></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="loader" class="htmx-indicator">
+       <span class="loader"></span>
+    </div>
+<script>
+let menuOpened = false;
+document.querySelector("#menuBtn").addEventListener("click", function() {
+    document.querySelector("#menu").style.marginLeft = menuOpened ? '-200px' : 0;
+    document.querySelector("#nav-right").style.opacity = menuOpened ? 1 : 0;
+    menuOpened = !menuOpened;
+    document.querySelector("#main").style.zIndex = menuOpened ? 0 : 100;
+});
+let layoutNow = "index";
+if (layoutNow == "archive") {
+    layoutNow = "archivemenu";
+}
+makeActive ("menu", layoutNow);
+function addImgClick() {
+    document.querySelectorAll('.art-body img').forEach(function (imgRes) {
+      let imgSrc = imgRes.getAttribute("src");
+      let aImg = document.createElement('a');
+      aImg.href = imgSrc;
+      aImg.target = '_blank';
+      imgRes.parentNode.insertBefore(aImg, imgRes);
+      aImg.appendChild(imgRes);
+    });
+}
+addImgClick();
+let firstCate = document.querySelector("#cates-all li a").getAttribute("href");
+document.querySelector(".active-category a").setAttribute("href", firstCate);
+htmx.on("htmx:load", function(evt) {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+    addImgClick();
+});
+</script>
+</body>
+</html>
